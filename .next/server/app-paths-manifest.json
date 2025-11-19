@@ -1,0 +1,13 @@
+{
+  "/api/settings/route": "app/api/settings/route.js",
+  "/api/themeOptions/route": "app/api/themeOptions/route.js",
+  "/api/menu/route": "app/api/menu/route.js",
+  "/api/theme/route": "app/api/theme/route.js",
+  "/api/currency/route": "app/api/currency/route.js",
+  "/api/category/route": "app/api/category/route.js",
+  "/api/product/route": "app/api/product/route.js",
+  "/api/blog/route": "app/api/blog/route.js",
+  "/api/home/electronics_three/route": "app/api/home/electronics_three/route.js",
+  "/api/brand/route": "app/api/brand/route.js",
+  "/(mainBody)/page": "app/(mainBody)/page.js"
+}
