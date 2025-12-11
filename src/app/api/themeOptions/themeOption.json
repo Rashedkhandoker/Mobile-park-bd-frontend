@@ -265,7 +265,7 @@
           "primary_color": "#2874f0",
           "secondary_color": null,
           "back_to_top_enable": true,
-          "celebration_effect": true,
+          "celebration_effect": false,
           "language_direction": "ltr",
           "exit_tagline_enable": true,
           "seller_register_url": "https://multikart-frontend-next-json.vercel.app"

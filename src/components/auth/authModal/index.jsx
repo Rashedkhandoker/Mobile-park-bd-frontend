@@ -48,7 +48,7 @@ const AuthModal = () => {
         <div className="modal-content">
           <ModalBody>
             <div className="modal-content open">
-              <div className="d-flex">
+              <div className="d-flex justify-content-center align-items-center">
                 <div className="right-content w-lg-50 w-100">
                   <div>
                     <div className="auth-title">
@@ -81,7 +81,6 @@ const AuthModal = () => {
                     )}
                   </div>
                 </div>
-                <div className="left-img w-lg-50 d-lg-block d-none">{/* <Ima  ge height={1920} width={1920} src={themeOption?.popup?.auth?.image_url ? storageURL + themeOption?.popup?.auth?.image_url : ` ${ImagePath}/placeholder/auth.png`} alt="login" /> */}</div>
               </div>
             </div>
           </ModalBody>
