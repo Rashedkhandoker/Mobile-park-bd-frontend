@@ -18,13 +18,13 @@ const FooterStoreInformation = ({ icon }) => {
       {themeOption?.footer?.support_number && (
         <li>
           {icon && <RiPhoneLine />}
-          {t("CallUs")}: {themeOption?.footer?.support_number}
+           {themeOption?.footer?.support_number}
         </li>
       )}
       {themeOption?.footer?.about_email && (
         <li>
           {icon && <RiMailLine />}
-          {t("EmailUs")}: {themeOption?.footer?.about_email}
+           {themeOption?.footer?.about_email}
         </li>
       )}
     </ul>
