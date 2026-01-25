@@ -23,9 +23,10 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
   const param = useSearchParams();
   const tagParam = param.get("tag");
 
+
   const fetchData = async () => {
     return request({
-      url: ProductAPI,
+      url: ProductAPI, // dynamic url for filter
       params: {
         page,
         status: 1,
