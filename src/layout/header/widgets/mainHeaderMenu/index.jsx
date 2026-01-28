@@ -2486,7 +2486,7 @@ const MainHeaderMenu = () => {
         </ul>
       ) : (
         <ul className="navbar-nav">
-          {demoMenu?.map((menu, i) => (
+          {headerMenu?.map((menu, i) => (
             <MenuList
               menu={menu}
               key={i}
