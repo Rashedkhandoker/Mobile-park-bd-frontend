@@ -112,13 +112,13 @@ const ElectronicsThree = () => {
         </WrapperComponent>
       )}
       {/* Categories 1  */}
-      {/* {data?.categories_1?.status && (
+      {data?.categories_1?.status && (
         <WrapperComponent classes={{ sectionClass: `vector-category`, fluidClass: "container" }} noRowCol={true}>
           <div className="vector-slide-8 category-slide ratio_square">
             <HomeCategorySidebar categoryIds={data?.categories_1?.category_ids || []} style="books" sliderOptions={bookSlider} />
           </div>
         </WrapperComponent>
-      )} */}
+      )}
       {/* Product List 1 */}
       {data?.products_list_1?.status && (
         <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
