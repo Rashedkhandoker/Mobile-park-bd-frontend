@@ -54,7 +54,7 @@ const ElectronicsThree = () => {
           {data?.home_banner?.banner_1?.status && (
             <Col md="7">
               <div className="position-relative">
-                <ImageLink homeBanner={true} imgUrl={data?.home_banner?.banner_1} height={792} width={792} />
+                <ImageLink homeBanner={true} imgUrl={data?.home_banner?.banner_1} height={802} width={793} />
                 <div className="banner-skeleton">
                   <div className="skeleton-content">
                     <p className="card-text placeholder-glow row g-lg-3 g-0">
@@ -81,7 +81,7 @@ const ElectronicsThree = () => {
                       banner?.status && (
                         <Col xs="12" key={index}>
                           <div className="position-relative">
-                            <ImageLink imgUrl={banner} height={384} width={560} />
+                            <ImageLink imgUrl={banner} height={387} width={560} />
                             <div className="banner-skeleton">
                               <div className="skeleton-content">
                                 <p className="card-text placeholder-glow row g-lg-3 g-0">
