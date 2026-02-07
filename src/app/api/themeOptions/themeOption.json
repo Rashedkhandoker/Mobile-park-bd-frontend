@@ -96,7 +96,7 @@
           "instagram": "https://instagram.com/",
           "pinterest": "https://pinterest.com/",
           "sub_title": "Never Miss Anything From Store By Signing Up To Our Newsletter.",
-          "about_email": "Support@Multikart.com",
+          "about_email": "mobileparkbd2000@gmail.com",
           "help_center": [
               {
                   "id": 1,
@@ -156,15 +156,15 @@
                   "value": "search"
               }
           ],
-          "footer_about": "Discover the latest trends and enjoy seamless shopping with our exclusive collections.",
+          "footer_about": "Discover MobileParkBD – the most trusted mobile, gadgets, and accessories shop in Dhaka. Get the best prices, top-notch service, and a wide range of products at Jamuna Future Park.",
           "footer_style": "footer_three",
-          "about_address": "Multikart Demo Store, Demo Store India 345-659",
+          "about_address": "Level 04, Block C, Shop No. 37/A2, Jamuna Future Park, Dhaka, Bangladesh",
           "app_store_url": "https://www.apple.com/in/app-store/",
           "support_email": "support@gmail.com",
           "play_store_url": "https://play.google.com/store/apps",
-          "support_number": "123-456-7898",
+          "support_number": "01916-858692",
           "footer_copyright": true,
-          "copyright_content": "2023-24 themeforest powered by pixelstrap",
+          "copyright_content": "© 2025 Mobile Park BD powered by Code Console Creations.",
           "footer_categories": [
               74,
               41,
@@ -185,7 +185,7 @@
               107
           ],
           "header_options": "header_six",
-          "support_number": "123 - 456 - 7890",
+          "support_number": "01916-858692",
           "top_bar_content": [
               {
                   "content": "<i class=\"ri-truck-line\"></i>Free Shipping on Orders $100+"
@@ -262,10 +262,10 @@
           "cart_style": "cart_sidebar",
           "site_title": "Multikart Marketplace: Where Vendors Shine Together",
           "site_tagline": "Shop Unique, Sell Exceptional – Multikart Multi-Vendor Universe.",
-          "primary_color": "#ec8951",
+          "primary_color": "#2874f0",
           "secondary_color": null,
           "back_to_top_enable": true,
-          "celebration_effect": true,
+          "celebration_effect": false,
           "language_direction": "ltr",
           "exit_tagline_enable": true,
           "seller_register_url": "https://multikart-frontend-next-json.vercel.app"

@@ -54,7 +54,7 @@ const ElectronicsThree = () => {
           {data?.home_banner?.banner_1?.status && (
             <Col md="7">
               <div className="position-relative">
-                <ImageLink homeBanner={true} imgUrl={data?.home_banner?.banner_1} height={792} width={792} />
+                <ImageLink homeBanner={true} imgUrl={data?.home_banner?.banner_1} height={802} width={793} />
                 <div className="banner-skeleton">
                   <div className="skeleton-content">
                     <p className="card-text placeholder-glow row g-lg-3 g-0">
@@ -81,7 +81,7 @@ const ElectronicsThree = () => {
                       banner?.status && (
                         <Col xs="12" key={index}>
                           <div className="position-relative">
-                            <ImageLink imgUrl={banner} height={384} width={560} />
+                            <ImageLink imgUrl={banner} height={387} width={560} />
                             <div className="banner-skeleton">
                               <div className="skeleton-content">
                                 <p className="card-text placeholder-glow row g-lg-3 g-0">
@@ -112,13 +112,13 @@ const ElectronicsThree = () => {
         </WrapperComponent>
       )}
       {/* Categories 1  */}
-      {/* {data?.categories_1?.status && (
+      {data?.categories_1?.status && (
         <WrapperComponent classes={{ sectionClass: `vector-category`, fluidClass: "container" }} noRowCol={true}>
           <div className="vector-slide-8 category-slide ratio_square">
             <HomeCategorySidebar categoryIds={data?.categories_1?.category_ids || []} style="books" sliderOptions={bookSlider} />
           </div>
         </WrapperComponent>
-      )} */}
+      )}
       {/* Product List 1 */}
       {data?.products_list_1?.status && (
         <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
@@ -185,30 +185,6 @@ const ElectronicsThree = () => {
           </Container>
         </div>
       </section>
-
-      {/* Category Product 1 */}
-      {/* {data?.category_product_1?.status && (
-        <WrapperComponent classes={{ sectionClass: "container" }} customCol={true}>
-          {data?.category_product_1?.categories?.status && (
-            <Col xl="2" className=" d-xl-inline-block d-none ">
-              <div className="left-header left-header-relative">
-                <div className="metro">
-                  <div className="main-menu">
-                    <div className="menu-left">
-                      <HomeCategorySidebar categoryIds={data?.category_product_1?.categories?.category_ids} style="vertical" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Col>
-          )}
-          {data?.category_product_1?.products?.status && (
-            <div className={data?.category_product_1?.categories?.status ? "col-xl-10" : "col-xl-12"}>
-              <HomeProduct productIds={data?.category_product_1?.products?.product_ids || []} style="vertical" />
-            </div>
-          )}
-        </WrapperComponent>
-      )} */}
       {/* New Arrival- product 3 */}
       {data?.products_list_3?.status && (
         <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
@@ -229,22 +205,6 @@ const ElectronicsThree = () => {
           <HomeProduct productIds={data?.products_list_2?.product_ids} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
         </WrapperComponent> 
       )}
-      
-      {/* <WrapperComponent classes={{ sectionClass: "ratio2_1 banner-padding", fluidClass: "container", row: "g-sm-4 g-3" }} customCol={true}>
-        {data?.offer_banner_2?.banner_1?.status && (
-          <div className={data?.offer_banner_2?.banner_2?.status ? "col-md-6" : "col-12"}>
-            <ImageLink imgUrl={data?.offer_banner_2?.banner_1} bgImg={true} />
-          </div>
-        )}
-        {data?.offer_banner_2?.banner_2?.status && (
-          <div className={data?.offer_banner_2?.banner_1?.status ? "col-md-6" : "col-12"}>
-            <ImageLink imgUrl={data?.offer_banner_2?.banner_2} bgImg={true} />
-          </div>
-        )}
-      </WrapperComponent> */}
-
-      
-
       {/* Brands */}
       {data?.brand?.status && (
         <section className="section-b-space blog-wo-bg section-t-space">

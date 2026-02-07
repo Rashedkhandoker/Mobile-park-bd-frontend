@@ -21,21 +21,21 @@ const TopBar = ({ classes }) => {
                 <li>
                   {t("WelcomeTo")} {settingData?.general?.site_name}
                 </li>
+                {/* <li>
+                  <i className="ri-phone-fill"></i> {t("CallUs")} : {themeOption?.header?.support_number}
+                </li> */}
+              </ul>
+            </div>
+          </Col>
+          <Col lg={6} className="text-end">  
+            <div className="header-contact">
+              <ul>
                 <li>
                   <i className="ri-phone-fill"></i> {t("CallUs")} : {themeOption?.header?.support_number}
                 </li>
               </ul>
             </div>
-          </Col>
-          <Col lg={6} className="text-end">
-            <ul className="right-nav-about">
-              <li className="right-nav-list">
-                <HeaderLanguage />
-              </li>
-              <li className="right-nav-list">
-                <HeaderCurrency />
-              </li>
-            </ul>
+            
           </Col>
         </Row>
       </div>

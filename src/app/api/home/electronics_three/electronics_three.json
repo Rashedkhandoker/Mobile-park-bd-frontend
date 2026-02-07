@@ -17,7 +17,7 @@
         "banner": {
             "main_banner": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_three/electronic_three_2.png",
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
                 "redirect_link": {
                     "link": 391,
                     "link_type": "product",
@@ -26,7 +26,7 @@
             },
             "grid_banner_1": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_three/electronic_three_3.png",
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
                 "redirect_link": {
                     "link": 88,
                     "link_type": "product",
@@ -35,7 +35,7 @@
             },
             "grid_banner_2": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_three/electronic_three_4.png",
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
                 "redirect_link": {
                     "link": 88,
                     "link_type": "product",
@@ -104,7 +104,7 @@
             },
             "banner_2": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_two/electronic_two_2.png",
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
                 "redirect_link": {
                     "link": 83,
                     "link_type": "product",
@@ -113,7 +113,7 @@
             },
             "banner_3": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_two/electronic_two_3.png",
+                "image_url": "/assets/images/theme/electronic_three/macbook1.png",
                 "redirect_link": {
                     "link": 90,
                     "link_type": "product",
