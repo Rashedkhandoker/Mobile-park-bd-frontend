@@ -17,7 +17,7 @@ const NumberLoginForm = ({ setState }) => {
   return (
     <Formik
       initialValues={{
-        country_code: "91",
+        country_code: "880",
         phone: "",
       }}
       validationSchema={YupObject({
