@@ -156,68 +156,13 @@
         },
         "payment_methods": [
             {
-                "name": "cod",
+                "name": "Cash On Delivery",
                 "title": "Cash On Delivery",
-                "status": true
-            },
-            {
-                "name": "paypal",
-                "title": "PayPal",
-                "status": true
-            },
-            {
-                "name": "stripe",
-                "title": "Stripe",
                 "status": true
             },
             {
                 "name": "sslcommerz",
                 "title": "SSLCommerz",
-                "status": true
-            },
-            {
-                "name": "flutter_wave",
-                "title": "FlutterWave",
-                "status": true
-            },
-            {
-                "name": "paystack",
-                "title": "Paystack",
-                "status": true
-            },
-            {
-                "name": "mollie",
-                "title": "Mollie",
-                "status": true
-            },
-            {
-                "name": "bank_transfer",
-                "title": "Bank Transfer",
-                "status": true
-            },
-            {
-                "name": "bkash",
-                "title": "bKash",
-                "status": true
-            },
-            {
-                "name": "ccavenue",
-                "title": "CCAvenue",
-                "status": true
-            },
-            {
-                "name": "phonepe",
-                "title": "PhonePe",
-                "status": true
-            },
-            {
-                "name": "instamojo",
-                "title": "InstaMojo",
-                "status": true
-            },
-            {
-                "name": "razorpay",
-                "title": "RazorPay",
                 "status": true
             }
         ],
