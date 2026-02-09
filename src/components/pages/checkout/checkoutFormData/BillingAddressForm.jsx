@@ -26,7 +26,7 @@ const BillingAddressForm = ({ values, setFieldValue, errors, data }) => {
         same_shipping: false,
         title: "",
         street: "",
-        country_id: "",
+        country_id: "880",
         state_id: "",
         city: "",
         pincode: "",
