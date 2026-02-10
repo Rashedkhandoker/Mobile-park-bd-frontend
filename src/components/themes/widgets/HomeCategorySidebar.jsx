@@ -39,6 +39,8 @@ const HomeCategorySidebar = ({ categoryIds, height, width, style, slider, slider
 
   const categorySliderSettingMain = sliderOptions && sliderOptions(mainCategories?.length);
 
+  console.log(mainCategories)
+
   return (
     <>
       {mainCategories?.length ? (

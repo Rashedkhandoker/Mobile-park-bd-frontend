@@ -28,39 +28,11 @@ const ProductBox = ({ style = "vertical", product, boxStyle }) => {
   }, [product]);
 
   useEffect(() => {
-    if (theme == "fashion_one" || theme == "fashion_two" || theme == "fashion_three" || theme == "furniture_two" || theme == "watch" || theme == "christmas") {
-      setVariant("product_box_one");
-    } else if (theme == "fashion_four" || theme == "fashion_seven" || theme == "tools") {
       setVariant("product_box_two");
-    } else if (theme == "bicycle" || theme == "surfboard") {
-      setVariant("product_box_three");
-    } else if (theme == "medical" || theme == "fashion_six") {
-      setVariant("product_box_four");
-    } else if (theme == "perfume" || theme == "furniture_dark" || theme == "furniture_one" || theme == "shoes") {
-      setVariant("product_box_five");
-    } else if (theme == "bag" || theme == "electronics_one" || theme == "electronics_two" || theme == "electronics_three" || theme == "fashion_five") {
-      setVariant("product_box_six");
-    } else if (theme == "marketplace_one" || theme == "marketplace_two" || theme == "marketplace_three" || theme == "marketplace_four") {
-      setVariant("product_box_seven");
-    } else if (theme == "gym" || theme == "vegetables_one" || theme == "vegetables_two" || theme == "vegetables_four") {
-      setVariant("product_box_eight");
-    } else if (theme == "marijuana" || theme == "jewellery_three" || theme == "goggles") {
-      setVariant("product_box_nine");
-    } else if (theme == "digital_download") {
-      setVariant("product_box_ten");
-    } else if ("") {
-      setVariant("product_box_eleven");
-    } else if (theme == "shoes") {
-      setVariant("product_box_fourteen");
-    } else if (theme == "jewellery_one" || theme == "jewellery_two") {
-      setVariant("product_box_twelve");
-    } else {
-      setVariant(themeOption?.product ? themeOption?.product?.product_box_variant : "product_box_one");
-    }
-  }, [theme]);
+  }, []);
 
   return <>
-  {style == "vertical" && variant == "product_box_one" ? <ProductBox1 productState={productState} setProductState={setProductState} /> : style == "vertical" && variant == "product_box_two" ? <ProductBox2 productState={productState} setProductState={setProductState} /> : style == "vertical" && variant == "product_box_three" ? <ProductBox3 productState={productState} setProductState={setProductState} /> : style == "vertical" && variant == "product_box_four" ? <ProductBox4 productState={productState} /> : style == "vertical" && variant == "product_box_five" ? <ProductBox5 productState={productState} setProductState={setProductState} /> : style == "vertical" && variant == "product_box_six" ? <ProductBox6 productState={productState} /> : style == "vertical" && variant == "product_box_seven" ? <ProductBox7 productState={productState} /> : style == "vertical" && variant == "product_box_eight" ? <ProductBox8 productState={productState} /> : style == "vertical" && variant == "product_box_nine" ? <ProductBox9 productState={productState} setProductState={setProductState} /> : style == "vertical" && variant == "product_box_ten" ? <ProductBox10 productState={productState} /> : style == "vertical" && variant == "product_box_eleven" ? <ProductBox11 productState={productState} setProductState={setProductState} /> : style == "vertical" && variant == "product_box_twelve" ? <ProductBox12 setProductState={setProductState} productState={productState} /> : style == "horizontal" && <ProductBoxHorizontal productState={productState} style={boxStyle} />}</>;
+  {style == "vertical" && variant == "product_box_two" ? <ProductBox2 productState={productState} /> : null}</>;
 };
 
 export default ProductBox;

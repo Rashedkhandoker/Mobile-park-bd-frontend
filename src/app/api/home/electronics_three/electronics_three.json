@@ -84,12 +84,14 @@
         "categories_1": {
             "status": true,
             "category_ids": [
+                98,
                 99,
                 100,
                 101,
                 147,
-                148,
-                149
+                149,
+                148
+               
             ]
         },
         "home_banner": {
