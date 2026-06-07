@@ -1,7 +1,6 @@
 {
   "current_page": 1,
   "data": [
- 
     {
       "id": 16,
       "name": "Airpods 3",
@@ -229,7 +228,11 @@
         "id": 4,
         "store_name": "Trendy Fashion",
         "slug": "trendy-fashion",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 281,
         "rating_count": 4.5,
         "store_logo": null,
@@ -574,7 +577,11 @@
         "id": 4,
         "store_name": "Trendy Fashion",
         "slug": "trendy-fashion",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 281,
         "rating_count": 4.5,
         "store_logo": null,
@@ -693,8 +700,6 @@
       "cross_products": []
     },
 
-
-    
     {
       "id": 313,
       "name": "Infinite Horizons",
@@ -922,7 +927,11 @@
         "id": 21,
         "store_name": "Bonanza Books",
         "slug": "bonanza-books",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 0,
         "rating_count": 0,
         "store_logo": null,
@@ -1185,7 +1194,11 @@
         "id": 20,
         "store_name": "Petal Perfection",
         "slug": "petal-perfection",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 0,
         "rating_count": 0,
         "store_logo": null,
@@ -1448,7 +1461,11 @@
         "id": 20,
         "store_name": "Petal Perfection",
         "slug": "petal-perfection",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 0,
         "rating_count": 0,
         "store_logo": null,
@@ -1707,7 +1724,11 @@
         "id": 21,
         "store_name": "Bonanza Books",
         "slug": "bonanza-books",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 0,
         "rating_count": 0,
         "store_logo": null,
@@ -1948,7 +1969,11 @@
         "id": 21,
         "store_name": "Bonanza Books",
         "slug": "bonanza-books",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 0,
         "rating_count": 0,
         "store_logo": null,
@@ -1962,9 +1987,852 @@
       "similar_products": [],
       "cross_products": []
     },
-    
- 
- 
+
+
+    {
+      "id": 201,
+      "name": "IPhone 17 Pro Max",
+      "short_description": "All-new Aluminum Unibody with Vapor Chamber Cooling, 6.9-inch Super Retina XDR Display, ProMotion (1-120Hz), 3,000 nits Peak Outdoor Brightness, Apple A19 Pro Chip (3nm), Triple 48MP Fusion Camera System with 8x Optical-Quality Zoom, 18MP Center Stage Front Camera.",
+      "description": "<h5><strong><span style=\"color:rgb(33, 33, 33);\">Specifications</span></strong></h5><p></p><h5><strong><span style=\"color:rgb(33, 33, 33);\">General</span></strong></h5><p></p><p><strong>In The Box</strong>: Handset, USB-C Charge Cable (1m), Documentation</p><p><strong>Model Number</strong>: A3106</p><p><strong>Model Name</strong>: iPhone 17 Pro Max</p><p><strong>Color</strong>: Cosmic Orange, Deep Blue, Silver, Space Black</p><p><strong>Type</strong>: Smartphones</p><p><strong>SIM Type</strong>: Dual eSIM (US); Nano SIM + eSIM (International)</p><p><strong>Hybrid Sim Slot</strong>: No</p><p><strong>Touchscreen</strong>: Yes (Ceramic Shield 2 with Anti-Reflective Coating)</p><p><strong>OTG Compatible</strong>: Yes</p><p><strong>Sound Enhancements</strong>: Spatial Audio playback, Built-in Stereo Speakers</p><p></p><h5><strong><span style=\"color:rgb(33, 33, 33);\">OS & Processor Features</span></strong></h5><p></p><p><strong>Operating System</strong>: iOS 19</p><p><strong>Processor Brand</strong>: Apple</p><p><strong>Processor Type</strong>: A19 Pro Chip, 6-Core CPU (2 performance and 4 efficiency cores)</p><p><strong>Processor Core</strong>: Hexa Core with 16-Core Neural Engine and 6-Core GPU</p><p><strong>Operating Frequency:</strong> 5G NR (Bands n1, n2, n3, n5, n7, n8, n12, n14, n20, n25, n26, n28, n29, n30, n38, n40, n41, n48, n53, n66, n70, n71, n75, n76, n77, n78, n79), 4G FDD-LTE, 4G TD-LTE, 3G UMTS/HSPA+, 2G GSM/EDGE</p>",
+      "type": "classified",
+      "unit": "1 Item",
+      "weight": 221,
+      "quantity": 2,
+      "price": 799,
+      "sale_price": 759.05,
+      "discount": 5,
+      "is_featured": 0,
+      "shipping_days": null,
+      "is_cod": 0,
+      "is_free_shipping": 0,
+      "is_sale_enable": 0,
+      "is_return": 1,
+      "is_trending": 0,
+      "is_approved": 1,
+      "is_external": 0,
+      "external_url": null,
+      "external_button_text": null,
+      "sale_starts_at": null,
+      "sale_expired_at": null,
+      "sku": "ABA1077P",
+      "is_random_related_products": 0,
+      "stock_status": "in_stock",
+      "meta_title": "Apple iPhone 17 Pro Max",
+      "meta_description": "Apple iPhone 17 Pro Max",
+      "product_thumbnail_id": 1316,
+      "product_meta_image_id": "1316",
+      "size_chart_image_id": null,
+      "estimated_delivery_text": "Your order is likely to reach you within 5 to 10 days.",
+      "return_policy_text": null,
+      "safe_checkout": 1,
+      "secure_checkout": 1,
+      "social_share": 1,
+      "encourage_order": 1,
+      "encourage_view": 1,
+      "slug": "iphone-17-pro-max",
+      "status": 1,
+      "store_id": 6,
+      "created_by_id": "1",
+      "tax_id": 1,
+      "preview_type": "url",
+      "product_type": "physical",
+      "separator": null,
+      "is_licensable": 0,
+      "license_type": null,
+      "preview_url": null,
+      "watermark": 0,
+      "watermark_position": "center",
+      "brand_id": null,
+      "watermark_image_id": null,
+      "wholesale_price_type": null,
+      "is_licensekey_auto": 0,
+      "preview_audio_file_id": null,
+      "preview_video_file_id": null,
+      "deleted_at": null,
+      "created_at": "2024-05-16T04:04:25.000000Z",
+      "updated_at": "2024-05-16T04:54:10.000000Z",
+      "orders_count": 0,
+      "reviews_count": 0,
+      "can_review": false,
+      "order_amount": 0,
+      "is_wishlist": false,
+      "rating_count": null,
+      "review_ratings": [0, 0, 0, 0, 0],
+      "related_products": [],
+      "cross_sell_products": [],
+      "wholesales": [],
+      "variations": [
+        {
+          "id": 77,
+          "name": "IPhone 17 Pro Max (256 GB / Cosmic Orange)",
+          "price": 799,
+          "quantity": 20,
+          "stock_status": "in_stock",
+          "sale_price": 759.05,
+          "discount": 5,
+          "sku": "ABA1077P",
+          "status": 1,
+          "variation_options": null,
+          "preview_url": null,
+          "separator": null,
+          "is_digital": null,
+          "is_licensable": 0,
+          "is_licensekey_auto": 0,
+          "variation_image_id": 1316,
+          "product_id": 201,
+          "deleted_at": null,
+          "created_at": "2024-05-16T04:40:43.000000Z",
+          "updated_at": "2024-05-16T04:54:10.000000Z",
+          "variation_image": {
+            "id": 1316,
+            "name": "iphone_111",
+            "file_name": "iphone_111.png",
+            "mime_type": "image/png",
+            "disk": "public",
+            "created_by_id": "1",
+            "created_at": "2024-05-16T04:02:20.000000Z",
+            "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+          },
+          "variation_galleries": [
+            {
+              "id": 1318,
+              "name": "iphone_113",
+              "file_name": "iphone_113.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg"
+            },
+            {
+              "id": 1317,
+              "name": "iphone_112",
+              "file_name": "iphone_112.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg"
+            },
+            {
+              "id": 1316,
+              "name": "iphone_111",
+              "file_name": "iphone_111.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+            }
+          ],
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "256 GB",
+              "hex_color": null,
+              "slug": "256-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "77",
+                "attribute_value_id": "67"
+              }
+            },
+            {
+              "id": 36,
+              "value": "CosmicOrange",
+              "hex_color": "#FF6B35",
+              "slug": "cosmic-orange",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "77",
+                "attribute_value_id": "36"
+              }
+            }
+          ]
+        },
+        {
+          "id": 78,
+          "name": "IPhone 17 Pro Max (256 GB / Blue)",
+          "price": 799,
+          "quantity": 20,
+          "stock_status": "in_stock",
+          "sale_price": 759.05,
+          "discount": 5,
+          "sku": "ABA1077P",
+          "status": 1,
+          "variation_options": null,
+          "preview_url": null,
+          "separator": null,
+          "is_digital": null,
+          "is_licensable": 0,
+          "is_licensekey_auto": 0,
+          "variation_image_id": 1316,
+          "product_id": 201,
+          "deleted_at": null,
+          "created_at": "2024-05-16T04:40:43.000000Z",
+          "updated_at": "2024-05-16T04:54:10.000000Z",
+          "variation_image": {
+            "id": 1316,
+            "name": "iphone_111",
+            "file_name": "iphone_111.png",
+            "mime_type": "image/png",
+            "disk": "public",
+            "created_by_id": "1",
+            "created_at": "2024-05-16T04:02:20.000000Z",
+            "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
+          },
+          "variation_galleries": [
+            {
+              "id": 1318,
+              "name": "iphone_113",
+              "file_name": "iphone_113.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg"
+            },
+            {
+              "id": 1317,
+              "name": "iphone_112",
+              "file_name": "iphone_112.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg"
+            },
+            {
+              "id": 1316,
+              "name": "iphone_111",
+              "file_name": "iphone_111.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
+            }
+          ],
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "256 GB",
+              "hex_color": null,
+              "slug": "256-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "78",
+                "attribute_value_id": "67"
+              }
+            },
+            {
+              "id": 71,
+              "value": "Blue",
+              "hex_color": "#515461",
+              "slug": "blue",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "78",
+                "attribute_value_id": "71"
+              }
+            }
+          ]
+        }
+      ],
+      "product_thumbnail": {
+        "id": 1325,
+        "name": "iphone-17-pro-max-orange-1",
+        "disk": "public",
+        "file_name": "iphone-17-pro-max-orange-1.jpg",
+        "mime_type": "image/jpg",
+        "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+        "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+      },
+      "product_galleries": [
+        {
+           "id": 1323,
+              "name": "iphone-14-pro-max-black",
+              "file_name": "iphone-14-pro-max-black.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
+            
+        },
+        {
+          "id": 1324,
+              "name": "iphone-14-pro-max-black-2",
+              "file_name": "iphone-14-pro-max-black-2.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+            },
+        {
+             "id": 1325,
+        "name": "iphone-17-pro-max-orange-1",
+        "disk": "public",
+        "file_name": "iphone-17-pro-max-orange-1.jpg",
+        "mime_type": "image/jpg",
+        "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+        "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+       }
+      ],
+      "attributes": [
+        {
+          "id": 11,
+          "name": "Color",
+          "style": "color",
+          "slug": "color",
+          "status": 1,
+          "created_by_id": "1",
+          "created_at": "2024-05-04T05:43:59.000000Z",
+          "updated_at": "2024-05-04T05:43:59.000000Z",
+          "deleted_at": null,
+          "pivot": {
+            "product_id": "201",
+            "attribute_id": "11"
+          },
+          "attribute_values": [
+            {
+              "id": 36,
+              "value": "CosmicOrange",
+              "hex_color": "#FF6B35",
+              "slug": "cosmic-orange",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-04T05:43:59.000000Z",
+              "updated_at": "2024-05-04T05:45:06.000000Z",
+              "deleted_at": null
+            },
+
+            {
+              "id": 71,
+              "value": "Blue",
+              "hex_color": "#2E4053",
+              "slug": "blue",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "GB",
+          "style": "rectangle",
+          "slug": "gb",
+          "status": 1,
+          "created_by_id": "1",
+          "created_at": "2024-05-16T04:06:30.000000Z",
+          "updated_at": "2024-05-16T04:06:30.000000Z",
+          "deleted_at": null,
+          "pivot": {
+            "product_id": "201",
+            "attribute_id": "16"
+          },
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "256 GB",
+              "hex_color": null,
+              "slug": "128-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "id": 51,
+          "name": "IPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": null,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": 3,
+          "parent_id": 25,
+          "created_by_id": "1",
+          "created_at": "2024-05-10T06:30:35.000000Z",
+          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 6,
+          "pivot": {
+            "product_id": "207",
+            "category_id": "51"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": null
+        }
+      ],
+      "tags": [],
+      "brand": {
+        "id": 6,
+        "name": "Apple",
+        "slug": "apple",
+        "status": 1,
+        "brand_image": null,
+        "brand_meta_image": null,
+        "brand_banner": null
+      },
+      "store": {},
+      "reviews": [],
+      "similar_products": [],
+      "cross_products": []
+    },
+    {
+      "id": 203,
+      "name": "IPhone 16 Pro Max",
+      "short_description": "All-new Aluminum Unibody with Vapor Chamber Cooling, 6.9-inch Super Retina XDR Display, ProMotion (1-120Hz), 3,000 nits Peak Outdoor Brightness, Apple A19 Pro Chip (3nm), Triple 48MP Fusion Camera System with 8x Optical-Quality Zoom, 18MP Center Stage Front Camera.",
+      "description": "<h5><strong><span style=\"color:rgb(33, 33, 33);\">Specifications</span></strong></h5><p></p><h5><strong><span style=\"color:rgb(33, 33, 33);\">General</span></strong></h5><p></p><p><strong>In The Box</strong>: Handset, USB-C Charge Cable (1m), Documentation</p><p><strong>Model Number</strong>: A3106</p><p><strong>Model Name</strong>: iPhone 17 Pro Max</p><p><strong>Color</strong>: Cosmic Orange, Deep Blue, Silver, Space Black</p><p><strong>Type</strong>: Smartphones</p><p><strong>SIM Type</strong>: Dual eSIM (US); Nano SIM + eSIM (International)</p><p><strong>Hybrid Sim Slot</strong>: No</p><p><strong>Touchscreen</strong>: Yes (Ceramic Shield 2 with Anti-Reflective Coating)</p><p><strong>OTG Compatible</strong>: Yes</p><p><strong>Sound Enhancements</strong>: Spatial Audio playback, Built-in Stereo Speakers</p><p></p><h5><strong><span style=\"color:rgb(33, 33, 33);\">OS & Processor Features</span></strong></h5><p></p><p><strong>Operating System</strong>: iOS 19</p><p><strong>Processor Brand</strong>: Apple</p><p><strong>Processor Type</strong>: A19 Pro Chip, 6-Core CPU (2 performance and 4 efficiency cores)</p><p><strong>Processor Core</strong>: Hexa Core with 16-Core Neural Engine and 6-Core GPU</p><p><strong>Operating Frequency:</strong> 5G NR (Bands n1, n2, n3, n5, n7, n8, n12, n14, n20, n25, n26, n28, n29, n30, n38, n40, n41, n48, n53, n66, n70, n71, n75, n76, n77, n78, n79), 4G FDD-LTE, 4G TD-LTE, 3G UMTS/HSPA+, 2G GSM/EDGE</p>",
+      "type": "classified",
+      "unit": "1 Item",
+      "weight": 221,
+      "quantity": 2,
+      "price": 799,
+      "sale_price": 759.05,
+      "discount": 5,
+      "is_featured": 0,
+      "shipping_days": null,
+      "is_cod": 0,
+      "is_free_shipping": 0,
+      "is_sale_enable": 0,
+      "is_return": 1,
+      "is_trending": 0,
+      "is_approved": 1,
+      "is_external": 0,
+      "external_url": null,
+      "external_button_text": null,
+      "sale_starts_at": null,
+      "sale_expired_at": null,
+      "sku": "ABA1093P",
+      "is_random_related_products": 0,
+      "stock_status": "in_stock",
+      "meta_title": "Apple iPhone 16 Pro Max",
+      "meta_description": "Apple iPhone 16 Pro Max",
+      "product_thumbnail_id": 1316,
+      "product_meta_image_id": "1316",
+      "size_chart_image_id": null,
+      "estimated_delivery_text": "Your order is likely to reach you within 5 to 10 days.",
+      "return_policy_text": null,
+      "safe_checkout": 1,
+      "secure_checkout": 1,
+      "social_share": 1,
+      "encourage_order": 1,
+      "encourage_view": 1,
+      "slug": "iphone-16-pro-max",
+      "status": 1,
+      "store_id": 6,
+      "created_by_id": "1",
+      "tax_id": 1,
+      "preview_type": "url",
+      "product_type": "physical",
+      "separator": null,
+      "is_licensable": 0,
+      "license_type": null,
+      "preview_url": null,
+      "watermark": 0,
+      "watermark_position": "center",
+      "brand_id": null,
+      "watermark_image_id": null,
+      "wholesale_price_type": null,
+      "is_licensekey_auto": 0,
+      "preview_audio_file_id": null,
+      "preview_video_file_id": null,
+      "deleted_at": null,
+      "created_at": "2024-05-16T04:04:25.000000Z",
+      "updated_at": "2024-05-16T04:54:10.000000Z",
+      "orders_count": 0,
+      "reviews_count": 0,
+      "can_review": false,
+      "order_amount": 0,
+      "is_wishlist": false,
+      "rating_count": null,
+      "review_ratings": [0, 0, 0, 0, 0],
+      "related_products": [],
+      "cross_sell_products": [],
+      "wholesales": [],
+      "variations": [
+        {
+          "id": 77,
+          "name": "IPhone 16 Pro Max (256 GB / Desert Titanium)",
+          "price": 799,
+          "quantity": 20,
+          "stock_status": "in_stock",
+          "sale_price": 759.05,
+          "discount": 5,
+          "sku": "ABA1077P",
+          "status": 1,
+          "variation_options": null,
+          "preview_url": null,
+          "separator": null,
+          "is_digital": null,
+          "is_licensable": 0,
+          "is_licensekey_auto": 0,
+          "variation_image_id": 1316,
+          "product_id": 206,
+          "deleted_at": null,
+          "created_at": "2024-05-16T04:40:43.000000Z",
+          "updated_at": "2024-05-16T04:54:10.000000Z",
+          "variation_image": {
+            "id": 1316,
+            "name": "iphone_111",
+            "file_name": "iphone_111.png",
+            "mime_type": "image/png",
+            "disk": "public",
+            "created_by_id": "1",
+            "created_at": "2024-05-16T04:02:20.000000Z",
+            "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+          },
+          "variation_galleries": [
+            {
+              "id": 1318,
+              "name": "iphone_113",
+              "file_name": "iphone_113.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg"
+            },
+            {
+              "id": 1317,
+              "name": "iphone_112",
+              "file_name": "iphone_112.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg"
+            },
+            {
+              "id": 1316,
+              "name": "iphone_111",
+              "file_name": "iphone_111.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+            }
+          ],
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "256 GB",
+              "hex_color": null,
+              "slug": "256-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "77",
+                "attribute_value_id": "67"
+              }
+            },
+            {
+              "id": 36,
+              "value": "DesertTitanium",
+              "hex_color": "#BFA48F",
+              "slug": "desert-titanium",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "77",
+                "attribute_value_id": "36"
+              }
+            }
+          ]
+        },
+        {
+          "id": 78,
+          "name": "IPhone 17 Pro Max (256 GB / Blue)",
+          "price": 799,
+          "quantity": 20,
+          "stock_status": "in_stock",
+          "sale_price": 759.05,
+          "discount": 5,
+          "sku": "ABA1077P",
+          "status": 1,
+          "variation_options": null,
+          "preview_url": null,
+          "separator": null,
+          "is_digital": null,
+          "is_licensable": 0,
+          "is_licensekey_auto": 0,
+          "variation_image_id": 1316,
+          "product_id": 206,
+          "deleted_at": null,
+          "created_at": "2024-05-16T04:40:43.000000Z",
+          "updated_at": "2024-05-16T04:54:10.000000Z",
+          "variation_image": {
+            "id": 1316,
+            "name": "iphone_111",
+            "file_name": "iphone_111.png",
+            "mime_type": "image/png",
+            "disk": "public",
+            "created_by_id": "1",
+            "created_at": "2024-05-16T04:02:20.000000Z",
+            "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
+          },
+          "variation_galleries": [
+            {
+              "id": 1318,
+              "name": "iphone_113",
+              "file_name": "iphone_113.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg"
+            },
+            {
+              "id": 1317,
+              "name": "iphone_112",
+              "file_name": "iphone_112.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg"
+            },
+            {
+              "id": 1316,
+              "name": "iphone_111",
+              "file_name": "iphone_111.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg",
+            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
+            }
+          ],
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "256 GB",
+              "hex_color": null,
+              "slug": "256-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "78",
+                "attribute_value_id": "67"
+              }
+            },
+            {
+              "id": 71,
+              "value": "Blue",
+              "hex_color": "#515461",
+              "slug": "blue",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "78",
+                "attribute_value_id": "71"
+              }
+            }
+          ]
+        }
+      ],
+      "product_thumbnail": {
+        "id": 1325,
+        "name": "iphone-17-pro-max-orange-1",
+        "disk": "public",
+        "file_name": "iphone-17-pro-max-orange-1.jpg",
+        "mime_type": "image/jpg",
+        "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+        "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+      },
+      "product_galleries": [
+        {
+           "id": 1323,
+              "name": "iphone-14-pro-max-black",
+              "file_name": "iphone-14-pro-max-black.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
+            
+        },
+        {
+          "id": 1324,
+              "name": "iphone-14-pro-max-black-2",
+              "file_name": "iphone-14-pro-max-black-2.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+            },
+        {
+             "id": 1325,
+        "name": "iphone-17-pro-max-orange-1",
+        "disk": "public",
+        "file_name": "iphone-17-pro-max-orange-1.jpg",
+        "mime_type": "image/jpg",
+        "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+        "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+       }
+      ],
+      "attributes": [
+        {
+          "id": 11,
+          "name": "Color",
+          "style": "color",
+          "slug": "color",
+          "status": 1,
+          "created_by_id": "1",
+          "created_at": "2024-05-04T05:43:59.000000Z",
+          "updated_at": "2024-05-04T05:43:59.000000Z",
+          "deleted_at": null,
+          "pivot": {
+            "product_id": "206",
+            "attribute_id": "11"
+          },
+          "attribute_values": [
+            {
+              "id": 36,
+              "value": "DesertTitanium",
+              "hex_color": "#BFA48F",
+              "slug": "desert-titanium",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-04T05:43:59.000000Z",
+              "updated_at": "2024-05-04T05:45:06.000000Z",
+              "deleted_at": null
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "GB",
+          "style": "rectangle",
+          "slug": "gb",
+          "status": 1,
+          "created_by_id": "1",
+          "created_at": "2024-05-16T04:06:30.000000Z",
+          "updated_at": "2024-05-16T04:06:30.000000Z",
+          "deleted_at": null,
+          "pivot": {
+            "product_id": "206",
+            "attribute_id": "16"
+          },
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "256 GB",
+              "hex_color": null,
+              "slug": "256-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "id": 51,
+          "name": "IPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": null,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": 3,
+          "parent_id": 25,
+          "created_by_id": "1",
+          "created_at": "2024-05-10T06:30:35.000000Z",
+          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 6,
+          "pivot": {
+            "product_id": "203",
+            "category_id": "51"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": null
+        }
+      ],
+      "tags": [],
+      "brand": {
+        "id": 6,
+        "name": "Apple",
+        "slug": "apple",
+        "status": 1,
+        "brand_image": null,
+        "brand_meta_image": null,
+        "brand_banner": null
+      },
+      "store": {},
+      "reviews": [],
+      "similar_products": [],
+      "cross_products": []
+    },
     {
       "id": 207,
       "name": "IPhone 14 Pro Max",
@@ -1995,8 +2863,8 @@
       "stock_status": "in_stock",
       "meta_title": "Apple iPhone 14 Pro Max",
       "meta_description": "Apple iPhone 14 Pro Max",
-      "product_thumbnail_id": 1316,
-      "product_meta_image_id": "1316",
+      "product_thumbnail_id": 1325,
+      "product_meta_image_id": "1325",
       "size_chart_image_id": null,
       "estimated_delivery_text": "Your order is likely to reach you within 5 to 10 days.",
       "return_policy_text": null,
@@ -2040,7 +2908,7 @@
       "variations": [
         {
           "id": 77,
-          "name": "Apple iPhone 14 Pro Max (128 GB / Blue)",
+          "name": "IPhone 14 Pro Max (128 GB / Blue)",
           "price": 799,
           "quantity": 20,
           "stock_status": "in_stock",
@@ -2054,55 +2922,55 @@
           "is_digital": null,
           "is_licensable": 0,
           "is_licensekey_auto": 0,
-          "variation_image_id": 1316,
+          "variation_image_id": 1325,
           "product_id": 207,
           "deleted_at": null,
           "created_at": "2024-05-16T04:40:43.000000Z",
           "updated_at": "2024-05-16T04:54:10.000000Z",
           "variation_image": {
-            "id": 1316,
-            "name": "iphone_111",
-            "file_name": "iphone_111.png",
+            "id": 1325,
+            "name": "iphone-14-pro-max-black-1",
+            "file_name": "iphone-14-pro-max-black-1.png",
             "mime_type": "image/png",
             "disk": "public",
             "created_by_id": "1",
-            "created_at": "2024-05-16T04:02:20.000000Z",
-            "asset_url": "/storage/1316/iphone_111.png",
-            "original_url": "/assets/images/placeholder/product.png"
+            "created_at": "2024-05-16T04:02:42.000000Z",
+            "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+            "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
           },
           "variation_galleries": [
+            
             {
-              "id": 1318,
-              "name": "iphone_113",
-              "file_name": "iphone_113.png",
+              "id": 1323,
+              "name": "iphone-14-pro-max-black",
+              "file_name": "iphone-14-pro-max-black.png",
               "mime_type": "image/png",
               "disk": "public",
               "created_by_id": "1",
-              "created_at": "2024-05-16T04:02:20.000000Z",
-              "asset_url": "/storage/1318/iphone_113.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "created_at": "2024-05-16T04:02:42.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
             },
             {
-              "id": 1317,
-              "name": "iphone_112",
-              "file_name": "iphone_112.png",
+              "id": 1324,
+              "name": "iphone-14-pro-max-black-2",
+              "file_name": "iphone-14-pro-max-black-2.png",
               "mime_type": "image/png",
               "disk": "public",
               "created_by_id": "1",
-              "created_at": "2024-05-16T04:02:20.000000Z",
-              "asset_url": "/storage/1317/iphone_112.png",
-              "original_url": "/assets/images/placeholder/product.png"
-            },
-            {
-              "id": 1316,
-              "name": "iphone_111",
-              "file_name": "iphone_111.png",
+              "created_at": "2024-05-16T04:02:42.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+            },{
+              "id": 1325,
+              "name": "iphone-14-pro-max-black-1",
+              "file_name": "iphone-14-pro-max-black-1.png",
               "mime_type": "image/png",
               "disk": "public",
               "created_by_id": "1",
-              "created_at": "2024-05-16T04:02:20.000000Z",
-              "asset_url": "/storage/1316/iphone_111.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "created_at": "2024-05-16T04:02:42.000000Z",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
             }
           ],
           "attribute_values": [
@@ -2162,13 +3030,13 @@
           "variation_image": {
             "id": 1323,
             "name": "Iphone_131",
-            "file_name": "Iphone_131.png",
+            "file_name": "iphone-14-pro-max-black-1.png",
             "mime_type": "image/png",
             "disk": "public",
             "created_by_id": "1",
             "created_at": "2024-05-16T04:02:42.000000Z",
-            "asset_url": "/storage/1323/Iphone_131.png",
-            "original_url": "/assets/images/placeholder/product.png"
+            "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+            "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
           },
           "variation_galleries": [
             {
@@ -2180,7 +3048,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:42.000000Z",
               "asset_url": "/storage/1325/Iphone_133.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
             },
             {
               "id": 1324,
@@ -2191,7 +3059,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:42.000000Z",
               "asset_url": "/storage/1324/Iphone_132.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
             },
             {
               "id": 1323,
@@ -2202,7 +3070,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:42.000000Z",
               "asset_url": "/storage/1323/Iphone_131.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
             }
           ],
           "attribute_values": [
@@ -2222,10 +3090,10 @@
               }
             },
             {
-              "id": 71,
-              "value": "Black",
-              "hex_color": "#4e4d4b",
-              "slug": "black-3",
+              "id": 36,
+              "value": "Red",
+              "hex_color": "#f00000",
+              "slug": "red",
               "attribute_id": "11",
               "created_by_id": "1",
               "created_at": "2024-05-16T04:20:12.000000Z",
@@ -2233,7 +3101,7 @@
               "deleted_at": null,
               "pivot": {
                 "variation_id": "78",
-                "attribute_value_id": "71"
+                "attribute_value_id": "36"
               }
             }
           ]
@@ -2761,48 +3629,48 @@
           "updated_at": "2024-05-16T04:54:10.000000Z",
           "variation_image": {
             "id": 1323,
-            "name": "Iphone_131",
-            "file_name": "Iphone_131.png",
+            "name": "iphone-14-pro-max-black-1",
+            "file_name": "iphone-14-pro-max-black-1.png",
             "mime_type": "image/png",
             "disk": "public",
             "created_by_id": "1",
             "created_at": "2024-05-16T04:02:42.000000Z",
-            "asset_url": "/storage/1323/Iphone_131.png",
-            "original_url": "/assets/images/placeholder/product.png"
+            "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+            "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
           },
           "variation_galleries": [
             {
               "id": 1325,
-              "name": "Iphone_133",
-              "file_name": "Iphone_133.png",
+              "name": "iphone-14-pro-max-black-1",
+              "file_name": "iphone-14-pro-max-black-1.png",
               "mime_type": "image/png",
               "disk": "public",
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:42.000000Z",
-              "asset_url": "/storage/1325/Iphone_133.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
             },
             {
               "id": 1324,
-              "name": "Iphone_132",
-              "file_name": "Iphone_132.png",
+              "name": "iphone-14-pro-max-black-2",
+              "file_name": "iphone-14-pro-max-black-2.png",
               "mime_type": "image/png",
               "disk": "public",
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:42.000000Z",
-              "asset_url": "/storage/1324/Iphone_132.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
             },
             {
               "id": 1323,
-              "name": "Iphone_131",
-              "file_name": "Iphone_131.png",
+              "name": "iphone-14-pro-max-black",
+              "file_name": "iphone-14-pro-max-black.png",
               "mime_type": "image/png",
               "disk": "public",
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:42.000000Z",
-              "asset_url": "/storage/1323/Iphone_131.png",
-              "original_url": "/assets/images/placeholder/product.png"
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
             }
           ],
           "attribute_values": [
@@ -2838,6 +3706,7 @@
             }
           ]
         },
+
         {
           "id": 85,
           "name": "Apple iPhone 14 Pro Max (512 GB / Natural)",
@@ -2940,42 +3809,43 @@
         }
       ],
       "product_thumbnail": {
-        "id": 1316,
-        "name": "iphone_111",
+        "id": 1325,
+        "name": "iphone-14-pro-max-black-1",
         "disk": "public",
-        "file_name": "iphone_111.png",
+        "file_name": "iphone-14-pro-max-black-1.png",
         "mime_type": "image/png",
-        "asset_url": "/storage/1316/iphone_111.png",
-        "original_url": "/assets/images/placeholder/product.png"
+        "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+        "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
       },
       "product_galleries": [
         {
-          "id": 1318,
-          "name": "iphone_113",
-          "disk": "public",
-          "file_name": "iphone_113.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1318/iphone_113.png",
-          "original_url": "/assets/images/placeholder/product.png"
+           "id": 1323,
+              "name": "iphone-14-pro-max-black",
+              "file_name": "iphone-14-pro-max-black.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
+            
         },
         {
-          "id": 1317,
-          "name": "iphone_112",
-          "disk": "public",
-          "file_name": "iphone_112.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1317/iphone_112.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
+          "id": 1324,
+              "name": "iphone-14-pro-max-black-2",
+              "file_name": "iphone-14-pro-max-black-2.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+            },
         {
-          "id": 1316,
-          "name": "iphone_111",
-          "disk": "public",
-          "file_name": "iphone_111.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1316/iphone_111.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        }
+          "id": 1325,
+              "name": "iphone-14-pro-max-black-1",
+              "file_name": "iphone-14-pro-max-black-1.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
+            }
       ],
       "attributes": [
         {
@@ -2993,17 +3863,6 @@
             "attribute_id": "11"
           },
           "attribute_values": [
-            {
-              "id": 36,
-              "value": "Red",
-              "hex_color": "#f00000",
-              "slug": "red",
-              "attribute_id": "11",
-              "created_by_id": "1",
-              "created_at": "2024-05-04T05:43:59.000000Z",
-              "updated_at": "2024-05-04T05:45:06.000000Z",
-              "deleted_at": null
-            },
             {
               "id": 37,
               "value": "Black",
@@ -3222,7 +4081,357 @@
         "id": 6,
         "store_name": "Powerhouse Electronics",
         "slug": "powerhouse-electronics",
-        "product_images": ["/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png", "/assets/images/placeholder/product.png"],
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
+        "order_amount": 2177,
+        "rating_count": 0,
+        "store_logo": null,
+        "store_cover": null,
+        "vendor": null,
+        "country": null,
+        "state": null,
+        "reviews": []
+      },
+      "reviews": [],
+      "similar_products": [],
+      "cross_products": []
+    },
+
+    {
+      "id": 208,
+      "name": "IPhone 14",
+      "short_description": "Dynamic Island, Always-On Display, Pro Motion Technology with Adaptive Refresh Rates Upto 120 Hz, HDR Display, True Tone, Wide Colour (P3), Haptic Touch, Contrast Ratio: 20,00,000:1, Max Brightness: 1,000 nits, Peak Brightness: 1,600 nits, Peak Brightness (Outdoor): 2,000 nits",
+      "description": "<h5><strong><span style=\"color:rgb(33, 33, 33);\"><span style=\"background-color:rgb(255, 255, 255);\">Specifications</span></span></strong></h5><p></p><h5><strong><span style=\"color:rgb(33, 33, 33);\"><span style=\"background-color:rgb(255, 255, 255);\">General</span></span></strong></h5><p></p><p><strong>In The Box</strong>: <span style=\"color:rgb(33, 33, 33);\"><span style=\"background-color:rgb(255, 255, 255);\">Handset, USB-C to Lightning Cable, Documentation</span></span></p><p><strong>Model Number</strong>: <span style=\"color:rgb(33, 33, 33);\"><span style=\"background-color:rgb(255, 255, 255);\">MQ9T3HN/A</span></span></p><p><strong>In</strong> <strong>The Box</strong>: Handset, USB-C to Lightning Cable, Documentation</p><p><strong>Model Number</strong>: MQ9T3HN/A</p><p><strong>Model Name</strong>: iPhone 14 Pro Max</p><p><strong>Color</strong>: Deep Purple, Browse</p><p><strong>Type</strong>: Smartphones</p><p><strong>SIM Type</strong>: Dual Sim(Nano + eSIM)</p><p><strong>Hybrid Sim Slot</strong>: No</p><p><strong>Touchscreen</strong>: Yes</p><p><strong>OTG Compatible</strong>: No</p><p><strong>Sound Enhancements</strong>: Built-in Stereo Speaker</p><p></p><h5><strong><span style=\"color:rgb(33, 33, 33);\"><span style=\"background-color:rgb(255, 255, 255);\">Os &amp; Processor Features</span></span></strong></h5><p></p><p><strong>Operating System</strong>: iOS 16</p><p><strong>Processor Brand</strong>: Apple</p><p><strong>Processor Type</strong>: A16 Bionic Chip, 6 Core Processor</p><p><strong>Processor Core</strong>: Hexa Core</p><p><strong>Operating Frequency:</strong> 5G NR (Bands n1, n2, n3, n5, n7, n8, n12, n20, n25, n26, n28, n30, n38, n40, n41, n48, n53, n66, n70, n77, n78, n79) ), 4G FDD-LTE (B1, B2, B3, B4, B5, B7, B8, B12, B13, B17, B18, B19, B20, B25, B26, B28, B30, B32, B66), 4G TD-LTE (B34, B38, B39, B40, B41, B42, B46, B48, B53), 3G UMTS/HSPA+/DC-HSDPA (850, 900, 1700/2100, 1900, 2100 MHz),2G GSM/EDGE (850, 900, 1800, 1900 MHz)</p>",
+      "type": "classified",
+      "unit": "1 Item",
+      "weight": 221,
+      "quantity": 2,
+      "price": 799,
+      "sale_price": 759.05,
+      "discount": 5,
+      "is_featured": 0,
+      "shipping_days": null,
+      "is_cod": 0,
+      "is_free_shipping": 0,
+      "is_sale_enable": 0,
+      "is_return": 1,
+      "is_trending": 0,
+      "is_approved": 1,
+      "is_external": 0,
+      "external_url": null,
+      "external_button_text": null,
+      "sale_starts_at": null,
+      "sale_expired_at": null,
+      "sku": "IPHONE14",
+      "is_random_related_products": 0,
+      "stock_status": "in_stock",
+      "meta_title": "Apple iPhone 14",
+      "meta_description": "Apple iPhone 14",
+      "product_thumbnail_id": 1316,
+      "product_meta_image_id": "1316",
+      "size_chart_image_id": null,
+      "estimated_delivery_text": "Your order is likely to reach you within 5 to 10 days.",
+      "return_policy_text": null,
+      "safe_checkout": 1,
+      "secure_checkout": 1,
+      "social_share": 1,
+      "encourage_order": 1,
+      "encourage_view": 1,
+      "slug": "iphone-14",
+      "status": 1,
+      "store_id": 6,
+      "created_by_id": "1",
+      "tax_id": 1,
+      "preview_type": "url",
+      "product_type": "physical",
+      "separator": null,
+      "is_licensable": 0,
+      "license_type": null,
+      "preview_url": null,
+      "watermark": 0,
+      "watermark_position": "center",
+      "brand_id": null,
+      "watermark_image_id": null,
+      "wholesale_price_type": null,
+      "is_licensekey_auto": 0,
+      "preview_audio_file_id": null,
+      "preview_video_file_id": null,
+      "deleted_at": null,
+      "created_at": "2024-05-16T04:04:25.000000Z",
+      "updated_at": "2024-05-16T04:54:10.000000Z",
+      "orders_count": 0,
+      "reviews_count": 0,
+      "can_review": false,
+      "order_amount": 0,
+      "is_wishlist": false,
+      "rating_count": null,
+      "review_ratings": [0, 0, 0, 0, 0],
+      "related_products": [],
+      "cross_sell_products": [],
+      "wholesales": [],
+      "variations": [
+        {
+          "id": 77,
+          "name": "Apple iPhone 14 (128 GB / Midnight)",
+          "price": 799,
+          "quantity": 20,
+          "stock_status": "in_stock",
+          "sale_price": 759.05,
+          "discount": 5,
+          "sku": "ABA820P",
+          "status": 1,
+          "variation_options": null,
+          "preview_url": null,
+          "separator": null,
+          "is_digital": null,
+          "is_licensable": 0,
+          "is_licensekey_auto": 0,
+          "variation_image_id": 1316,
+          "product_id": 208,
+          "deleted_at": null,
+          "created_at": "2024-05-16T04:40:43.000000Z",
+          "updated_at": "2024-05-16T04:54:10.000000Z",
+          "variation_image": {
+            "id": 1316,
+            "name": "iphone_111",
+            "file_name": "iphone_111.png",
+            "mime_type": "image/png",
+            "disk": "public",
+            "created_by_id": "1",
+            "created_at": "2024-05-16T04:02:20.000000Z",
+            "asset_url": "/storage/1316/iphone_111.png",
+            "original_url": "/assets/images/placeholder/product.png"
+          },
+          "variation_galleries": [
+            {
+              "id": 1318,
+              "name": "iphone_113",
+              "file_name": "iphone_113.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/storage/1318/iphone_113.png",
+              "original_url": "/assets/images/placeholder/product.png"
+            },
+            {
+              "id": 1317,
+              "name": "iphone_112",
+              "file_name": "iphone_112.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/storage/1317/iphone_112.png",
+              "original_url": "/assets/images/placeholder/product.png"
+            },
+            {
+              "id": 1316,
+              "name": "iphone_111",
+              "file_name": "iphone_111.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:02:20.000000Z",
+              "asset_url": "/storage/1316/iphone_111.png",
+              "original_url": "/assets/images/placeholder/product.png"
+            }
+          ],
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "128 GB",
+              "hex_color": null,
+              "slug": "128-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "77",
+                "attribute_value_id": "67"
+              }
+            },
+            {
+              "id": 71,
+              "value": "Midnight",
+              "hex_color": "#343b43",
+              "slug": "midnight",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null,
+              "pivot": {
+                "variation_id": "77",
+                "attribute_value_id": "71"
+              }
+            }
+          ]
+        }
+      ],
+      "product_thumbnail": {
+        "id": 1325,
+        "name": "iphone-14-black-1",
+        "disk": "public",
+        "file_name": "iphone-14-black-1.jpg",
+        "mime_type": "image/jpg",
+        "asset_url": "/assets/images/product/iphone/iphone-14-black-1.jpg",
+        "original_url": "/assets/images/product/iphone/iphone-14-black-1.jpg"
+      },
+      "product_galleries": [
+        {
+           "id": 1323,
+              "name": "iphone-14-pro-max-black",
+              "file_name": "iphone-14-pro-max-black.png",
+              "mime_type": "image/jpg",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
+            
+        },
+        {
+          "id": 1324,
+              "name": "iphone-14-pro-max-black-2",
+              "file_name": "iphone-14-pro-max-black-2.png",
+              "mime_type": "image/png",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+            },
+        {
+          "id": 1325,
+              "name": "iphone-14-black-1",
+              "file_name": "iphone-14-black-1.jpg",
+              "mime_type": "image/jpg",
+              "disk": "public",
+              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.jpg",
+              "original_url": "/assets/images/product/iphone/iphone-14-black-1.jpg"
+            }
+      ],
+      "attributes": [
+        {
+          "id": 11,
+          "name": "Color",
+          "style": "color",
+          "slug": "color",
+          "status": 1,
+          "created_by_id": "1",
+          "created_at": "2024-05-04T05:43:59.000000Z",
+          "updated_at": "2024-05-04T05:43:59.000000Z",
+          "deleted_at": null,
+          "pivot": {
+            "product_id": "208",
+            "attribute_id": "11"
+          },
+          "attribute_values": [
+            {
+              "id": 36,
+              "value": "Red",
+              "hex_color": "#f00000",
+              "slug": "red",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-04T05:43:59.000000Z",
+              "updated_at": "2024-05-04T05:45:06.000000Z",
+              "deleted_at": null
+            },
+
+            {
+              "id": 71,
+              "value": "Midnight",
+              "hex_color": "#343b43",
+              "slug": "midnight",
+              "attribute_id": "11",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:20:12.000000Z",
+              "updated_at": "2024-05-16T04:20:12.000000Z",
+              "deleted_at": null
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "GB",
+          "style": "rectangle",
+          "slug": "gb",
+          "status": 1,
+          "created_by_id": "1",
+          "created_at": "2024-05-16T04:06:30.000000Z",
+          "updated_at": "2024-05-16T04:06:30.000000Z",
+          "deleted_at": null,
+          "pivot": {
+            "product_id": "208",
+            "attribute_id": "16"
+          },
+          "attribute_values": [
+            {
+              "id": 67,
+              "value": "128 GB",
+              "hex_color": null,
+              "slug": "128-gb",
+              "attribute_id": "16",
+              "created_by_id": "1",
+              "created_at": "2024-05-16T04:06:30.000000Z",
+              "updated_at": "2024-05-16T04:06:30.000000Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "id": 51,
+          "name": "IPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": null,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": 3,
+          "parent_id": 25,
+          "created_by_id": "1",
+          "created_at": "2024-05-10T06:30:35.000000Z",
+          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 6,
+          "pivot": {
+            "product_id": "207",
+            "category_id": "51"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": null
+        }
+      ],
+      "tags": [],
+      "brand": {
+        "id": 6,
+        "name": "Apple",
+        "slug": "apple",
+        "status": 1,
+        "brand_image": null,
+        "brand_meta_image": null,
+        "brand_banner": null
+      },
+      "store": {
+        "id": 6,
+        "store_name": "Mobile Park BD",
+        "slug": "mobile-park-bd",
+        "product_images": [
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png",
+          "/assets/images/placeholder/product.png"
+        ],
         "order_amount": 2177,
         "rating_count": 0,
         "store_logo": null,
@@ -3236,10 +4445,7 @@
       "similar_products": [],
       "cross_products": []
     }
- 
     
- 
-   
   ],
   "first_page_url": "",
   "from": 1,

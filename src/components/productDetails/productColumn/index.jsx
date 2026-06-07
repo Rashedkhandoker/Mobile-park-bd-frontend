@@ -24,18 +24,18 @@ const ProductColumn = ({ productState, setProductState, direction }) => {
           </Col>
           <Col xl="4" lg="7">
             <div className="product-right product-description-box product-page-details">
-              <CustomerOrderCount productState={productState} />
+              {/* <CustomerOrderCount productState={productState} /> */}
               <ProductContent productState={productState} setProductState={setProductState} noQuantityButtons={true} productAccordion={true} />
               <ProductInformation productState={productState} />
-              <ProductDeliveryInformation productState={productState} />
-              <PaymentOptions productState={productState} />
+              {/* <ProductDeliveryInformation productState={productState} /> */}
+              {/* <PaymentOptions productState={productState} /> */}
             </div>
           </Col>
           <Col xl="4" lg="5">
             <div className="product-right product-form-box product-page-details">
               <ProductContent productState={productState} setProductState={setProductState} noDetails={true} noModals={true} />
               <ProductStatus productState={productState} />
-              <WishlistCompareShare productState={productState} />
+              {/* <WishlistCompareShare productState={productState} /> */}
               {productState?.product.status && productState?.product?.sale_starts_at && productState?.product?.sale_expired_at && <OfferTimer productState={productState} />}
               {productState?.product?.cross_sell_products?.length > 0 && <ProductBundle productState={productState} setProductState={setProductState} />}
             </div>

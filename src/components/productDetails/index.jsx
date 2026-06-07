@@ -30,6 +30,7 @@ const ProductDetailContent = ({ params }) => {
   const isProductLayout = useMemo(() => {
     return queryProductLayout ? queryProductLayout : themeOption?.product?.product_layout ?? "product_thumbnail";
   }, [queryProductLayout, themeOption]);
+  console.log(isProductLayout);
 
   const [productState, setProductState] = useState({ product: [], attributeValues: [], productQty: 1, selectedVariation: "", variantIds: [], statusIds: [] });
 
@@ -91,7 +92,7 @@ const ProductDetailContent = ({ params }) => {
     <>
       {/* {<Breadcrumbs title={params} subNavigation={[{ name: "Product" }, { name: params }]} />} */}
       {showProductLayout[isProductLayout]}
-      {ProductData && <StickyCheckout ProductData={ProductData} isLoading={isLoading} />}
+      {/* {ProductData && <StickyCheckout ProductData={ProductData} isLoading={isLoading} />} */}
     </>
   );
 };
