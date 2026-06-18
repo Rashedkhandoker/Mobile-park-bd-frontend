@@ -94,6 +94,8 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
   setPage(1); 
   }, [refetch, filter]);
 
+  console.log(data, filter)
+
   return (
     <>
       {(!infiniteScroll && fetchStatus != "idle") || isLoading ? (

@@ -57,6 +57,24 @@ const ProductBox6 = ({ productState }) => {
               </>
             )}
           </h4>
+          <h4 className="price">
+            {productState?.selectedVariation ? convertCurrency(productState?.selectedVariation?.sale_price) : convertCurrency(productState?.product?.sale_price)}{" "}
+            {productState?.selectedVariation ? (
+              <>
+                {productState?.selectedVariation?.price != productState?.selectedVariation?.sale_price || productState?.product?.price != productState?.product?.sale_price ? <del>{convertCurrency(productState?.selectedVariation?.price)}</del> : ""}
+                <span className="discounted-price">
+                  {productState?.selectedVariation?.discount} % {t("Off")}
+                </span>
+              </>
+            ) : (
+              <>
+                {productState?.selectedVariation?.price != productState?.selectedVariation?.sale_price || productState?.product?.price != productState?.product?.sale_price && <del>{convertCurrency(productState?.product?.price)}</del> }
+                <span className="discounted-price">
+                  {productState?.product?.discount} % {t("Off")}
+                </span>
+              </>
+            )}
+          </h4>
         </div>
       </div>
     </>

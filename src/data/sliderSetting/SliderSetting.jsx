@@ -139,7 +139,7 @@ export const surfboardCategorySlider = (length) => {
 export const categorySlider = (length) => {
   return {
     loop: true,
-    slidesToShow: length > 5 ? 5 : length,
+    slidesToShow: length > 5 ? length : length,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
@@ -175,7 +175,7 @@ export const categorySlider = (length) => {
 export const bookSlider = (length) => {
   return {
     loop: true,
-    slidesToShow: length > 5 ? 5 : length,
+    slidesToShow: length > 5 ? length : length,
     slidesToScroll: 1,
     arrows: false,
     responsive: [

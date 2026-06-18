@@ -201,7 +201,7 @@ const SubLayout = ({ children }) => {
       if (!isTabActive && themeOption?.general?.exit_tagline_enable) {
         updateTitle(0);
       } else {
-        let value = themeOption?.general?.site_title && themeOption?.general?.site_tagline ? `${themeOption?.general?.site_title} | ${themeOption?.general?.site_tagline}` : "Multikart Marketplace: Where Vendors Shine Together";
+        let value = themeOption?.general?.site_title && themeOption?.general?.site_tagline ? `${themeOption?.general?.site_title} | ${themeOption?.general?.site_tagline}` : "Mobile Park BD";
         document.title = value;
         clearTimeout(timer);
       }
@@ -219,7 +219,7 @@ const SubLayout = ({ children }) => {
       {children}
       <AuthModal />
       {theme != "full_page" && <Footers />}
-      <ThemeCustomizer />
+      {/* <ThemeCustomizer /> */}
       <NextTopLoader showSpinner={false} />
       <RecentPurchase />
       {themeOption?.popup?.news_letter?.is_enable && <NewsLetterModal setMakeExitActive={setMakeExitActive} />}
