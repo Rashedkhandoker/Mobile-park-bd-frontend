@@ -19,7 +19,7 @@ const BillingSummary = ({ data, values, setFieldValue, isLoading, mutate, storeC
         <div className="order-box">
           <div className="title-box">
             <h4>{t("BillingSummary")}</h4>
-            <ApplyCoupon values={values} setFieldValue={setFieldValue} data={data} storeCoupon={storeCoupon} setStoreCoupon={setStoreCoupon} errorCoupon={errorCoupon} appliedCoupon={appliedCoupon} setAppliedCoupon={setAppliedCoupon} mutate={mutate} isLoading={isLoading} />
+            {/* <ApplyCoupon values={values} setFieldValue={setFieldValue} data={data} storeCoupon={storeCoupon} setStoreCoupon={setStoreCoupon} errorCoupon={errorCoupon} appliedCoupon={appliedCoupon} setAppliedCoupon={setAppliedCoupon} mutate={mutate} isLoading={isLoading} /> */}
           </div>
           <div>
             <div className="custom-box-loader">
@@ -37,12 +37,12 @@ const BillingSummary = ({ data, values, setFieldValue, isLoading, mutate, storeC
                   {t("Shipping")}
                   <span className="count">{convertCurrency("0")}</span>
                 </li>
-                <li>
+                {/* <li>
                   {t("Tax")}
                   <span className="count">{convertCurrency("1.99")}</span>
-                </li>
+                </li> */}
 
-                <PointWallet values={values} setFieldValue={setFieldValue} data={data} />
+                {/* <PointWallet values={values} setFieldValue={setFieldValue} data={data} /> */}
               </ul>
               <ul className="total">
                 {appliedCoupon == "applied" && data?.data?.total?.coupon_total_discount ? (
