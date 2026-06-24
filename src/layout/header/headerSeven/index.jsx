@@ -1,15 +1,12 @@
-import CurrencyContext from "@/context/currencyContext";
-import SettingContext from "@/context/settingContext";
 import ThemeOptionContext from "@/context/themeOptionsContext";
 import { Href } from "@/utils/constants";
 import { useHeaderScroll } from "@/utils/hooks/HeaderScroll";
-import i18next from "i18next";
 import Cookies from "js-cookie";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { RiEqualizer2Line, RiMenuLine, RiUserLine } from "react-icons/ri";
+import { RiMenuLine, RiUserLine } from "react-icons/ri";
 import { Button, Col, Container, Row } from "reactstrap";
 import HeaderCart from "../widgets/headerCart";
 import HeaderLogo from "../widgets/HeaderLogo";
@@ -22,45 +19,10 @@ const HeaderSeven = () => {
   const UpScroll = useHeaderScroll(false);
   const { t } = useTranslation("common");
   const router = useRouter();
-  const handleProfileClick = (path) => {
+  const handleProfileClick = () => {
     isAuthenticated ? router.push("/account/dashboard") : setOpenAuthModal(true);
   };
-  // For Updating Currency
-  const [activeCurr, setActiveCurr] = useState();
-  const { setSelectedCurrency } = useContext(SettingContext);
-  const { currencyState } = useContext(CurrencyContext);
 
-  useEffect(() => {
-    let getDefaultCurrency = JSON.parse(localStorage.getItem("selectedCurrency"));
-    setSelectedCurrency(getDefaultCurrency);
-  }, []);
-
-  const handleClick = (value) => {
-    setActiveCurr(value?.title);
-    setSelectedCurrency(value);
-    localStorage.setItem("selectedCurrency", JSON.stringify(value));
-  };
-
-  // For Updating Language
-  const { i18n } = useTranslation("common");
-  const currentLanguage = i18n.resolvedLanguage;
-  const [selectedLang, setSelectedLang] = useState({});
-
-  const language = [
-    { id: 1, title: "English", icon: "en", image: "us", isLang: "/en/" },
-    { id: 2, title: "Arabic", icon: "ar", image: "ar", isLang: "/ar/" },
-    { id: 3, title: "French", icon: "fr", image: "fr", isLang: "/fr/" },
-    { id: 4, title: "Spanish", icon: "es", image: "es", isLang: "/es/" },
-  ];
-  useEffect(() => {
-    const defaultLanguage = language.find((data) => data.icon == currentLanguage);
-    setSelectedLang(defaultLanguage);
-  }, []);
-  const handleChangeLang = (value) => {
-    setSelectedLang(value);
-    i18next.changeLanguage(value.icon);
-    router.refresh();
-  };
   return (
     <header className={`header-tools header-style ${themeOption?.header?.sticky_header_enable && UpScroll ? "sticky fixed" : ""}`}>
       <div className="logo-menu-part">
@@ -102,39 +64,12 @@ const HeaderSeven = () => {
                     <div className="icon-nav">
                       <ul>
                         <li className="onhover-div">
-                      <Link href={isAuthenticated ? "/account/dashboard" : Href} onClick={handleProfileClick}>
-                        <RiUserLine />
-                      </Link>
-                    </li>
-                        <li className="onhover-div">
-                          <HeaderSearchbar />
+                          <Link href={isAuthenticated ? "/account/dashboard" : Href} onClick={handleProfileClick}>
+                            <RiUserLine />
+                          </Link>
                         </li>
                         <li className="onhover-div">
-                          <RiEqualizer2Line />
-
-                          <div className="show-div setting">
-                            <h6>{t("Language")}</h6>
-                            <ul>
-                              {language.map((elem, i) => (
-                                <li key={i}>
-                                  <a onClick={() => handleChangeLang(elem)} key={i}>
-                                    {elem?.image && <div className={`iti-flag ${elem?.image}`} />}
-                                    {elem.title}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                            <h6>{t("Currency")}</h6>
-                            <ul className="list-inline">
-                              {currencyState?.map((elem, i) => (
-                                <li id={elem.title} key={i} className={activeCurr == elem.title ? "active" : ""} onClick={() => handleClick(elem)}>
-                                  <a href={Href}>
-                                    {elem?.symbol} {elem?.code}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                          <HeaderSearchbar />
                         </li>
                         <li className="onhover-div">
                           <HeaderCart />

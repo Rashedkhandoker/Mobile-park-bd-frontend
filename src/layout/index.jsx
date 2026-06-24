@@ -4,7 +4,6 @@ import BrandProvider from "@/context/brandContext/BrandProvider";
 import BrandIdsProvider from "@/context/brandIdsContext/BrandIdsProvider";
 import CartProvider from "@/context/cartContext/CartProvider";
 import CategoryProvider from "@/context/categoryContext/CategoryProvider";
-import CurrencyProvider from "@/context/currencyContext/CurrencyProvider";
 import ProductProvider from "@/context/productContext/ProductProvider";
 import ProductIdsProvider from "@/context/productIdsContext/ProductIdsProvider";
 import SettingProvider from "@/context/settingContext/SettingProvider";
@@ -24,19 +23,17 @@ const MainLayout = ({ children }) => {
             <CategoryProvider>
               <ThemeOptionProvider>
                 <BrandProvider>
-                  <CurrencyProvider>
-                    <ProductIdsProvider>
-                      <AccountProvider>
-                        <CartProvider>
-                          <BrandIdsProvider>
-                            <ProductProvider>
-                              <SubLayout children={children} />
-                            </ProductProvider>
-                          </BrandIdsProvider>
-                        </CartProvider>
-                      </AccountProvider>
-                    </ProductIdsProvider>
-                  </CurrencyProvider>
+                  <ProductIdsProvider>
+                    <AccountProvider>
+                      <CartProvider>
+                        <BrandIdsProvider>
+                          <ProductProvider>
+                            <SubLayout children={children} />
+                          </ProductProvider>
+                        </BrandIdsProvider>
+                      </CartProvider>
+                    </AccountProvider>
+                  </ProductIdsProvider>
                 </BrandProvider>
               </ThemeOptionProvider>
             </CategoryProvider>

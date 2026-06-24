@@ -6,10 +6,9 @@ import { Href } from "@/utils/constants";
 import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { RiQuestionnaireLine, RiRulerLine, RiTruckLine } from "react-icons/ri";
+import { RiRulerLine, RiTruckLine } from "react-icons/ri";
 import AddToCartButton from "./AddToCartButton";
 import DeliveryReturnModal from "./allModal/DeliveryReturnModal";
-import QuestionAnswerModal from "./allModal/QuestionAnswerModal";
 import SizeModal from "./allModal/SizeModal";
 import ProductAttribute from "./productAttribute/ProductAttribute";
 import ProductDetailAction from "./ProductDetailAction";
@@ -32,7 +31,6 @@ const ProductContent = ({ productState, setProductState, productAccordion, noDet
   const activeModal = {
     size: <SizeModal modal={modal} setModal={setModal} productState={productState} />,
     delivery: <DeliveryReturnModal modal={modal} setModal={setModal} productState={productState} />,
-    qna: <QuestionAnswerModal modal={modal} setModal={setModal} productState={productState} />,
   };
 
   return (
@@ -81,9 +79,6 @@ const ProductContent = ({ productState, setProductState, productAccordion, noDet
                   <RiTruckLine /> {t("DeliveryReturn")}
                 </a>
               ) : null}
-              <a href={Href} onClick={() => setModal("qna")}>
-                <RiQuestionnaireLine /> {t("Askaquestion")}
-              </a>
             </div>
             {modal && activeModal[modal]}
           </>

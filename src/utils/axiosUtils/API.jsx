@@ -36,9 +36,6 @@ export const BlogAPI = "/blog";
 // Tags API
 export const TagAPI = "/tag";
 
-// Currency API
-export const CurrencyAPI = "/currency";
-
 // Setting API
 export const SettingAPI = "/settings";
 
@@ -99,14 +96,8 @@ export const PointAPI = "/points/consumer";
 // Refund  API
 export const RefundAPI = "/refund";
 
-// Question And Answer API
-export const QuestionAnswerAPI = "/question-and-answer";
-
 // Coupon API
 export const CouponAPI = "/coupon";
-
-// FeedBack API
-export const FeedBackAPI = "/question-and-answer/feedback";
 
 // Review API
 export const ReviewAPI = "/review";

@@ -2,10 +2,9 @@ import ThemeOptionContext from "@/context/themeOptionsContext";
 import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
 import { useContext, useState } from "react";
-import { RiQuestionnaireLine, RiTruckLine } from "react-icons/ri";
+import { RiTruckLine } from "react-icons/ri";
 import { Progress } from "reactstrap";
 import DeliveryReturnModal from "./allModal/DeliveryReturnModal";
-import QuestionAnswerModal from "./allModal/QuestionAnswerModal";
 import SizeModal from "./allModal/SizeModal";
 
 const AddProductDetail = ({ productState }) => {
@@ -18,7 +17,6 @@ const AddProductDetail = ({ productState }) => {
   const activeModal = {
     size: <SizeModal modal={modal} setModal={setModal} productState={productState} />,
     delivery: <DeliveryReturnModal modal={modal} setModal={setModal} productState={productState} />,
-    qna: <QuestionAnswerModal modal={modal} setModal={setModal} productState={productState} />,
   };
 
   const getProgressValue = (productState) => {
@@ -42,16 +40,11 @@ const AddProductDetail = ({ productState }) => {
           </div>
         ) : null
       ) : null}
-      {productState?.product?.size_chart_image || (themeOption?.product?.shipping_and_return && productState?.product?.is_return) || (themeOption?.product?.shipping_and_return && productState?.product?.is_return) ? (
+      {productState?.product?.size_chart_image || (themeOption?.product?.shipping_and_return && productState?.product?.is_return) ? (
         <div className="size-delivery-info">
           {themeOption?.product?.shipping_and_return && productState?.product?.is_return ? (
             <a onClick={() => setModal("delivery")}>
               <RiTruckLine /> {t("DeliveryReturn")}
-            </a>
-          ) : null}
-          {isLogin && themeOption?.product?.shipping_and_return && productState?.product?.is_return ? (
-            <a onClick={() => setModal("qna")}>
-              <RiQuestionnaireLine /> {t("Askaquestion")}
             </a>
           ) : null}
         </div>
