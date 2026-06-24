@@ -32,6 +32,7 @@ const ProductBox = ({ style = "vertical", product, boxStyle }) => {
   }, []);
 
   return <>
+  {style == "horizontal" ? <ProductBoxHorizontal productState={productState} setProductState={setProductState} style={boxStyle} /> : null}
   {style == "vertical" && variant == "product_box_two" ? <ProductBox2 productState={productState} /> : null}</>;
 };
 

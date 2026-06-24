@@ -7,7 +7,7 @@ import CartButton from "./widgets/CartButton";
 import ImageVariant from "./widgets/ImageVariant";
 import ProductBoxVariantAttribute from "./widgets/ProductBoxVariantAttributes";
 
-const ProductBoxHorizontal = ({ productState, style }) => {
+const ProductBoxHorizontal = ({ productState, setProductState, style }) => {
   const { convertCurrency } = useContext(SettingContext);
   return (
     <>
@@ -26,7 +26,7 @@ const ProductBoxHorizontal = ({ productState, style }) => {
               <h2>{productState?.selectedVariation ? productState?.selectedVariation?.name : productState?.product?.name}</h2>
             </Link>
             {productState?.product?.short_description && <p>{productState?.product?.short_description}</p>}
-            <ProductBoxVariantAttribute productState={productState} showVariableType={["color", "rectangle", "circle", "radio", "dropdown", "image"]} />
+            <ProductBoxVariantAttribute productState={productState} setProductState={setProductState} showVariableType={["color", "rectangle", "circle", "radio", "dropdown", "image"]} />
             <CartButton classes="btn gradient-btn" text="Add To Cart" productState={productState} />
           </div>
         </div>
