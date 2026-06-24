@@ -54,9 +54,6 @@ export const ContactUsAPI = "/contact-us";
 // Store API
 export const StoreAPI = "/store";
 
-// Compare API
-export const CompareAPI = "/compare";
-
 // Attributes API
 export const AttributesAPI = "/attribute";
 

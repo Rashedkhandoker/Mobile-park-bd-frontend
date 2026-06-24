@@ -14,9 +14,13 @@ export async function middleware(request) {
     headers: myHeaders,
   };
   let settingData = await (await fetch(process.env.API_PROD_URL + "/settings", requestOptions))?.json();
-  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`, `/compare`];
+  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`];
 
   const path = request.nextUrl.pathname;
+
+  if (path.startsWith('/admin') && !request.cookies.has('uat')) {
+    return NextResponse.redirect(new URL('/auth/login', request.url));
+  }
   if (request.cookies.has("maintenance") && path !== `/maintenance`) {
     let myHeaders = new Headers();
     myHeaders.append("Authorization", `Bearer ${request.cookies.get("uat")?.value}`);

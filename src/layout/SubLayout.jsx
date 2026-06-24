@@ -1,10 +1,7 @@
 import AuthModal from "@/components/auth/authModal";
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import request from "@/utils/axiosUtils";
-import { CompareAPI } from "@/utils/axiosUtils/API";
 import TabFocusChecker from "@/utils/customFunctions/TabFocus";
 import { ToastNotification } from "@/utils/customFunctions/ToastNotification";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";
 import Cookies from "js-cookie";
 import { usePathname, useSearchParams } from "next/navigation";
 import NextTopLoader from "nextjs-toploader";
@@ -15,7 +12,6 @@ import Headers from "./header";
 import MobileMenu from "./header/widgets/MobileMenu";
 import NewsLetterModal from "./newsLetterModal";
 import RecentPurchase from "./recentPurchase";
-import StickyCompare from "./stickyCompare";
 import TapTop from "./tapTop";
 import ThemeCustomizer from "./themeCustomizer";
 
@@ -30,7 +26,7 @@ const SubLayout = ({ children }) => {
   const accountVerified = Cookies.get("uat");
   const authToast = Cookies.get("showAuthToast");
 
-  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`, `/compare`];
+  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`];
 
   useEffect(() => {
     if (!accountVerified && authToast && protectedRoutes.includes(pathName)) {
@@ -148,29 +144,6 @@ const SubLayout = ({ children }) => {
     }
   }, [pathName, path]);
 
-  const {
-    data: CompareData,
-    refetch,
-    isLoading: getCompareLoading,
-  } = useFetchQuery(
-    [CompareAPI],
-    () => {
-      if (Cookies.get("uat")) {
-        return request({ url: CompareAPI });
-      }
-      return Promise.resolve(null); // Return null to avoid unnecessary loading
-    },
-    {
-      enabled: false, // Initially disable fetching
-      refetchOnWindowFocus: false,
-      select: (res) => res?.data?.data,
-    }
-  );
-
-  useEffect(() => {
-    getCompareLoading && refetch();
-  }, [getCompareLoading]);
-
   const [themeColor, setThemeColor] = useState("");
   const [themeColor2, setThemeColor2] = useState("");
 
@@ -223,10 +196,7 @@ const SubLayout = ({ children }) => {
       <NextTopLoader showSpinner={false} />
       <RecentPurchase />
       {themeOption?.popup?.news_letter?.is_enable && <NewsLetterModal setMakeExitActive={setMakeExitActive} />}
-      <div className="compare-tap-top-box">
-        {CompareData?.length > 0 && <StickyCompare CompareData={CompareData} />}
-        <TapTop />
-      </div>
+      <TapTop />
       {themeOption?.popup?.exit?.is_enable && makeExitActive && <ExitModal dataApi={themeOption?.popup?.exit} headerLogo={themeOption?.logo?.header_logo?.original_url} />}
     </>
   );
