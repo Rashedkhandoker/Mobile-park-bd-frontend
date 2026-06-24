@@ -3,7 +3,6 @@ import ThemeOptionContext from "@/context/themeOptionsContext";
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { Col, Row } from "reactstrap";
-import HeaderCurrency from "./HeaderCurrency";
 import HeaderLanguage from "./HeaderLanguage";
 
 const TopBar = ({ classes }) => {
