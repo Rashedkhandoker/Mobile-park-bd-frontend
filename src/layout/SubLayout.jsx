@@ -26,7 +26,7 @@ const SubLayout = ({ children }) => {
   const accountVerified = Cookies.get("uat");
   const authToast = Cookies.get("showAuthToast");
 
-  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`];
+  const protectedRoutes = [`/account/dashboard`, `/account/order`, `/account/addresses`];
 
   useEffect(() => {
     if (!accountVerified && authToast && protectedRoutes.includes(pathName)) {

@@ -1,7 +1,6 @@
 import AccountContext from "@/context/accountContext";
 import CartContext from "@/context/cartContext";
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import WishlistContext from "@/context/wishlistContext";
 import { useMutation } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
@@ -27,7 +26,7 @@ const transformLocalStorageData = (localStorageData) => {
   return transformedData;
 };
 
-const LoginHandle = (responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, addToWishlist, setOpenAuthModal) => {
+const LoginHandle = (responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, setOpenAuthModal) => {
   if (responseData.status === 200 || responseData.status === 201) {
     Cookies.set("uat", responseData.data?.access_token, { path: "/", expires: new Date(Date.now() + 24 * 60 * 6000) });
     if (typeof window !== "undefined") {
@@ -35,14 +34,9 @@ const LoginHandle = (responseData, router, refetch, CallBackUrl, mutate, cartRef
       localStorage.setItem("account", JSON.stringify(responseData.data));
     }
     router.push(`${CallBackUrl}`);
-
     refetch();
     setOpenAuthModal(false);
     cartRefetch();
-    const wishListID = Cookies.get("wishListID");
-    const productObj = { id: wishListID };
-    wishListID ? addToWishlist(productObj) : null;
-    Cookies.remove("wishListID");
     localStorage.removeItem("cart");
   } else {
     setShowBoxMessage(responseData.response.data.message);
@@ -52,12 +46,11 @@ const LoginHandle = (responseData, router, refetch, CallBackUrl, mutate, cartRef
 const useHandleLogin = (setShowBoxMessage) => {
   const { setOpenAuthModal } = useContext(ThemeOptionContext);
   const { mutate } = useCreate(SyncCart, false, false, "No");
-  const { addToWishlist } = useContext(WishlistContext);
   const CallBackUrl = Cookies.get("CallBackUrl") ? Cookies.get("CallBackUrl") : "/account/dashboard";
   const { refetch } = useContext(AccountContext);
   const { refetch: cartRefetch } = useContext(CartContext);
   const router = useRouter();
-  return useMutation({ mutationFn: (data) => request({ url: LoginAPI, method: "post", data }), onSuccess: (responseData) => LoginHandle(responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, addToWishlist, setOpenAuthModal) });
+  return useMutation({ mutationFn: (data) => request({ url: LoginAPI, method: "post", data }), onSuccess: (responseData) => LoginHandle(responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, setOpenAuthModal) });
 };
 
 export default useHandleLogin;

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { RiHeartLine, RiMenuLine, RiUserLine } from "react-icons/ri";
+import { RiMenuLine, RiUserLine } from "react-icons/ri";
 import { Button, Col, Container, Row } from "reactstrap";
 import HeaderCart from "../widgets/headerCart";
 import HeaderLogo from "../widgets/HeaderLogo";
@@ -22,9 +22,6 @@ const HeaderTwo = () => {
   };
   const { t } = useTranslation("common");
 
-  const handleWishlistClick = () => {
-    isAuthenticated ? router.push("/wishlist") : setOpenAuthModal(true);
-  };
   return (
     <header className="style-light header-compact">
       {themeOption?.header?.page_top_bar_enable && <TopBar />}
@@ -47,11 +44,6 @@ const HeaderTwo = () => {
                 <div>
                   <div className="icon-nav">
                     <ul>
-                      <li className="onhover-div">
-                        <Link href={isAuthenticated ? "/wishlist" : Href} onClick={handleWishlistClick}>
-                          <RiHeartLine />
-                        </Link>
-                      </li>
                       <li className="onhover-div">
                         <HeaderCart />
                       </li>

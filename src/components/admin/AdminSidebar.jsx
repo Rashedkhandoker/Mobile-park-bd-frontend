@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { RiDashboardLine, RiShoppingBag3Line, RiListOrdered, RiPriceTag3Line, RiMedalLine, RiCoupon3Line, RiArticleLine, RiUserLine, RiMenuLine, RiCloseLine } from 'react-icons/ri';
+import { RiDashboardLine, RiShoppingBag3Line, RiListOrdered, RiPriceTag3Line, RiMedalLine, RiUserLine, RiMenuLine, RiCloseLine } from 'react-icons/ri';
 import { useState } from 'react';
 
 const navItems = [
@@ -10,8 +10,7 @@ const navItems = [
   { href: '/admin/orders', label: 'Orders', icon: RiListOrdered },
   { href: '/admin/categories', label: 'Categories', icon: RiPriceTag3Line },
   { href: '/admin/brands', label: 'Brands', icon: RiMedalLine },
-  { href: '/admin/coupons', label: 'Coupons', icon: RiCoupon3Line },
-  { href: '/admin/blogs', label: 'Blogs', icon: RiArticleLine },
+
   { href: '/admin/users', label: 'Users', icon: RiUserLine },
 ];
 

@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { RiDiscountPercentFill, RiStarFill } from "react-icons/ri";
 import CartButton from "./widgets/CartButton";
-import WishlistButton from "./widgets/hoverButton/WishlistButton";
 import ProductHoverButton from "./widgets/ProductHoverButton";
 import { useRouter } from "next/navigation";
 
@@ -25,7 +24,6 @@ const ProductBox10 = ({ productState }) => {
           </a>
 
           <div className="cart-info">
-            <WishlistButton productstate={productState?.product} classes="wishlist-icon" />
             <ProductHoverButton productstate={productState.product} actionsToHide={"wishlist"}>
               <CartButton productState={productState} selectedVariation={productState.selectedVariation} />
             </ProductHoverButton>

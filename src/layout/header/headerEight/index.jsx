@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { RiHeartLine, RiMenuLine, RiUserLine } from "react-icons/ri";
+import { RiMenuLine, RiUserLine } from "react-icons/ri";
 import { Button, Col, Container, Row } from "reactstrap";
 import HeaderCart from "../widgets/headerCart";
 import HeaderLogo from "../widgets/HeaderLogo";
@@ -20,10 +20,6 @@ const HeaderEight = () => {
   const handleProfileClick = (path) => {
     isAuthenticated ? router.push("/account/dashboard") : setOpenAuthModal(true);
   };
-  const handleWishlistClick = () => {
-    isAuthenticated ? router.push("/wishlist") : setOpenAuthModal(true);
-  };
-
   return (
     <header className="full-scroll-menu">
       <Container fluid>
@@ -74,11 +70,6 @@ const HeaderEight = () => {
                     <ul>
                       <li className="onhover-div">
                         <HeaderSearchbar />
-                      </li>
-                      <li className="onhover-div">
-                        <Link href={isAuthenticated? '/wishlist': Href} onClick={handleWishlistClick}>
-                          <RiHeartLine />
-                        </Link>
                       </li>
                       <li className="onhover-div">
                         <HeaderCart />

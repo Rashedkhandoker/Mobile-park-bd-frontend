@@ -1,8 +1,6 @@
 import CartContext from "@/context/cartContext";
 import SettingContext from "@/context/settingContext";
-import { WishlistAPI } from "@/utils/axiosUtils/API";
 import { Href } from "@/utils/constants";
-import useCreate from "@/utils/hooks/useCreate";
 import Link from "next/link";
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
@@ -15,8 +13,6 @@ const CartData = ({ elem }) => {
   const { t } = useTranslation("common");
   const { removeCart } = useContext(CartContext);
   const { convertCurrency } = useContext(SettingContext);
-  const { mutate } = useCreate(WishlistAPI, false);
-
   const removeItem = () => {
     removeCart(elem?.variation_id ? elem?.variation_id : elem.product_id, elem?.id);
   };

@@ -1,13 +1,7 @@
 import WrapperComponent from "@/components/widgets/WrapperComponent";
-import ThemeOptionContext from "@/context/themeOptionsContext";
-import { WishlistAPI } from "@/utils/axiosUtils/API";
 import { Href } from "@/utils/constants";
 import { dateFormat } from "@/utils/customFunctions/DateFormat";
-import useCreate from "@/utils/hooks/useCreate";
-import Cookies from "js-cookie";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
-import { RiHeartLine } from "react-icons/ri";
 import { Col } from "reactstrap";
 import ProductContent from "../common/ProductContent";
 import ProductWholesale from "../common/ProductWholesale";
@@ -15,17 +9,6 @@ import VendorContains from "../common/VendorContains";
 import DigitalImage from "./DigitalImage";
 
 const ProductDigital = ({ productState, setProductState }) => {
-  const { mutate, isLoading } = useCreate(WishlistAPI, false, false, "Added to Wishlist List");
-  const { setOpenAuthModal } = useContext(ThemeOptionContext);
-
-  const handelWishlist = (productState) => {
-    if (Cookies.get("uat")) {
-      mutate({ product_id: productState?.product?.id });
-    } else {
-      setOpenAuthModal(true);
-    }
-  };
-
   return (
     <WrapperComponent classes={{ sectionClass: "product-section section-b-space theme-product-section", row: "g-4" }} customCol={true}>
       <Col xl={8} lg={7}>
@@ -42,13 +25,6 @@ const ProductDigital = ({ productState, setProductState }) => {
             </div>
 
             <ProductContent productState={productState} setProductState={setProductState} />
-            <div className="buy-box">
-              <a onClick={() => handelWishlist()}>
-                <RiHeartLine />
-                <span>{"Add to Wishlist"}</span>
-              </a>
-
-            </div>
 
             <div className="pickup-box">
               <div className="product-title">

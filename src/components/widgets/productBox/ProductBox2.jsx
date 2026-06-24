@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { RiDiscountPercentFill, RiStarSFill } from "react-icons/ri";
 import { placeHolderImage } from "../Placeholder";
 import CartButton from "./widgets/CartButton";
-import WishlistButton from "./widgets/hoverButton/WishlistButton";
 import ProductBoxVariantAttribute from "./widgets/ProductBoxVariantAttributes";
 import ProductHoverButton from "./widgets/ProductHoverButton";
 
@@ -28,7 +27,6 @@ const ProductBox2 = ({ productState, setProductState }) => {
           </Link>
           
           <div className="cart-info">
-            <WishlistButton customAnchor={true} productstate={productState?.product} />
             <CartButton productState={productState} selectedVariation={productState.selectedVariation} />
             <ProductHoverButton productstate={productState?.product} actionsToHide={"wishlist"} />
           </div>

@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { RiEqualizer2Line, RiHeartLine, RiMenuLine, RiUserLine } from "react-icons/ri";
+import { RiEqualizer2Line, RiMenuLine, RiUserLine } from "react-icons/ri";
 import { Button, Col, Container, Row } from "reactstrap";
 import HeaderCart from "../widgets/headerCart";
 import HeaderLogo from "../widgets/HeaderLogo";
@@ -61,10 +61,6 @@ const HeaderSeven = () => {
     i18next.changeLanguage(value.icon);
     router.refresh();
   };
-  const handleWishlistClick = () => {
-    isAuthenticated ? router.push("/wishlist") : setOpenAuthModal(true);
-  };
-
   return (
     <header className={`header-tools header-style ${themeOption?.header?.sticky_header_enable && UpScroll ? "sticky fixed" : ""}`}>
       <div className="logo-menu-part">
@@ -105,11 +101,6 @@ const HeaderSeven = () => {
                   <div>
                     <div className="icon-nav">
                       <ul>
-                        <li className="onhover-div">
-                          <Link href={isAuthenticated ? '/wishlist' : Href} onClick={handleWishlistClick}>
-                            <RiHeartLine />
-                          </Link>
-                        </li>
                         <li className="onhover-div">
                       <Link href={isAuthenticated ? "/account/dashboard" : Href} onClick={handleProfileClick}>
                         <RiUserLine />

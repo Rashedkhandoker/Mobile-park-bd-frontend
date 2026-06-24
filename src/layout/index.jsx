@@ -1,7 +1,5 @@
 "use client";
 import AccountProvider from "@/context/accountContext/AccountProvider";
-import BlogProvider from "@/context/blogContext/BlogProvider";
-import BlogIdsProvider from "@/context/blogIdsContext/BlogIdsProvider";
 import BrandProvider from "@/context/brandContext/BrandProvider";
 import BrandIdsProvider from "@/context/brandIdsContext/BrandIdsProvider";
 import CartProvider from "@/context/cartContext/CartProvider";
@@ -11,7 +9,6 @@ import ProductProvider from "@/context/productContext/ProductProvider";
 import ProductIdsProvider from "@/context/productIdsContext/ProductIdsProvider";
 import SettingProvider from "@/context/settingContext/SettingProvider";
 import ThemeOptionProvider from "@/context/themeOptionsContext/ThemeOptionProvider";
-import WishlistProvider from "@/context/wishlistContext/WishlistProvider";
 import { HydrationBoundary, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
@@ -25,30 +22,24 @@ const MainLayout = ({ children }) => {
         <HydrationBoundary state={children.dehydratedState}>
           <SettingProvider>
             <CategoryProvider>
-                <BlogProvider>
-                  <ThemeOptionProvider>
-                    <BrandProvider>
-                      <CurrencyProvider>
-                        <ProductIdsProvider>
-                          <AccountProvider>
-                            <CartProvider>
-                              <WishlistProvider>
-                                <BrandIdsProvider>
-                                  <BlogIdsProvider>
-                                    <ProductProvider>
-                                      <SubLayout children={children} />
-                                    </ProductProvider>
-                                  </BlogIdsProvider>
-                                </BrandIdsProvider>
-                              </WishlistProvider>
-                            </CartProvider>
-                          </AccountProvider>
-                        </ProductIdsProvider>
-                      </CurrencyProvider>
-                    </BrandProvider>
-                  </ThemeOptionProvider>
-                </BlogProvider>
-              </CategoryProvider>
+              <ThemeOptionProvider>
+                <BrandProvider>
+                  <CurrencyProvider>
+                    <ProductIdsProvider>
+                      <AccountProvider>
+                        <CartProvider>
+                          <BrandIdsProvider>
+                            <ProductProvider>
+                              <SubLayout children={children} />
+                            </ProductProvider>
+                          </BrandIdsProvider>
+                        </CartProvider>
+                      </AccountProvider>
+                    </ProductIdsProvider>
+                  </CurrencyProvider>
+                </BrandProvider>
+              </ThemeOptionProvider>
+            </CategoryProvider>
           </SettingProvider>
         </HydrationBoundary>
       </QueryClientProvider>

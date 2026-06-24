@@ -26,7 +26,7 @@ const AuthModal = () => {
     setLogOrNew(!logOrNew);
   };
 
-  const protectedRoutes = [`/account/dashboard`, `/account/notifications`, `/account/wallet`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`];
+  const protectedRoutes = [`/account/dashboard`, `/account/order`, `/account/addresses`];
 
   useEffect(() => {
     if (state == "forgot") {

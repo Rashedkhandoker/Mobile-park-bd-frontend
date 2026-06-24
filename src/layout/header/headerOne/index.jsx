@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
-import { RiHeartLine, RiMenuLine, RiUserLine } from "react-icons/ri";
+import { RiMenuLine, RiUserLine } from "react-icons/ri";
 import { Button, Col, Container, Row } from "reactstrap";
 import HeaderCart from "../widgets/headerCart";
 import HeaderLogo from "../widgets/HeaderLogo";
@@ -24,10 +24,6 @@ const HeaderOne = () => {
   const handleProfileClick = (path) => {
     isAuthenticated ? router.push("/account/dashboard") : setOpenAuthModal(true);
   };
-  const handleWishlistClick = () => {
-    isAuthenticated ? router.push("/wishlist") : setOpenAuthModal(true);
-  };
-
   return (
     <header className={`${themeOption?.header?.sticky_header_enable && UpScroll ? "sticky fixed" : ""}`}>
       {themeOption?.header?.page_top_bar_enable && <TopBar />}
@@ -71,11 +67,6 @@ const HeaderOne = () => {
                       <ul>
                         <li className="onhover-div">
                           <HeaderSearchbar />
-                        </li>
-                        <li className="onhover-div">
-                          <Link href={isAuthenticated ? "/wishlist" : Href} onClick={handleWishlistClick}>
-                            <RiHeartLine />
-                          </Link>
                         </li>
                         <li className="onhover-div">
                           <HeaderCart />

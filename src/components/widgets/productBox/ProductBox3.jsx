@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import CartButton from "./widgets/CartButton";
 import QuickViewButton from "./widgets/hoverButton/QuickViewButton";
-import WishlistButton from "./widgets/hoverButton/WishlistButton";
 import ProductBoxVariantAttribute from "./widgets/ProductBoxVariantAttributes";
 import ProductRatingBox from "./widgets/ProductRatingBox";
 
@@ -26,9 +25,6 @@ const ProductBox3 = ({ productState, setProductState }) => {
               <li>{productState?.product?.unit}</li>
             </ul>
           )}
-          <div className="add-wish">
-            <WishlistButton productstate={productState?.product} />
-          </div>
         </div>
         <div className="img-wrapper">
           <Link href={`/product/${productState?.product?.slug}`}>

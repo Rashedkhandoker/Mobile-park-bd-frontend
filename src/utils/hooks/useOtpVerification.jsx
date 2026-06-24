@@ -1,7 +1,6 @@
 import AccountContext from "@/context/accountContext";
 import CartContext from "@/context/cartContext";
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import WishlistContext from "@/context/wishlistContext";
 import { useMutation } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
@@ -18,7 +17,7 @@ const transformLocalStorageData = (localStorageData) => {
   }));
 };
 
-const LoginWithMobileHandle = (responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, addToWishlist, setOpenAuthModal, setState) => {
+const LoginWithMobileHandle = (responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, setOpenAuthModal, setState) => {
   setState("login");
   if (responseData.status === 200 || responseData.status === 201) {
     Cookies.set("uat", responseData.data?.access_token, { path: "/", expires: new Date(Date.now() + 24 * 60 * 6000) });
@@ -32,12 +31,7 @@ const LoginWithMobileHandle = (responseData, router, refetch, CallBackUrl, mutat
     refetch();
     setOpenAuthModal(false);
     cartRefetch();
-    router.push("/account/dashboard");
-    const wishListID = Cookies.get("wishListID");
-    const productObj = { id: wishListID };
-    wishListID ? addToWishlist(productObj) : null;
     router.push(`/${CallBackUrl}`);
-    Cookies.remove("wishListID");
     localStorage.removeItem("cart");
   } else {
     setShowBoxMessage(responseData.response.data.message);
@@ -51,11 +45,10 @@ const useOtpVerification = (setState) => {
 
   const { setOpenAuthModal } = useContext(ThemeOptionContext);
   const { mutate } = useCreate(SyncCart, false, false, "No");
-  const { addToWishlist } = useContext(WishlistContext);
   const CallBackUrl = Cookies.get("CallBackUrl") ? Cookies.get("CallBackUrl") : Cookies.set("CallBackUrl", "/");
   const { refetch } = useContext(AccountContext);
   const { refetch: cartRefetch } = useContext(CartContext);
   const router = useRouter();
-  return useMutation({ mutationFn: (data) => request({ url: VerifyTokenAPI, method: "post", data }, router), onSuccess: (responseData, requestData) => LoginWithMobileHandle(responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, addToWishlist, setOpenAuthModal, setState) });
+  return useMutation({ mutationFn: (data) => request({ url: VerifyTokenAPI, method: "post", data }, router), onSuccess: (responseData) => LoginWithMobileHandle(responseData, router, refetch, CallBackUrl, mutate, cartRefetch, setShowBoxMessage, setOpenAuthModal, setState) });
 };
 export default useOtpVerification;

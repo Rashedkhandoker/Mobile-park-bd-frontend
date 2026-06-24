@@ -1,4 +1,4 @@
-import SKBlogSidebar from "@/components/widgets/skeletonLoader/blogSkeleton/SKBlogSidebar";
+import SKBlogSidebar from "@/components/widgets/skeletonLoader/SKSidebar";
 import ThemeOptionContext from "@/context/themeOptionsContext";
 import request from "@/utils/axiosUtils";
 import { AttributesAPI } from "@/utils/axiosUtils/API";

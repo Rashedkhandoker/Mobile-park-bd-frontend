@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
 import CartButton from "./widgets/CartButton";
-import WishlistButton from "./widgets/hoverButton/WishlistButton";
 import ProductHoverButton from "./widgets/ProductHoverButton";
 import ProductRatingBox from "./widgets/ProductRatingBox";
 
@@ -19,7 +18,6 @@ const ProductBox4 = ({ productState }) => {
             <img src={productState?.product?.product_thumbnail?.original_url} className="img-fluid bg-img" alt={productState?.product?.name} />
           </Link>
           <div className="cart-info">
-            <WishlistButton productstate={productState?.product} classes="wishlist-icon" />
             <ProductHoverButton productstate={productState.product} actionsToHide={"wishlist"} />
           </div>
         </div>

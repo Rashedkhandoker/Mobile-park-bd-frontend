@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import CartButton from "./widgets/CartButton";
-import WishlistButton from "./widgets/hoverButton/WishlistButton";
 import ProductBoxVariantAttribute from "./widgets/ProductBoxVariantAttributes";
 import ProductHoverButton from "./widgets/ProductHoverButton";
 import ProductRatingBox from "./widgets/ProductRatingBox";
@@ -21,7 +20,6 @@ const ProductBox9 = ({ productState, setProductState }) => {
             <img  src={productState?.selectedVariation?.variation_image ? productState?.selectedVariation.variation_image.original_url : productState?.product?.product_thumbnail?.original_url} className="img-fluid bg-img" alt="product-image" />
           </Link>
           <div className="cart-info">
-            <WishlistButton productstate={productState?.product} />
             <ProductHoverButton productstate={productState.product} actionsToHide={"wishlist"} />
           </div>
           {productState?.product?.product_galleries?.length > 0 && (

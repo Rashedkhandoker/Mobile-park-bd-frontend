@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useContext } from "react";
 import CartButton from "./widgets/CartButton";
 import QuickViewButton from "./widgets/hoverButton/QuickViewButton";
-import WishlistButton from "./widgets/hoverButton/WishlistButton";
 import ProductRatingBox from "./widgets/ProductRatingBox";
 
 const ProductBox8 = ({ productState }) => {
@@ -29,7 +28,6 @@ const ProductBox8 = ({ productState }) => {
             <span>({productState?.product?.reviews_count})</span>
           </div>
           <div className="product-action">
-            <WishlistButton productstate={productState?.product} />
             <CartButton productState={productState} selectedVariation={productState.selectedVariation} text="Add to cart" />
           </div>
         </div>
