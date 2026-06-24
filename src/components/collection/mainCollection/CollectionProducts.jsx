@@ -3,8 +3,7 @@ import Pagination from "@/components/widgets/Pagination";
 import ProductBox from "@/components/widgets/productBox";
 import ProductSkeleton from "@/components/widgets/skeletonLoader/ProductSkeleton";
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
+import { getProducts } from "@/utils/services/productService";
 import { ImagePath } from "@/utils/constants";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useParams, useSearchParams } from "next/navigation";
@@ -25,23 +24,14 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
 
 
   const fetchData = async () => {
-    return request({
-      url: ProductAPI, // dynamic url for filter
-      params: {
-        page,
-        status: 1,
-        paginate: filter?.paginate ?? filter?.paginate,
-        field: filter?.field ?? "created_at",
-        price: filter?.price.join(",") ?? "",
-        category: categorySlug ? categorySlug : filter?.category.join(",") || tagParam,
-        brand: filter.brand.join(","),
-        sort: "",
-        sortBy: filter?.sortBy ?? "asc",
-        rating: filter?.rating.join(",") ?? "",
-        attribute: filter?.attribute.join(",") ?? "",
-        store_slug: slug ? slug : null,
-        created_at: filter?.created_at ?? "",
-      },
+    return getProducts({
+      page,
+      status: 1,
+      paginate: filter?.paginate,
+      category: categorySlug ? categorySlug : filter?.category.join(",") || tagParam,
+      brand: filter.brand.join(","),
+      sortBy: filter?.sortBy ?? "asc",
+      store_slug: slug ?? null,
     });
   };
 
@@ -53,15 +43,17 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
     getNextPageParam: ({ page, last_page }) => last_page > page && { page: page + 1 },
   });
 
+  const lastPage = data?.pages?.[data?.pages?.length - 1];
+
   const onLoad = () => {
-    if (!isLoading && data?.pages?.[data?.pages?.length - 1]?.data?.data?.last_page !== infiniteScrollData.length) {
+    if (!isLoading && lastPage?.last_page !== infiniteScrollData.length) {
       setPage(page + 1);
     }
   };
 
   useEffect(() => {
     if (data?.pages?.length > 0) {
-      data?.pages[data?.pages?.length - 1]?.data?.data?.length && setInfiniteScrollData([...infiniteScrollData, data?.pages[data?.pages?.length - 1]?.data?.data]);
+      lastPage?.data?.length && setInfiniteScrollData([...infiniteScrollData, lastPage?.data]);
     }
   }, [data]);
 
@@ -106,11 +98,11 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
             </Col>
           ))}
         </Row>
-      ) : data?.pages?.length > 0 && data.pages[data?.pages?.length - 1]?.data?.data?.length ? (
+      ) : data?.pages?.length > 0 && lastPage?.data?.length ? (
         <div className={`product-wrapper-grid ${infiniteScroll ? "product-load-more" : ""} ${grid == "list" ? "list-view" : ""} ${themeOption?.product?.full_border ? "full_border" : ""} ${themeOption?.product?.image_bg ? "product_img_bg" : ""} ${themeOption?.product?.product_box_bg ? "full_bg" : ""} ${themeOption?.product?.product_box_border ? "product_border" : ""}`}>
           {!infiniteScroll ? (
             <Row className="g-xl-4 g-lg-3 g-sm-4 g-3">
-              {data?.pages[data.pages.length - 1]?.data?.data?.map((product, i) => (
+              {lastPage?.data?.map((product, i) => (
                 <Col className={adjustGrid} key={i}>
                   {grid == "list" ? <ListProductBox product={product} /> : <ProductBox product={product} style="vertical" />}
                 </Col>
@@ -134,11 +126,11 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
         <NoDataFound customClass="no-data-added " title="NoProductFound" description="Please check if you have misspelt something or try searching with other way." height="345" width="345" imageUrl={`/assets/svg/empty-items.svg`} />
       )}
       {!infiniteScroll ? (
-        data?.pages[data.pages.length - 1]?.data?.data?.length > 0 && (
+        lastPage?.data?.length > 0 && (
           <div className="product-pagination">
             <div className="theme-pagination-block">
               <nav>
-                <Pagination current_page={data?.pages[data.pages.length - 1]?.data.current_page} total={data?.pages[data.pages.length - 1]?.data?.total} per_page={data?.pages[data.pages.length - 1]?.data?.per_page} setPage={setPage} />
+                <Pagination current_page={lastPage?.current_page} total={lastPage?.total} per_page={lastPage?.per_page} setPage={setPage} />
               </nav>
             </div>
           </div>

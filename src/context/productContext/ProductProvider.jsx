@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
-import request from '@/utils/axiosUtils';
-import { ProductAPI } from '@/utils/axiosUtils/API';
+import useFetchQuery from "@/utils/hooks/useFetchQuery";
+import { getProducts } from '@/utils/services/productService';
 import ProductContext from '.';
 
 const ProductProvider = (props) => {
@@ -13,13 +12,12 @@ const ProductProvider = (props) => {
     refetch: productRefetch,
     isLoading: productIsLoading,
   } = useFetchQuery(
-    [ProductAPI],
-    () => request({ url: ProductAPI, params: { ...productAPIData.params, ids: totalDealIds, status: 1, paginate: Object.keys(totalDealIds).length > 5 ? Object.keys(totalDealIds).length : 5 } }),
+    ["dealProducts", totalDealIds],
+    () => getProducts({ ...productAPIData.params, ids: totalDealIds, status: 1, paginate: Object.keys(totalDealIds).length > 5 ? Object.keys(totalDealIds).length : 5 }),
     {
       enabled: false,
       refetchOnWindowFocus: false,
-      select: (data) => data.data,
-    },
+    }
   );
   useEffect(() => {
     if (productData) {

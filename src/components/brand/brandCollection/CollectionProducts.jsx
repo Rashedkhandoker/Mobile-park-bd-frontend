@@ -3,10 +3,8 @@ import NoDataFound from "@/components/widgets/NoDataFound";
 import Pagination from "@/components/widgets/Pagination";
 import ProductSkeleton from "@/components/widgets/skeletonLoader/ProductSkeleton";
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
-import { useParams, useRouter } from "next/navigation";
+import { useProducts } from "@/utils/hooks/useProducts";
+import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { Col, Row } from "reactstrap";
 
@@ -14,7 +12,6 @@ const CollectionProducts = ({ filter, grid }) => {
   const { themeOption } = useContext(ThemeOptionContext);
   const { slug } = useParams();
   const [page, setPage] = useState(1);
-  const router = useRouter();
   const [adjustGrid, setAdjustGrid] = useState("col-6 col-xl-3");
   
 
@@ -30,26 +27,7 @@ const CollectionProducts = ({ filter, grid }) => {
     }
   }, [grid]);
 
-  const { data, fetchStatus } = useFetchQuery(
-    ["collectionProducts",filter],
-    () =>
-      request(
-        {
-          url: ProductAPI,
-          params: {
-            ...filter,
-            page,
-            status: 1,
-            brand: slug ? slug : null,
-          },
-        },
-      ),
-    {
-      enabled: true,
-      refetchOnWindowFocus: false,
-      select: (data) => data.data,
-    }
-  );
+  const { data, fetchStatus } = useProducts({ ...filter, page, status: 1, brand: slug ?? null });
 
   useEffect(() => {
     window.scroll(0, 0);

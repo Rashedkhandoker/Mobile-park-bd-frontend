@@ -1,11 +1,10 @@
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
 import { FilterItemIds } from "@/utils/customFunctions/FilterItemIds";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
+import { useProducts } from "@/utils/hooks/useProducts";
 import React from "react";
 
 const SliderProducts = ({ data = {}, classes }) => {
-  const { data: productData } = useFetchQuery([ProductAPI], () => request({ url: ProductAPI }), { select: (res) => res?.data?.data, refetchOnWindowFocus: false });
+  const { data: productsPage } = useProducts();
+  const productData = productsPage?.data;
   const filteredItems = FilterItemIds({ neededData: data?.product_ids, mainData: productData });
 
   return (

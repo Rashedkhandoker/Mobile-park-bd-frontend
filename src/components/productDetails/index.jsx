@@ -2,11 +2,9 @@
 import ProductIdsContext from "@/context/productIdsContext";
 import ThemeOptionContext from "@/context/themeOptionsContext";
 import Loader from "@/layout/loader";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
 import Breadcrumbs from "@/utils/commonComponents/breadcrumb";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
-import { useRouter, useSearchParams } from "next/navigation";
+import { useProductBySlug } from "@/utils/hooks/useProducts";
+import { useSearchParams } from "next/navigation";
 import { useContext, useEffect, useMemo, useState } from "react";
 import StickyCheckout from "./common/stickyCheckout";
 import Product4Image from "./product4Image";
@@ -21,7 +19,6 @@ import ProductThumbnail from "./productThumbnail";
 import ProductVerticalTab from "./productVerticalTab";
 
 const ProductDetailContent = ({ params }) => {
-  const router = useRouter();
   const { themeOption } = useContext(ThemeOptionContext);
   const { setGetProductIds, isLoading: productLoader } = useContext(ProductIdsContext);
   const searchParams = useSearchParams();
@@ -34,12 +31,7 @@ const ProductDetailContent = ({ params }) => {
 
   const [productState, setProductState] = useState({ product: [], attributeValues: [], productQty: 1, selectedVariation: "", variantIds: [], statusIds: [] });
 
-  // Calling Product API on slug
-  const { data: ProductData, isLoading, refetch, error } = useFetchQuery([params], () => request({ url: `${ProductAPI}/${params}` }, router), { enabled: false, refetchOnWindowFocus: false, select: (res) => res?.data });
-  // Calling Product API when params is there
-  useEffect(() => {
-    params && refetch();
-  }, [params]);
+  const { data: ProductData, isLoading, error } = useProductBySlug(params);
 
   // Setting Product API Data on state Variable and getting ids from cross_sell_products,related_products;
   useEffect(() => {

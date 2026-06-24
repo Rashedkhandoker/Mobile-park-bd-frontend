@@ -3,9 +3,10 @@ import NoDataFound from "@/components/widgets/NoDataFound";
 import ProductSkeleton from "@/components/widgets/skeletonLoader/ProductSkeleton";
 import Btn from "@/elements/buttons/Btn";
 import request from "@/utils/axiosUtils";
-import { CategoryAPI, ProductAPI } from "@/utils/axiosUtils/API";
+import { CategoryAPI } from "@/utils/axiosUtils/API";
 import useOutsideDropdown from "@/utils/hooks/useOutsideDropdown";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
+import useFetchQuery from "@/utils/hooks/useFetchQuery";
+import { useProducts } from "@/utils/hooks/useProducts";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { RiCloseLine, RiSearchLine } from "react-icons/ri";
@@ -22,7 +23,11 @@ const IconSearchModal = ({ setIsOpen, isOpen }) => {
   const [productCustomSearch, setProductCustomSearch] = useState("");
   const [productTc, setProductTc] = useState(null);
   const { ref, isComponentVisible, setIsComponentVisible } = useOutsideDropdown();
-  const { data, isLoading: productLoading, refetch: productRefetch, fetchStatus } = useFetchQuery([ProductAPI, "Search"], () => request({ url: ProductAPI, params: { status: 1, search: productCustomSearch ? productCustomSearch : null, paginate: searchValue === "" ? 4 : paginate } }), { enabled: true, refetchOnWindowFocus: false, select: (data) => data.data.data });
+  const { data: productPage, isLoading: productLoading, refetch: productRefetch, fetchStatus } = useProducts(
+    { status: 1, search: productCustomSearch || null, paginate: searchValue === "" ? 4 : paginate },
+    { enabled: true }
+  );
+  const data = productPage?.data;
   const { data: categoryData, refetch, isLoading: categoryIsLoading, fetchStatus: categoryFetchStatus } = useFetchQuery(["CategoryAPIMinimalSearch"], () => request({ url: CategoryAPI, params: { status: 1, paginate: searchValue === "" ? 4 : paginate, search: categoryCustomSearch ? categoryCustomSearch : null } }), { enabled: isOpen, refetchOnWindowFocus: false, select: (data) => data.data.data });
 
   const [text] = useTypewriter({

@@ -3,17 +3,13 @@ import ProductBox from "@/components/widgets/productBox";
 import ProductSkeleton from "@/components/widgets/skeletonLoader/ProductSkeleton";
 import CategoryContext from "@/context/categoryContext";
 import { dynamicHorizontalSlider } from "@/data/sliderSetting/SliderSetting";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
+import { useProductsByCategory } from "@/utils/hooks/useProducts";
 import { Href } from "@/utils/constants";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
-import { useRouter } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Col, Row } from "reactstrap";
 
 const HomeProductTab = ({ categoryIds, slider, style, tab_title_class, tabStyle, classes, type, title, product_box_style, sliderOptions, paginate, isFilterCategoryDataNested, dynamic, customSelect }) => {
-  const router = useRouter();
   const [activeTab, setActiveTab] = useState(0);
   const [currentCategory, setCurrentCategory] = useState("");
   const { filterCategory } = useContext(CategoryContext);
@@ -70,7 +66,11 @@ const HomeProductTab = ({ categoryIds, slider, style, tab_title_class, tabStyle,
 
   const filteredCategories = isFilterCategoryDataNested ? filterCategoryDataNested(categoryData, categoryIds) : filterCategoryData(categoryData, categoryIds);
 
-  const { data: product, refetch, fetchStatus, isLoading } = useFetchQuery([currentCategory], () => request({ url: ProductAPI, params: { category_ids: currentCategory || customSelectedId, status: 1, paginate: paginate ? paginate : 4 } }, router), { enabled: !!(currentCategory || customSelectedId), refetchOnWindowFocus: false, select: (res) => res?.data?.data });
+  const { data: product, refetch, fetchStatus, isLoading } = useProductsByCategory(
+    currentCategory || customSelectedId,
+    { status: 1, paginate: paginate ?? 4 },
+    { enabled: !!(currentCategory || customSelectedId) }
+  );
 
   const changeTab = (index, category) => {
     setActiveTab(index);

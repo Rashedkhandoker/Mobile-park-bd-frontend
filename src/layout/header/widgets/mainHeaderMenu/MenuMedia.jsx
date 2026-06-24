@@ -2,9 +2,10 @@ import NoDataFound from "@/components/widgets/NoDataFound";
 import ProductBox from "@/components/widgets/productBox";
 import ThemeOptionContext from "@/context/themeOptionsContext";
 import request from "@/utils/axiosUtils";
-import { BlogAPI, ProductAPI } from "@/utils/axiosUtils/API";
+import { BlogAPI } from "@/utils/axiosUtils/API";
 import { showMonthWiseDateAndTime } from "@/utils/customFunctions/DateFormat";
 import useFetchQuery from "@/utils/hooks/useFetchQuery";
+import { useProductsByIds } from "@/utils/hooks/useProducts";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -21,11 +22,8 @@ const MenuMedia = ({ menu }) => {
     select: (data) => data.data.data,
   });
 
-  const { data: filterProduct, refetch: productRefetch } = useFetchQuery([ProductAPI], () => request({ url: ProductAPI, params: { ids: Array.from(new Set(menu?.product_ids))?.join(",") } }, router), {
-    enabled: false,
-    refetchOnWindowFocus: false,
-    select: (data) => data.data.data,
-  });
+  const productIds = Array.from(new Set(menu?.product_ids ?? []));
+  const { data: filterProduct, refetch: productRefetch } = useProductsByIds(productIds);
 
   useEffect(() => {
     if (menu?.blog_ids?.length > 0) {

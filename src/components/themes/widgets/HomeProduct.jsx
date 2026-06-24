@@ -1,32 +1,19 @@
 import NoDataFound from "@/components/widgets/NoDataFound";
 import ProductBox from "@/components/widgets/productBox";
 import ProductIdsContext from "@/context/productIdsContext";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";
-import { useRouter } from "next/navigation";
+import { useProductsByIds } from "@/utils/hooks/useProducts";
 import React, { useContext, useEffect, useMemo } from "react";
 import Slider from "react-slick";
 import { Row } from "reactstrap";
 const HomeProduct = ({ type, style, slider = false, productIds, product_box_style, classForVertical, sliderOptions, rowClass }) => {
   const { filteredProduct } = useContext(ProductIdsContext);
-  const router = useRouter();
 
-  // Check if productIds is defined and not empty
   const {
     data: products,
     refetch,
     fetchStatus,
     isLoading,
-  } = useFetchQuery(
-    ["NewProds", productIds], // Include productIds in the query key
-    () => request({ url: ProductAPI, params: { ids: productIds?.join(","), status: 1 } }, router),
-    {
-      enabled: !!productIds?.length, // Only fetch if productIds has values
-      refetchOnWindowFocus: false,
-      select: (res) => res?.data?.data,
-    }
-  );
+  } = useProductsByIds(productIds, { status: 1 });
 
   const sliderSettingMain = sliderOptions && sliderOptions(productIds?.length);
 

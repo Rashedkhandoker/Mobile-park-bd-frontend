@@ -1,12 +1,10 @@
 "use client";
 import WrapperComponent from "@/components/widgets/WrapperComponent";
 import Btn from "@/elements/buttons/Btn";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
 import Breadcrumbs from "@/utils/commonComponents/breadcrumb";
 import { useCustomSearchParams } from "@/utils/hooks/useCustomSearchParams";
 import useDebounce from "@/utils/hooks/useDebounce";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
+import { useProducts } from "@/utils/hooks/useProducts";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -20,22 +18,11 @@ const SearchModule = () => {
   const debouncedSearch = useDebounce(searchState, 1000); // Add debounce for search input
   const router = useRouter();
 
-  const { data, refetch, isLoading, fetchStatus, isError } = useFetchQuery(
-    [ProductAPI, "search"],
-    () =>
-      request({
-        url: ProductAPI,
-        params: { search: debouncedSearch, paginate: 12, status: 1 },
-      }),
-    {
-      enabled: false,
-      refetchOnWindowFocus: false,
-      select: (data) => data.data.data,
-      onError: (error) => {
-        console.error("Error fetching search results", error); // Error handling
-      },
-    }
+  const { data: searchPage, refetch, isLoading, fetchStatus, isError } = useProducts(
+    { search: debouncedSearch, paginate: 12, status: 1 },
+    { enabled: false }
   );
+  const data = searchPage?.data;
 
   // Update search state and trigger refetch when query param changes
   useEffect(() => {

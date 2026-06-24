@@ -1,11 +1,9 @@
 import RatingBox from "@/components/collection/collectionSidebar/RatingBox";
 import ImageLink from "@/components/themes/widgets/imageLink";
 import SettingContext from "@/context/settingContext";
-import request from "@/utils/axiosUtils";
-import { ProductAPI } from "@/utils/axiosUtils/API";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
+import { useProductsByCategory } from "@/utils/hooks/useProducts";
 import Link from "next/link";
-import React, { useContext, useEffect, useMemo } from "react";
+import React, { useContext, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Media } from "reactstrap";
 
@@ -15,14 +13,7 @@ const TrendingProduct = ({ productState }) => {
   const categoryId = useMemo(() => {
     return productState?.product?.categories?.map((elem) => elem?.id);
   }, [productState?.product?.categories]);
-  const { data: productData, refetch: productRefetch } = useFetchQuery([categoryId], () => request({ url: ProductAPI, params: { status: 1, trending: 1, category_ids: categoryId?.join() } }), {
-    enabled: false,
-    refetchOnWindowFocus: false,
-    select: (data) => data.data.data,
-  });
-  useEffect(() => {
-    categoryId?.length > 0 && productRefetch();
-  }, [categoryId]);
+  const { data: productData } = useProductsByCategory(categoryId, { status: 1, trending: 1 });
   if (productData?.length == 0) return null;
   return (
     <div className="theme-card">
