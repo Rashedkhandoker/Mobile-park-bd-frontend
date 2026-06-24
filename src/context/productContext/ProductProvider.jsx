@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useFetchQuery from "@/utils/hooks/useFetchQuery";
 import { getProducts } from '@/utils/services/productService';
+import allProductsJson from '@/app/api/product/product.json';
 import ProductContext from '.';
 
 const ProductProvider = (props) => {
@@ -24,8 +25,11 @@ const ProductProvider = (props) => {
       setProductAPIData((prev) => ({ ...prev, data: productData, productIsLoading: productIsLoading }));
     }
   }, [productData]);
+
+  const searchList = allProductsJson?.data ?? [];
+
   return (
-    <ProductContext.Provider value={{ ...props, productAPIData, setProductAPIData, customProduct, setCustomProduct, totalDealIds, setTotalDealIds, productRefetch, productData }}>
+    <ProductContext.Provider value={{ ...props, productAPIData, setProductAPIData, customProduct, setCustomProduct, totalDealIds, setTotalDealIds, productRefetch, productData, searchList }}>
       {props.children}
     </ProductContext.Provider>
   );

@@ -31,7 +31,7 @@ const IconSearchModal = ({ setIsOpen, isOpen }) => {
   const { data: categoryData, refetch, isLoading: categoryIsLoading, fetchStatus: categoryFetchStatus } = useFetchQuery(["CategoryAPIMinimalSearch"], () => request({ url: CategoryAPI, params: { status: 1, paginate: searchValue === "" ? 4 : paginate, search: categoryCustomSearch ? categoryCustomSearch : null } }), { enabled: isOpen, refetchOnWindowFocus: false, select: (data) => data.data.data });
 
   const [text] = useTypewriter({
-    words: ["Search with brand and category..."],
+    words: ["Search Product, Brand and more..."],
     deleteSpeed: 120,
     loop: 0,
   });

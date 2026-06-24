@@ -62,7 +62,7 @@ const FullSearch = () => {
   };
 
   useEffect(() => {
-    const search = searchList?.filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()));
+    const search = searchList?.filter((item) => item.name?.toLowerCase().includes(searchValue.toLowerCase()));
     setSearchArray(search);
   }, [searchValue]);
   
@@ -99,7 +99,7 @@ const FullSearch = () => {
   };
 
   const [text] = useTypewriter({
-    words: ["Search with brand and category..."],
+    words: ["Search Product, Brand and more..."],
     deleteSpeed: 120,
     loop: 0,
   });
