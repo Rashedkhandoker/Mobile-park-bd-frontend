@@ -1,7 +1,6 @@
 import ImageLink from "@/components/widgets/imageLink";
 import TitleBox from "@/components/widgets/title";
 import WrapperComponent from "@/components/widgets/WrapperComponent";
-import BlogIdsContext from "@/context/blogIdsContext";
 import BrandIdsContext from "@/context/brandIdsContext";
 import ProductIdsContext from "@/context/productIdsContext";
 import { bookSlider, horizontalProductSlider5 } from "@/data/sliderSetting/SliderSetting";
@@ -23,7 +22,6 @@ const ElectronicsThree = () => {
   const { data, refetch, isLoading } = useCustomDataQuery({ params: "electronics_three" });
   const { setGetProductIds, isRefetching: productLoad } = useContext(ProductIdsContext);
   const { isLoading: brandLoading } = useContext(BrandIdsContext);
-  const { isLoading: blogLoading } = useContext(BlogIdsContext);
 
   useEffect(() => {
     if (data?.products_ids) {
@@ -42,7 +40,7 @@ const ElectronicsThree = () => {
     };
   }, []);
 
-  useSkeletonLoader2([productLoad, blogLoading, brandLoading]);
+  useSkeletonLoader2([productLoad, brandLoading]);
   if (isLoading && document.body) return <Loader />;
 
   return (
@@ -52,7 +50,7 @@ const ElectronicsThree = () => {
         <Container className=" banner-slider">
         <Row className="g-sm-4 g-3">
           {data?.home_banner?.banner_1?.status && (
-            <Col md="7">
+            <Col xs="12" md="7">
               <div className="position-relative">
                 <ImageLink homeBanner={true} imgUrl={data?.home_banner?.banner_1} height={802} width={793} />
                 <div className="banner-skeleton">
@@ -70,7 +68,7 @@ const ElectronicsThree = () => {
               </div>
             </Col>
           )}
-          <Col md="5">
+          <Col xs="12" md="5">
             <Row className=" home-banner g-sm-4 g-3">
               {data &&
                 Object?.keys(data?.home_banner)
@@ -79,7 +77,7 @@ const ElectronicsThree = () => {
                   ?.map(
                     (banner, index) =>
                       banner?.status && (
-                        <Col xs="12" key={index}>
+                        <Col xs="6" md="12" key={index}>
                           <div className="position-relative">
                             <ImageLink imgUrl={banner} height={387} width={560} />
                             <div className="banner-skeleton">
@@ -114,9 +112,7 @@ const ElectronicsThree = () => {
       {/* Categories 1  */}
       {data?.categories_1?.status && (
         <WrapperComponent classes={{ sectionClass: `vector-category`, fluidClass: "container" }} noRowCol={true}>
-          <div className="vector-slide-8 category-slide ratio_square">
-            <HomeCategorySidebar categoryIds={data?.categories_1?.category_ids || []} style="books" sliderOptions={bookSlider} />
-          </div>
+          <HomeCategorySidebar categoryIds={data?.categories_1?.category_ids || []} style="flat-grid" />
         </WrapperComponent>
       )}
       {/* Product List 1 */}

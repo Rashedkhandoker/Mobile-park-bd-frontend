@@ -338,6 +338,49 @@ const HomeCategorySidebar = ({ categoryIds, height, width, style, slider, slider
             </Slider>
           )}
 
+          {style === "mobile-grid" && (
+            <div className="mobile-category-section">
+              <Row className="g-3 mobile-category-grid">
+                {mainCategories?.slice(0, 6)?.map((category, i) => (
+                  <Col xs="4" key={i}>
+                    <Link href={`/category/${category?.slug}`} className="mobile-category-item">
+                      <div className="mobile-category-img">
+                        <img
+                          src={category.category_icon ? category.category_icon.original_url : `${ImagePath}/placeholder/category.png`}
+                          className="img-fluid"
+                          alt={category.name}
+                        />
+                      </div>
+                      <p>{category.name}</p>
+                    </Link>
+                  </Col>
+                ))}
+              </Row>
+              <div className="mobile-category-see-all">
+                <Link href="/collections">See All Categories</Link>
+              </div>
+            </div>
+          )}
+
+          {style === "flat-grid" && (
+            <Row className="g-3 g-md-4 flat-category-grid">
+              {mainCategories?.map((category, i) => (
+                <Col key={i} xs="4" sm="3" md="2" lg="auto" className="flat-category-col">
+                  <Link href={`/category/${category?.slug}`} className="flat-category-item">
+                    <div className="flat-category-img">
+                      <img
+                        src={category.category_icon ? category.category_icon.original_url : `${ImagePath}/placeholder/category.png`}
+                        className="img-fluid"
+                        alt={category.name}
+                      />
+                    </div>
+                    <p className="flat-category-name">{category.name}</p>
+                  </Link>
+                </Col>
+              ))}
+            </Row>
+          )}
+
           {style == "digital_download" && (
             <Slider {...categorySliderSettingMain}>
               {mainCategories?.map((category, index) => (

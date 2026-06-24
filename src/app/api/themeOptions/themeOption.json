@@ -109,16 +109,6 @@
           "value": "account/order"
         },
         {
-          "id": 4,
-          "name": "Wishlist",
-          "value": "wishlist"
-        },
-        {
-          "id": 6,
-          "name": "FAQ's",
-          "value": "faq"
-        },
-        {
           "id": 7,
           "name": "Contact Us",
           "value": "contact-us"
@@ -139,16 +129,6 @@
           "id": 3,
           "name": "About Us",
           "value": "about-us"
-        },
-        {
-          "id": 4,
-          "name": "Blogs",
-          "value": "blogs"
-        },
-        {
-          "id": 5,
-          "name": "Offers",
-          "value": "offers"
         },
         {
           "id": 6,
