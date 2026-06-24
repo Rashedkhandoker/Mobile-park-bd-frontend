@@ -18,7 +18,7 @@ const MenuList = ({ menu, isOpen, setIsOpen, level }) => {
   const isAuthenticated = Cookies.get("uat");
   const { setOpenAuthModal } = useContext(ThemeOptionContext);
 
-  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`, `/compare`];
+  const protectedRoutes = [`/account/dashboard`, `/account/notification`, `/account/wallet`, `/account/bank-details`, `/account/bank-details`, `/account/point`, `/account/refund`, `/account/order`, `/account/addresses`, `/wishlist`];
 
   const protectedRoute = (route) => {
     if (!isAuthenticated && protectedRoutes.includes(route)) {
