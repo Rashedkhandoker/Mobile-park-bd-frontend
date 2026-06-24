@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { RiHeartLine, RiMenuLine, RiUserLine } from "react-icons/ri";
+import { RiMenuLine, RiUserLine } from "react-icons/ri";
 import { Button, Col, Container, Row } from "reactstrap";
 import HeaderCart from "../widgets/headerCart";
 import HeaderLogo from "../widgets/HeaderLogo";
@@ -21,9 +21,6 @@ const HeaderSix = () => {
   const isAuthenticated = Cookies.get("uat");
   const handleProfileClick = (path) => {
     isAuthenticated ? router.push(path) : setOpenAuthModal(true);
-  };
-  const handleWishlistClick = () => {
-    isAuthenticated ? router.push("/wishlist") : setOpenAuthModal(true);
   };
   const { t } = useTranslation("common");
   const [activeCategory, setActiveCategory] = useState("Beauty");
@@ -73,18 +70,13 @@ const HeaderSix = () => {
                 <HeaderLogo />
               </div>
             </div>
-            <div>
+            <div className="d-none d-md-block">
               <HeaderSearchbar fullSearch={true} />
             </div>
             <div className="menu-right pull-right">
               <div>
                 <div className="icon-nav">
                   <ul>
-                    <li className="onhover-div">
-                      <Link href={isAuthenticated ? "/wishlist" : Href} onClick={handleWishlistClick}>
-                        <RiHeartLine />
-                      </Link>
-                    </li>
                     <li className="onhover-div">
                       <HeaderCart />
                     </li>
@@ -97,6 +89,9 @@ const HeaderSix = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="d-block d-md-none mobile-search-bar" style={{ padding: "8px 0" }}>
+            <HeaderSearchbar fullSearch={true} />
           </div>
         </Col>
       </Container>
