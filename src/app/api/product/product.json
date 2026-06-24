@@ -69,7 +69,13 @@
       "order_amount": 31.52,
       "is_wishlist": false,
       "rating_count": 5,
-      "review_ratings": [0, 0, 0, 0, 1],
+      "review_ratings": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
       "related_products": [],
       "cross_sell_products": [],
       "wholesales": [],
@@ -115,84 +121,76 @@
       "attributes": [],
       "categories": [
         {
-          "id": 7,
-          "name": "Airpod",
-          "slug": "airpod",
-          "description": "Fashion refers to the prevailing style or trend in clothing, accessories, footwear, makeup, and hairstyling that is popular at a particular time and place. It's a dynamic and ever-evolving aspect of culture that reflects social, economic, and cultural influences",
-          "category_image_id": 31,
-          "category_icon_id": 3797,
+          "id": 4,
+          "name": "Audio",
+          "slug": "audio",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": 4,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 2,
+          "commission_rate": null,
           "parent_id": null,
           "created_by_id": "1",
-          "created_at": "2024-05-04T06:01:31.000000Z",
-          "updated_at": "2024-06-21T06:40:24.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 19,
+          "products_count": 0,
           "pivot": {
             "product_id": "16",
-            "category_id": "7"
+            "category_id": "4"
           },
-          "category_image": {
-            "id": 31,
-            "name": "fashion_category",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "fashion_category.png",
-            "asset_url": "/storage/31/fashion_category.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
+          "category_image": null,
           "category_meta_image": null,
           "category_icon": {
-            "id": 3797,
-            "name": "fashion",
+            "id": 4,
+            "name": "audio",
             "disk": "public",
             "mime_type": "image/png",
-            "file_name": "fashion.png",
-            "asset_url": "/storage/3797/fashion.png",
-            "original_url": "/assets/images/placeholder/product.png"
+            "file_name": "audio.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
           }
         },
         {
-          "id": 10,
-          "name": "Winter Wear",
-          "slug": "winter-wear",
+          "id": 41,
+          "name": "AirPods",
+          "slug": "airpods",
           "description": null,
-          "category_image_id": 3590,
-          "category_icon_id": null,
+          "category_image_id": null,
+          "category_icon_id": 41,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 2,
-          "parent_id": 7,
+          "commission_rate": null,
+          "parent_id": 4,
           "created_by_id": "1",
-          "created_at": "2024-05-04T06:02:48.000000Z",
-          "updated_at": "2024-06-18T05:28:25.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 7,
+          "products_count": 0,
           "pivot": {
             "product_id": "16",
-            "category_id": "10"
+            "category_id": "41"
           },
-          "category_image": {
-            "id": 3590,
-            "name": "winter-ware",
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": {
+            "id": 41,
+            "name": "airpods",
             "disk": "public",
             "mime_type": "image/png",
-            "file_name": "winter-ware.png",
-            "asset_url": "/storage/3590/winter-ware.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
-          "category_meta_image": null,
-          "category_icon": null
+            "file_name": "airpods.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
         }
       ],
       "tags": [
@@ -348,11 +346,12 @@
         }
       ],
       "similar_products": [],
-      "cross_products": []
+      "cross_products": [],
+      "category_id": 4
     },
     {
       "id": 17,
-      "name": "AirPods Pro (2nd generation) USB‐C",
+      "name": "AirPods Pro (2nd generation) USB\u2010C",
       "short_description": "Introducing the ultimate fusion of style and comfort: the Shacket Combo. This versatile garment combines the warmth of a jacket with the laid-back feel of a shirt, perfect for effortless everyday wear.",
       "description": "<p>Our exclusive Shacket Combo, the ultimate solution to your style conundrums! Combining the best of both worlds - shirts and jackets - our Shacket Combo offers unparalleled versatility and fashion-forward flair. Crafted from premium fabrics, each piece in this combo is designed to deliver supreme comfort without compromising on style.</p><p>Whether you're dressing up for a casual brunch with friends or heading to a weekend getaway, our Shacket Combo effortlessly transitions from day to night, making it a wardrobe staple for every occasion. The timeless design and impeccable tailoring ensure a flattering fit for all body types, while the subtle detailing adds a touch of sophistication to your ensemble.</p><p>Gone are the days of agonizing over what to wear! With our Shacket Combo, you can effortlessly elevate any outfit with minimal effort. Pair it with your favorite denim for a laid-back vibe or layer it over a dress for a chic, on-trend look. The possibilities are endless!</p><p>But our Shacket Combo isn't just about style - it's about practicality too. Designed to withstand the rigors of everyday wear, each piece is durable and easy to maintain, so you can enjoy your new favorite wardrobe staple for years to come.</p><p>Whether you're a fashion enthusiast looking to make a statement or someone who appreciates the simplicity of classic style, our Shacket Combo has something for everyone. It's the perfect fusion of fashion and function, allowing you to express your unique sense of style with confidence and ease.</p><p>Upgrade your wardrobe today with our Shacket Combo and experience the epitome of style and comfort. With its timeless appeal and effortless versatility, it's bound to become your go-to choice for any occasion. Don't miss out on the opportunity to elevate your look and make a lasting impression wherever you go.</p>",
       "type": "simple",
@@ -418,7 +417,13 @@
       "order_amount": 31.52,
       "is_wishlist": false,
       "rating_count": 5,
-      "review_ratings": [0, 0, 0, 0, 1],
+      "review_ratings": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
       "related_products": [],
       "cross_sell_products": [],
       "wholesales": [],
@@ -464,84 +469,76 @@
       "attributes": [],
       "categories": [
         {
-          "id": 7,
-          "name": "Airpod",
-          "slug": "airpod",
-          "description": "Fashion refers to the prevailing style or trend in clothing, accessories, footwear, makeup, and hairstyling that is popular at a particular time and place. It's a dynamic and ever-evolving aspect of culture that reflects social, economic, and cultural influences",
-          "category_image_id": 31,
-          "category_icon_id": 3797,
+          "id": 4,
+          "name": "Audio",
+          "slug": "audio",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": 4,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 2,
+          "commission_rate": null,
           "parent_id": null,
           "created_by_id": "1",
-          "created_at": "2024-05-04T06:01:31.000000Z",
-          "updated_at": "2024-06-21T06:40:24.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 19,
+          "products_count": 0,
           "pivot": {
-            "product_id": "16",
-            "category_id": "7"
+            "product_id": "17",
+            "category_id": "4"
           },
-          "category_image": {
-            "id": 31,
-            "name": "fashion_category",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "fashion_category.png",
-            "asset_url": "/storage/31/fashion_category.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
+          "category_image": null,
           "category_meta_image": null,
           "category_icon": {
-            "id": 3797,
-            "name": "fashion",
+            "id": 4,
+            "name": "audio",
             "disk": "public",
             "mime_type": "image/png",
-            "file_name": "fashion.png",
-            "asset_url": "/storage/3797/fashion.png",
-            "original_url": "/assets/images/placeholder/product.png"
+            "file_name": "audio.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
           }
         },
         {
-          "id": 10,
-          "name": "Winter Wear",
-          "slug": "winter-wear",
+          "id": 41,
+          "name": "AirPods",
+          "slug": "airpods",
           "description": null,
-          "category_image_id": 3590,
-          "category_icon_id": null,
+          "category_image_id": null,
+          "category_icon_id": 41,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 2,
-          "parent_id": 7,
+          "commission_rate": null,
+          "parent_id": 4,
           "created_by_id": "1",
-          "created_at": "2024-05-04T06:02:48.000000Z",
-          "updated_at": "2024-06-18T05:28:25.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 7,
+          "products_count": 0,
           "pivot": {
-            "product_id": "16",
-            "category_id": "10"
+            "product_id": "17",
+            "category_id": "41"
           },
-          "category_image": {
-            "id": 3590,
-            "name": "winter-ware",
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": {
+            "id": 41,
+            "name": "airpods",
             "disk": "public",
             "mime_type": "image/png",
-            "file_name": "winter-ware.png",
-            "asset_url": "/storage/3590/winter-ware.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
-          "category_meta_image": null,
-          "category_icon": null
+            "file_name": "airpods.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
         }
       ],
       "tags": [
@@ -697,1298 +694,9 @@
         }
       ],
       "similar_products": [],
-      "cross_products": []
+      "cross_products": [],
+      "category_id": 4
     },
-
-    {
-      "id": 313,
-      "name": "Infinite Horizons",
-      "short_description": "Explore boundless creativity with our advanced productivity suite. Designed to elevate your work, it offers seamless integration, intuitive tools, and unparalleled flexibility. Transform your ideas into reality and achieve more than ever before.",
-      "description": "<p>Infinite Horizons is your gateway to boundless possibilities. Designed for the modern explorer, this state-of-the-art product seamlessly blends cutting-edge technology with unparalleled functionality. Imagine the freedom to venture into new realms, whether you're navigating rugged terrains or embarking on virtual journeys from the comfort of your home. With its sleek, durable design, Infinite Horizons is built to withstand the elements, ensuring you stay connected and inspired no matter where your adventures take you. </p><p>Equipped with advanced features such as GPS tracking, real-time weather updates, and immersive virtual reality experiences, this versatile tool empowers you to push the limits of exploration. Perfect for thrill-seekers, tech enthusiasts, and anyone with a thirst for discovery, Infinite Horizons transforms the way you experience the world. Embrace the adventure and redefine what's possible with Infinite Horizons, where your next great journey awaits.</p>",
-      "type": "simple",
-      "unit": "1 Item",
-      "weight": 150,
-      "quantity": 60,
-      "price": 7,
-      "sale_price": 7,
-      "discount": null,
-      "is_featured": 0,
-      "shipping_days": null,
-      "is_cod": 0,
-      "is_free_shipping": 0,
-      "is_sale_enable": 0,
-      "is_return": 0,
-      "is_trending": 0,
-      "is_approved": 1,
-      "is_external": 0,
-      "external_url": null,
-      "external_button_text": null,
-      "sale_starts_at": null,
-      "sale_expired_at": null,
-      "sku": "BO18",
-      "is_random_related_products": 0,
-      "stock_status": "in_stock",
-      "meta_title": "Infinite Horizons",
-      "meta_description": "Explore boundless creativity with our advanced productivity suite. Designed to elevate your work, it offers seamless integration, intuitive tools, and unparalleled flexibility. Transform your ideas into reality and achieve more than ever before.",
-      "product_thumbnail_id": 1809,
-      "product_meta_image_id": "1809",
-      "size_chart_image_id": null,
-      "estimated_delivery_text": "Your order is likely to reach you within 5 days.",
-      "return_policy_text": null,
-      "safe_checkout": 1,
-      "secure_checkout": 1,
-      "social_share": 1,
-      "encourage_order": 1,
-      "encourage_view": 1,
-      "slug": "infinite-horizons",
-      "status": 1,
-      "store_id": 21,
-      "created_by_id": "1",
-      "tax_id": 1,
-      "preview_type": "url",
-      "product_type": "physical",
-      "separator": null,
-      "is_licensable": 0,
-      "license_type": null,
-      "preview_url": null,
-      "watermark": 0,
-      "watermark_position": "center",
-      "brand_id": 63,
-      "watermark_image_id": null,
-      "wholesale_price_type": null,
-      "is_licensekey_auto": 0,
-      "preview_audio_file_id": null,
-      "preview_video_file_id": null,
-      "deleted_at": null,
-      "created_at": "2024-05-23T09:39:39.000000Z",
-      "updated_at": "2024-05-23T09:39:39.000000Z",
-      "orders_count": 0,
-      "reviews_count": 0,
-      "can_review": false,
-      "order_amount": 0,
-      "is_wishlist": false,
-      "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
-      "related_products": [],
-      "cross_sell_products": [],
-      "wholesales": [],
-      "variations": [],
-      "product_thumbnail": {
-        "id": 1809,
-        "name": "book_23",
-        "disk": "public",
-        "file_name": "book_23.png",
-        "mime_type": "image/png",
-        "asset_url": "/storage/1809/book_23.png",
-        "original_url": "/assets/images/placeholder/product.png"
-      },
-      "product_galleries": [
-        {
-          "id": 1809,
-          "name": "book_23",
-          "disk": "public",
-          "file_name": "book_23.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1809/book_23.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1808,
-          "name": "book_22",
-          "disk": "public",
-          "file_name": "book_22.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1808/book_22.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1807,
-          "name": "book_21",
-          "disk": "public",
-          "file_name": "book_21.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1807/book_21.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        }
-      ],
-      "attributes": [],
-      "categories": [
-        {
-          "id": 98,
-          "name": "Books",
-          "slug": "books",
-          "description": "Portals to infinite worlds, offering escape, knowledge, and empathy. Each page whispers secrets, sparks the imagination, and kindles curiosity.",
-          "category_image_id": null,
-          "category_icon_id": 3792,
-          "status": 1,
-          "meta_title": "Books",
-          "meta_description": "Portals to infinite worlds, offering escape, knowledge, and empathy. Each page whispers secrets, sparks the imagination, and kindles curiosity.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": null,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:10:09.000000Z",
-          "updated_at": "2024-06-21T06:36:17.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 3,
-          "pivot": {
-            "product_id": "313",
-            "category_id": "98"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": {
-            "id": 3792,
-            "name": "book",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "book.png",
-            "asset_url": "/storage/3792/book.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        },
-        {
-          "id": 100,
-          "name": "Romance",
-          "slug": "romance",
-          "description": "Indulge in the timeless allure of romance with our curated collection. Discover captivating tales of love, passion, and desire that will sweep you off your feet. From classic romances to modern love stories, immerse yourself in the enchanting world of romance literature.",
-          "category_image_id": null,
-          "category_icon_id": 3274,
-          "status": 1,
-          "meta_title": "Romance",
-          "meta_description": "Indulge in the timeless allure of romance with our curated collection. Discover captivating tales of love, passion, and desire that will sweep you off your feet. From classic romances to modern love stories, immerse yourself in the enchanting world of romance literature.",
-          "category_meta_image_id": 3274,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 98,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:12:48.000000Z",
-          "updated_at": "2024-06-13T10:38:31.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 7,
-          "pivot": {
-            "product_id": "313",
-            "category_id": "100"
-          },
-          "category_image": null,
-          "category_meta_image": {
-            "id": 3274,
-            "name": "romance",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "romance.png",
-            "asset_url": "/storage/3274/romance.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
-          "category_icon": {
-            "id": 3274,
-            "name": "romance",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "romance.png",
-            "asset_url": "/storage/3274/romance.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        }
-      ],
-      "tags": [
-        {
-          "id": 61,
-          "name": "Fiction",
-          "slug": "fiction",
-          "type": "product",
-          "description": "Embark on a thrilling journey through worlds unknown with our latest fiction anthology. Dive into captivating tales crafted by master storytellers, where each page unveils new adventures and characters to enchant your imagination. Immerse yourself in the magic of storytelling with this diverse collection of fiction wonders.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:14:54.000000Z",
-          "updated_at": "2024-05-23T08:14:54.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 1,
-          "pivot": {
-            "product_id": "313",
-            "tag_id": "61"
-          }
-        }
-      ],
-      "brand": {
-        "id": 63,
-        "name": "Book Boudoir",
-        "slug": "book-boudoir",
-        "status": 1,
-        "brand_image": null,
-        "brand_meta_image": null,
-        "brand_banner": null
-      },
-      "store": {
-        "id": 21,
-        "store_name": "Bonanza Books",
-        "slug": "bonanza-books",
-        "product_images": [
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png"
-        ],
-        "order_amount": 0,
-        "rating_count": 0,
-        "store_logo": null,
-        "store_cover": null,
-        "vendor": null,
-        "country": null,
-        "state": null,
-        "reviews": []
-      },
-      "reviews": [],
-      "similar_products": [],
-      "cross_products": []
-    },
-    {
-      "id": 312,
-      "name": "Pure Elegance Bouquet",
-      "short_description": "Experience timeless beauty with our White Rose Bouquet. Perfectly arranged, these fresh, pristine roses symbolize purity and grace, making them an ideal gift for any occasion.",
-      "description": "<p>Indulge in the elegance of our White Rose Bouquet, a stunning arrangement that captures the essence of purity and grace. Each rose is hand-selected for its pristine beauty, ensuring only the freshest blooms make it into your bouquet. The soft, velvety petals of these white roses exude a sense of tranquility and sophistication, making this bouquet a versatile choice for any occasion. Whether you're celebrating a wedding, honoring a loved one, or simply brightening someone's day, the White Rose Bouquet is a timeless expression of your sentiments.</p><p>Our skilled florists meticulously arrange each bouquet to highlight the natural beauty of the roses. The symmetrical design and careful placement of each bloom create a harmonious display that is both visually striking and emotionally evocative. The white roses are complemented by lush greenery, adding depth and contrast to the arrangement. The simplicity of the white roses paired with the rich foliage creates a bouquet that is both classic and contemporary, suitable for any d\u00c3\u00a9cor or setting.</p><p>The White Rose Bouquet is more than just a floral arrangement; it's a symbol of pure intentions and heartfelt emotions. White roses have long been associated with new beginnings, making them a popular choice for weddings, anniversaries, and other significant life events. They also convey messages of remembrance and reverence, offering a thoughtful gesture for moments of sympathy and condolence. Whatever the occasion, this bouquet delivers a message of sincerity and elegance that words alone cannot convey.</p><p>Each bouquet is carefully packaged to ensure it arrives in perfect condition, ready to be enjoyed. We take pride in the quality and freshness of our flowers, and our commitment to excellence is evident in every detail. From the moment you place your order to the moment the bouquet is delivered, we strive to provide an exceptional experience for both the giver and the recipient.</p><p>The White Rose Bouquet is not just a gift; it's an experience that leaves a lasting impression. Imagine the delight on your loved one's face as they receive this exquisite arrangement, the fragrance of fresh roses filling the air, and the sight of flawless white petals bringing a sense of peace and joy. This bouquet transcends the ordinary, making any occasion extraordinary.</p><p>Whether you're looking to make a grand gesture or simply want to show someone you care, the White Rose Bouquet is a perfect choice. Its timeless beauty and universal appeal make it a versatile and meaningful gift that will be cherished and remembered. Order yours today and let the purity and elegance of white roses speak volumes.</p>",
-      "type": "simple",
-      "unit": "1 Item",
-      "weight": 43,
-      "quantity": 32,
-      "price": 11,
-      "sale_price": 7.37,
-      "discount": 33,
-      "is_featured": 0,
-      "shipping_days": null,
-      "is_cod": 0,
-      "is_free_shipping": 1,
-      "is_sale_enable": 0,
-      "is_return": 1,
-      "is_trending": 0,
-      "is_approved": 1,
-      "is_external": 0,
-      "external_url": null,
-      "external_button_text": null,
-      "sale_starts_at": null,
-      "sale_expired_at": null,
-      "sku": "FLOW02",
-      "is_random_related_products": 0,
-      "stock_status": "in_stock",
-      "meta_title": "Pure Elegance Bouquet",
-      "meta_description": "Experience timeless beauty with our White Rose Bouquet. Perfectly arranged, these fresh, pristine roses symbolize purity and grace, making them an ideal gift for any occasion.",
-      "product_thumbnail_id": 1805,
-      "product_meta_image_id": "1805",
-      "size_chart_image_id": null,
-      "estimated_delivery_text": "our order is likely to reach you within 6 days.",
-      "return_policy_text": "Hassle free 7 days return might be available.",
-      "safe_checkout": 1,
-      "secure_checkout": 1,
-      "social_share": 1,
-      "encourage_order": 1,
-      "encourage_view": 1,
-      "slug": "pure-elegance-bouquet",
-      "status": 1,
-      "store_id": 20,
-      "created_by_id": "1",
-      "tax_id": 1,
-      "preview_type": "url",
-      "product_type": "physical",
-      "separator": null,
-      "is_licensable": 0,
-      "license_type": null,
-      "preview_url": null,
-      "watermark": 0,
-      "watermark_position": "center",
-      "brand_id": null,
-      "watermark_image_id": null,
-      "wholesale_price_type": null,
-      "is_licensekey_auto": 0,
-      "preview_audio_file_id": null,
-      "preview_video_file_id": null,
-      "deleted_at": null,
-      "created_at": "2024-05-23T09:13:35.000000Z",
-      "updated_at": "2024-05-23T09:13:35.000000Z",
-      "orders_count": 0,
-      "reviews_count": 0,
-      "can_review": false,
-      "order_amount": 0,
-      "is_wishlist": false,
-      "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
-      "related_products": [],
-      "cross_sell_products": [],
-      "wholesales": [],
-      "variations": [],
-      "product_thumbnail": {
-        "id": 1805,
-        "name": "flower_23",
-        "disk": "public",
-        "file_name": "flower_23.png",
-        "mime_type": "image/png",
-        "asset_url": "/storage/1805/flower_23.png",
-        "original_url": "/assets/images/placeholder/product.png"
-      },
-      "product_galleries": [
-        {
-          "id": 1805,
-          "name": "flower_23",
-          "disk": "public",
-          "file_name": "flower_23.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1805/flower_23.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1804,
-          "name": "flower_22",
-          "disk": "public",
-          "file_name": "flower_22.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1804/flower_22.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1803,
-          "name": "flower_21",
-          "disk": "public",
-          "file_name": "flower_21.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1803/flower_21.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        }
-      ],
-      "attributes": [],
-      "categories": [
-        {
-          "id": 93,
-          "name": "Flowers",
-          "slug": "flowers",
-          "description": "Brighten your space with our exquisite flowers, perfect for any occasion. Handpicked for their beauty and freshness, these blooms add a touch of elegance and charm to your home or office. Ideal for gifting or personal enjoyment, our flowers are sure to bring joy and vibrancy to any setting.",
-          "category_image_id": null,
-          "category_icon_id": 3799,
-          "status": 1,
-          "meta_title": "Flowers",
-          "meta_description": "Brighten your space with our exquisite flowers, perfect for any occasion. Handpicked for their beauty and freshness, these blooms add a touch of elegance and charm to your home or office. Ideal for gifting or personal enjoyment, our flowers are sure to bring joy and vibrancy to any setting.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": null,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T07:55:21.000000Z",
-          "updated_at": "2024-06-21T06:44:37.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 16,
-          "pivot": {
-            "product_id": "312",
-            "category_id": "93"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": {
-            "id": 3799,
-            "name": "Flowers",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "Flowers.png",
-            "asset_url": "/storage/3799/Flowers.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        },
-        {
-          "id": 94,
-          "name": "Personalized Bouquets",
-          "slug": "personalized-bouquets",
-          "description": "Create lasting memories with our personalized bouquets. Handcrafted with care, each arrangement is tailored to reflect your unique sentiments. Choose from a variety of blooms and add a personal touch with custom messages or names. Perfect for birthdays, anniversaries, or any special occasion. Make every moment unforgettable with our bespoke floral creations.",
-          "category_image_id": null,
-          "category_icon_id": null,
-          "status": 1,
-          "meta_title": "Personalized Bouquets",
-          "meta_description": "Create lasting memories with our personalized bouquets. Handcrafted with care, each arrangement is tailored to reflect your unique sentiments. Choose from a variety of blooms and add a personal touch with custom messages or names. Perfect for birthdays, anniversaries, or any special occasion. Make every moment unforgettable with our bespoke floral creations.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 93,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:02:29.000000Z",
-          "updated_at": "2024-05-23T08:02:29.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 1,
-          "pivot": {
-            "product_id": "312",
-            "category_id": "94"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": null
-        },
-        {
-          "id": 95,
-          "name": "Anniversary Bouquets",
-          "slug": "anniversary-bouquets",
-          "description": "Celebrate love with our exquisite anniversary bouquets. Handcrafted with care and attention to detail, each arrangement is a stunning expression of your affection. From classic roses to vibrant mixed blooms, our bouquets are designed to make every anniversary unforgettable. Choose the perfect bouquet to convey your heartfelt sentiments on this special day.",
-          "category_image_id": null,
-          "category_icon_id": null,
-          "status": 1,
-          "meta_title": "Anniversary Bouquets",
-          "meta_description": "Celebrate love with our exquisite anniversary bouquets. Handcrafted with care and attention to detail, each arrangement is a stunning expression of your affection. From classic roses to vibrant mixed blooms, our bouquets are designed to make every anniversary unforgettable. Choose the perfect bouquet to convey your heartfelt sentiments on this special day.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 93,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:03:35.000000Z",
-          "updated_at": "2024-05-23T08:03:35.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 7,
-          "pivot": {
-            "product_id": "312",
-            "category_id": "95"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": null
-        }
-      ],
-      "tags": [
-        {
-          "id": 59,
-          "name": "Hand-tied bouquets",
-          "slug": "hand-tied-bouquets",
-          "type": "product",
-          "description": "Crafted with care and creativity, our hand-tied bouquets are a perfect blend of elegance and charm. Each arrangement is thoughtfully composed by skilled florists using fresh, vibrant blooms, creating a stunning gift for any occasion. Delight your loved ones with the beauty of nature's finest hand-picked and artfully arranged just for them.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:06:19.000000Z",
-          "updated_at": "2024-05-23T08:06:19.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 9,
-          "pivot": {
-            "product_id": "312",
-            "tag_id": "59"
-          }
-        },
-        {
-          "id": 60,
-          "name": "Floral design",
-          "slug": "floral-design",
-          "type": "product",
-          "description": "Elevate your space with our exquisite floral designs. Each arrangement is meticulously crafted to bring a touch of natural beauty into your home or event. From vibrant bouquets to elegant centerpieces, our floral creations promise to add a refreshing burst of color and charm to any setting.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:06:52.000000Z",
-          "updated_at": "2024-05-23T08:06:52.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 8,
-          "pivot": {
-            "product_id": "312",
-            "tag_id": "60"
-          }
-        }
-      ],
-      "brand": null,
-      "store": {
-        "id": 20,
-        "store_name": "Petal Perfection",
-        "slug": "petal-perfection",
-        "product_images": [
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png"
-        ],
-        "order_amount": 0,
-        "rating_count": 0,
-        "store_logo": null,
-        "store_cover": null,
-        "vendor": null,
-        "country": null,
-        "state": null,
-        "reviews": []
-      },
-      "reviews": [],
-      "similar_products": [],
-      "cross_products": []
-    },
-    {
-      "id": 311,
-      "name": "Mixed Gerbera Flower",
-      "short_description": "Brighten any occasion with our Mixed Brilliance Gerbera Flower Bouquet. Featuring a stunning array of colorful gerberas, this bouquet adds a touch of cheer and sophistication.",
-      "description": "<p>A stunning arrangement designed to infuse any space with joy and elegance. This bouquet features a carefully selected mix of vibrant gerbera daisies, each bloom bursting with vivid colors that range from passionate reds and sunny yellows to cheerful pinks and serene whites. The eclectic blend of hues creates a visual symphony that is both striking and soothing, making it a perfect gift for any occasion or a beautiful addition to your own home decor.</p><p>Gerbera daisies are known for their large, daisy-like blooms and long-lasting freshness. They symbolize innocence, purity, and cheerfulness, making them an ideal choice for expressing a wide range of emotions. Whether you\u00e2\u20ac\u2122re celebrating a birthday, an anniversary, congratulating someone on a milestone, or simply wanting to brighten someone's day, this bouquet conveys your sentiments with elegance and flair.</p><p>Each stem in our Mixed Brilliance Gerbera Flower Bouquet is handpicked and arranged by skilled florists to ensure the highest quality and most aesthetically pleasing presentation. The blooms are carefully selected for their vibrant color and healthy appearance, then artfully arranged to create a bouquet that is as captivating as it is fragrant. The result is a breathtaking display that captures the essence of beauty and joy.</p><p>The Mixed Brilliance Gerbera Flower Bouquet is not only visually stunning but also incredibly versatile. Its cheerful appearance makes it suitable for a wide range of settings, from home interiors and office spaces to festive events and formal gatherings. The bouquet\u00e2\u20ac\u2122s lively colors can complement any decor style, adding a touch of natural beauty and sophistication wherever it is placed.</p><p>We understand the importance of making your gift special, which is why each bouquet is thoughtfully wrapped in eco-friendly packaging and accompanied by a personalized message card. This attention to detail ensures that your gift is not only beautiful but also meaningful and memorable. Our commitment to quality and customer satisfaction means that you can trust us to deliver a product that exceeds your expectations.</p><p>In addition to its aesthetic appeal, the Mixed Brilliance Gerbera Flower Bouquet is also a sustainable choice. We source our flowers from responsible growers who use environmentally friendly practices, ensuring that your purchase supports sustainable floriculture. This dedication to sustainability allows you to enjoy the beauty of fresh flowers while also caring for the planet.</p><p>Ordering the Mixed Brilliance Gerbera Flower Bouquet is simple and convenient. With just a few clicks, you can select your preferred size and delivery date, and we\u00e2\u20ac\u2122ll take care of the rest. Our reliable delivery service ensures that your bouquet arrives fresh and on time, ready to bring a smile to the recipient\u00e2\u20ac\u2122s face.</p><p>Experience the joy and beauty of the Mixed Brilliance Gerbera Flower Bouquet today. Whether you\u00e2\u20ac\u2122re giving it as a gift or treating yourself, this exquisite arrangement is sure to leave a lasting impression. Bright, bold, and full of life, it\u00e2\u20ac\u2122s the perfect way to celebrate life\u00e2\u20ac\u2122s special moments and make every day a little more beautiful.</p>",
-      "type": "simple",
-      "unit": "1 Item",
-      "weight": 56,
-      "quantity": 52,
-      "price": 12,
-      "sale_price": 11.4,
-      "discount": 5,
-      "is_featured": 0,
-      "shipping_days": null,
-      "is_cod": 0,
-      "is_free_shipping": 1,
-      "is_sale_enable": 0,
-      "is_return": 0,
-      "is_trending": 0,
-      "is_approved": 1,
-      "is_external": 0,
-      "external_url": null,
-      "external_button_text": null,
-      "sale_starts_at": null,
-      "sale_expired_at": null,
-      "sku": "FLOW01",
-      "is_random_related_products": 0,
-      "stock_status": "in_stock",
-      "meta_title": "Mixed Gerbera Flower",
-      "meta_description": "Brighten any occasion with our Mixed Brilliance Gerbera Flower Bouquet. Featuring a stunning array of colorful gerberas, this bouquet adds a touch of cheer and sophistication.",
-      "product_thumbnail_id": 1799,
-      "product_meta_image_id": "1799",
-      "size_chart_image_id": null,
-      "estimated_delivery_text": "our order is likely to reach you within 6 days.",
-      "return_policy_text": null,
-      "safe_checkout": 1,
-      "secure_checkout": 1,
-      "social_share": 1,
-      "encourage_order": 1,
-      "encourage_view": 1,
-      "slug": "mixed-gerbera-flower",
-      "status": 1,
-      "store_id": 20,
-      "created_by_id": "1",
-      "tax_id": 1,
-      "preview_type": "url",
-      "product_type": "physical",
-      "separator": null,
-      "is_licensable": 0,
-      "license_type": null,
-      "preview_url": null,
-      "watermark": 0,
-      "watermark_position": "center",
-      "brand_id": null,
-      "watermark_image_id": null,
-      "wholesale_price_type": null,
-      "is_licensekey_auto": 0,
-      "preview_audio_file_id": null,
-      "preview_video_file_id": null,
-      "deleted_at": null,
-      "created_at": "2024-05-23T09:07:44.000000Z",
-      "updated_at": "2024-05-23T09:07:44.000000Z",
-      "orders_count": 0,
-      "reviews_count": 0,
-      "can_review": false,
-      "order_amount": 0,
-      "is_wishlist": false,
-      "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
-      "related_products": [],
-      "cross_sell_products": [],
-      "wholesales": [],
-      "variations": [],
-      "product_thumbnail": {
-        "id": 1799,
-        "name": "flower_11",
-        "disk": "public",
-        "file_name": "flower_11.png",
-        "mime_type": "image/png",
-        "asset_url": "/storage/1799/flower_11.png",
-        "original_url": "/assets/images/placeholder/product.png"
-      },
-      "product_galleries": [
-        {
-          "id": 1801,
-          "name": "flower_13",
-          "disk": "public",
-          "file_name": "flower_13.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1801/flower_13.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1800,
-          "name": "flower_12",
-          "disk": "public",
-          "file_name": "flower_12.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1800/flower_12.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1799,
-          "name": "flower_11",
-          "disk": "public",
-          "file_name": "flower_11.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1799/flower_11.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        }
-      ],
-      "attributes": [],
-      "categories": [
-        {
-          "id": 93,
-          "name": "Flowers",
-          "slug": "flowers",
-          "description": "Brighten your space with our exquisite flowers, perfect for any occasion. Handpicked for their beauty and freshness, these blooms add a touch of elegance and charm to your home or office. Ideal for gifting or personal enjoyment, our flowers are sure to bring joy and vibrancy to any setting.",
-          "category_image_id": null,
-          "category_icon_id": 3799,
-          "status": 1,
-          "meta_title": "Flowers",
-          "meta_description": "Brighten your space with our exquisite flowers, perfect for any occasion. Handpicked for their beauty and freshness, these blooms add a touch of elegance and charm to your home or office. Ideal for gifting or personal enjoyment, our flowers are sure to bring joy and vibrancy to any setting.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": null,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T07:55:21.000000Z",
-          "updated_at": "2024-06-21T06:44:37.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 16,
-          "pivot": {
-            "product_id": "311",
-            "category_id": "93"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": {
-            "id": 3799,
-            "name": "Flowers",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "Flowers.png",
-            "asset_url": "/storage/3799/Flowers.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        },
-        {
-          "id": 95,
-          "name": "Anniversary Bouquets",
-          "slug": "anniversary-bouquets",
-          "description": "Celebrate love with our exquisite anniversary bouquets. Handcrafted with care and attention to detail, each arrangement is a stunning expression of your affection. From classic roses to vibrant mixed blooms, our bouquets are designed to make every anniversary unforgettable. Choose the perfect bouquet to convey your heartfelt sentiments on this special day.",
-          "category_image_id": null,
-          "category_icon_id": null,
-          "status": 1,
-          "meta_title": "Anniversary Bouquets",
-          "meta_description": "Celebrate love with our exquisite anniversary bouquets. Handcrafted with care and attention to detail, each arrangement is a stunning expression of your affection. From classic roses to vibrant mixed blooms, our bouquets are designed to make every anniversary unforgettable. Choose the perfect bouquet to convey your heartfelt sentiments on this special day.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 93,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:03:35.000000Z",
-          "updated_at": "2024-05-23T08:03:35.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 7,
-          "pivot": {
-            "product_id": "311",
-            "category_id": "95"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": null
-        },
-        {
-          "id": 97,
-          "name": "Gift bouquets",
-          "slug": "gift-bouquets",
-          "description": "Elevate any occasion with our exquisite gift bouquets. Handcrafted with precision and care, each arrangement is a stunning display of vibrant colors and fresh blooms. Whether celebrating a special milestone or expressing heartfelt sentiments, our bouquets are the perfect way to convey your love and appreciation.",
-          "category_image_id": null,
-          "category_icon_id": null,
-          "status": 1,
-          "meta_title": "Gift bouquets",
-          "meta_description": "Elevate any occasion with our exquisite gift bouquets. Handcrafted with precision and care, each arrangement is a stunning display of vibrant colors and fresh blooms. Whether celebrating a special milestone or expressing heartfelt sentiments, our bouquets are the perfect way to convey your love and appreciation.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 93,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:05:25.000000Z",
-          "updated_at": "2024-05-23T08:05:25.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 8,
-          "pivot": {
-            "product_id": "311",
-            "category_id": "97"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": null
-        }
-      ],
-      "tags": [
-        {
-          "id": 58,
-          "name": "Seasonal blooms",
-          "slug": "seasonal-blooms",
-          "type": "product",
-          "description": "Discover nature's artistry with our Seasonal Blooms collection. Each bloom is a fleeting masterpiece, embodying the essence of the changing seasons. From delicate spring blossoms to vibrant summer blooms, autumnal hues, and winter wonders, immerse yourself in the beauty of nature's ever-changing palette. Experience the joy of bringing the outdoors inside with our curated selection of seasonal flowers.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:05:50.000000Z",
-          "updated_at": "2024-05-23T08:05:50.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 3,
-          "pivot": {
-            "product_id": "311",
-            "tag_id": "58"
-          }
-        },
-        {
-          "id": 59,
-          "name": "Hand-tied bouquets",
-          "slug": "hand-tied-bouquets",
-          "type": "product",
-          "description": "Crafted with care and creativity, our hand-tied bouquets are a perfect blend of elegance and charm. Each arrangement is thoughtfully composed by skilled florists using fresh, vibrant blooms, creating a stunning gift for any occasion. Delight your loved ones with the beauty of nature's finest hand-picked and artfully arranged just for them.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:06:19.000000Z",
-          "updated_at": "2024-05-23T08:06:19.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 9,
-          "pivot": {
-            "product_id": "311",
-            "tag_id": "59"
-          }
-        }
-      ],
-      "brand": null,
-      "store": {
-        "id": 20,
-        "store_name": "Petal Perfection",
-        "slug": "petal-perfection",
-        "product_images": [
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png"
-        ],
-        "order_amount": 0,
-        "rating_count": 0,
-        "store_logo": null,
-        "store_cover": null,
-        "vendor": null,
-        "country": null,
-        "state": null,
-        "reviews": []
-      },
-      "reviews": [],
-      "similar_products": [],
-      "cross_products": []
-    },
-    {
-      "id": 310,
-      "name": "Wheels of Freedom",
-      "short_description": "\"Wheels of Freedom\" embodies liberation on two wheels. This innovative electric scooter promises effortless commuting, blending sleek design with eco-conscious engineering. Glide through city streets with ease, leaving behind the constraints of traffic and emissions. Rediscover urban mobility with style and sustainability.",
-      "description": "<p>\"Wheels of Freedom\" embodies liberation and adventure, capturing the essence of exploration and independence. This product is more than just a means of transportation; it's a gateway to boundless possibilities. With sleek design and cutting-edge technology, our wheels redefine mobility, empowering you to traverse urban landscapes or rural terrains with ease.</p><p>Crafted for the modern adventurer, these wheels offer versatility without compromise. Whether you're commuting through bustling city streets or embarking on a spontaneous road trip, our product ensures smooth, efficient travel. Embrace the freedom to roam, to discover new horizons, and to experience life's exhilarating moments without limitations.</p><p>Each component is meticulously engineered for performance and durability, promising reliability on every journey. From innovative features to customizable options, these wheels adapt to your lifestyle, enhancing every aspect of your mobility experience. With \"Wheels of Freedom,\" embrace the thrill of the open road and unlock a world of endless possibilities.</p>",
-      "type": "simple",
-      "unit": "1 Item",
-      "weight": 100,
-      "quantity": 45,
-      "price": 7,
-      "sale_price": 7,
-      "discount": null,
-      "is_featured": 0,
-      "shipping_days": null,
-      "is_cod": 0,
-      "is_free_shipping": 0,
-      "is_sale_enable": 0,
-      "is_return": 0,
-      "is_trending": 1,
-      "is_approved": 1,
-      "is_external": 0,
-      "external_url": null,
-      "external_button_text": null,
-      "sale_starts_at": null,
-      "sale_expired_at": null,
-      "sku": "BO17",
-      "is_random_related_products": 0,
-      "stock_status": "in_stock",
-      "meta_title": "Wheels of Freedom",
-      "meta_description": "\"Wheels of Freedom\" embodies liberation on two wheels. This innovative electric scooter promises effortless commuting, blending sleek design with eco-conscious engineering. Glide through city streets with ease, leaving behind the constraints of traffic and emissions. Rediscover urban mobility with style and sustainability.",
-      "product_thumbnail_id": 1797,
-      "product_meta_image_id": "1797",
-      "size_chart_image_id": null,
-      "estimated_delivery_text": "Your order is likely to reach you within 9 days.",
-      "return_policy_text": null,
-      "safe_checkout": 1,
-      "secure_checkout": 1,
-      "social_share": 1,
-      "encourage_order": 1,
-      "encourage_view": 1,
-      "slug": "wheels-of-freedom",
-      "status": 1,
-      "store_id": 21,
-      "created_by_id": "1",
-      "tax_id": 1,
-      "preview_type": "url",
-      "product_type": "physical",
-      "separator": null,
-      "is_licensable": 0,
-      "license_type": null,
-      "preview_url": null,
-      "watermark": 0,
-      "watermark_position": "center",
-      "brand_id": 62,
-      "watermark_image_id": null,
-      "wholesale_price_type": null,
-      "is_licensekey_auto": 0,
-      "preview_audio_file_id": null,
-      "preview_video_file_id": null,
-      "deleted_at": null,
-      "created_at": "2024-05-23T08:32:09.000000Z",
-      "updated_at": "2024-05-23T08:32:09.000000Z",
-      "orders_count": 0,
-      "reviews_count": 0,
-      "can_review": false,
-      "order_amount": 0,
-      "is_wishlist": false,
-      "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
-      "related_products": [],
-      "cross_sell_products": [],
-      "wholesales": [],
-      "variations": [],
-      "product_thumbnail": {
-        "id": 1797,
-        "name": "book_13",
-        "disk": "public",
-        "file_name": "book_13.png",
-        "mime_type": "image/png",
-        "asset_url": "/storage/1797/book_13.png",
-        "original_url": "/assets/images/placeholder/product.png"
-      },
-      "product_galleries": [
-        {
-          "id": 1797,
-          "name": "book_13",
-          "disk": "public",
-          "file_name": "book_13.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1797/book_13.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1796,
-          "name": "book_12",
-          "disk": "public",
-          "file_name": "book_12.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1796/book_12.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1795,
-          "name": "book_11",
-          "disk": "public",
-          "file_name": "book_11.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1795/book_11.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        }
-      ],
-      "attributes": [],
-      "categories": [
-        {
-          "id": 98,
-          "name": "Books",
-          "slug": "books",
-          "description": "Portals to infinite worlds, offering escape, knowledge, and empathy. Each page whispers secrets, sparks the imagination, and kindles curiosity.",
-          "category_image_id": null,
-          "category_icon_id": 3792,
-          "status": 1,
-          "meta_title": "Books",
-          "meta_description": "Portals to infinite worlds, offering escape, knowledge, and empathy. Each page whispers secrets, sparks the imagination, and kindles curiosity.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": null,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:10:09.000000Z",
-          "updated_at": "2024-06-21T06:36:17.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 3,
-          "pivot": {
-            "product_id": "310",
-            "category_id": "98"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": {
-            "id": 3792,
-            "name": "book",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "book.png",
-            "asset_url": "/storage/3792/book.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        },
-        {
-          "id": 101,
-          "name": "Self-help",
-          "slug": "self-help",
-          "description": "Boost your personal growth with our self-help guide. Uncover strategies to overcome obstacles, develop self-awareness, and cultivate positive habits. This comprehensive resource empowers you to achieve your goals, enhance relationships, and find fulfillment. Dive into practical exercises and insightful advice to navigate life's challenges with confidence and resilience.",
-          "category_image_id": null,
-          "category_icon_id": 3277,
-          "status": 1,
-          "meta_title": "Self-help",
-          "meta_description": "Boost your personal growth with our self-help guide. Uncover strategies to overcome obstacles, develop self-awareness, and cultivate positive habits. This comprehensive resource empowers you to achieve your goals, enhance relationships, and find fulfillment. Dive into practical exercises and insightful advice to navigate life's challenges with confidence and resilience.",
-          "category_meta_image_id": 3277,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 98,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:14:15.000000Z",
-          "updated_at": "2024-06-13T10:38:02.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 5,
-          "pivot": {
-            "product_id": "310",
-            "category_id": "101"
-          },
-          "category_image": null,
-          "category_meta_image": {
-            "id": 3277,
-            "name": "self-help",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "self-help.png",
-            "asset_url": "/storage/3277/self-help.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
-          "category_icon": {
-            "id": 3277,
-            "name": "self-help",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "self-help.png",
-            "asset_url": "/storage/3277/self-help.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        }
-      ],
-      "tags": [
-        {
-          "id": 62,
-          "name": "Non-fiction",
-          "slug": "non-fiction",
-          "type": "product",
-          "description": "Explore the fascinating world of non-fiction with our curated collection. From riveting biographies to insightful historical accounts, delve into real-life stories that inspire, educate, and entertain. Discover new perspectives, gain knowledge, and embark on intellectual journeys that will broaden your understanding of the world around you.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:15:18.000000Z",
-          "updated_at": "2024-05-23T08:15:18.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 2,
-          "pivot": {
-            "product_id": "310",
-            "tag_id": "62"
-          }
-        },
-        {
-          "id": 63,
-          "name": "Novella",
-          "slug": "novella",
-          "type": "product",
-          "description": "They are captivating tales of love, loss, and redemption set in the charming backdrop of a quaint European village. With rich character development and vivid storytelling, this novella promises to whisk you away on an unforgettable journey of emotions and discovery. Perfect for cozy evenings curled up with a good book.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:16:42.000000Z",
-          "updated_at": "2024-05-23T08:16:42.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 1,
-          "pivot": {
-            "product_id": "310",
-            "tag_id": "63"
-          }
-        }
-      ],
-      "brand": {
-        "id": 62,
-        "name": "Novel Nectar",
-        "slug": "novel-nectar",
-        "status": 1,
-        "brand_image": null,
-        "brand_meta_image": null,
-        "brand_banner": null
-      },
-      "store": {
-        "id": 21,
-        "store_name": "Bonanza Books",
-        "slug": "bonanza-books",
-        "product_images": [
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png"
-        ],
-        "order_amount": 0,
-        "rating_count": 0,
-        "store_logo": null,
-        "store_cover": null,
-        "vendor": null,
-        "country": null,
-        "state": null,
-        "reviews": []
-      },
-      "reviews": [],
-      "similar_products": [],
-      "cross_products": []
-    },
-    {
-      "id": 309,
-      "name": "Shadows of Destiny",
-      "short_description": "\"Shadows of Destiny\" immerses players in a gripping narrative where choices shape fate. Navigate a world veiled in mystery and intrigue, where every decision carries weight. Unravel the secrets of a forgotten past and determine the course of your journey. Embark on an unforgettable adventure where the shadows of destiny loom large.",
-      "description": "<p>\"Shadows of Destiny\" immerses players into a captivating world where fate hangs in the balance. In this gripping narrative-driven adventure, players embark on a journey of discovery, navigating through intricate storylines and confronting challenging decisions that shape the outcome of their destiny. Set in a richly detailed universe filled with mysteries and secrets, players must unravel the truth behind ancient prophecies and face the consequences of their choices. <br><br>With stunning visuals, immersive gameplay, and an engaging soundtrack, \"Shadows of Destiny\" promises an unforgettable gaming experience that will keep players on the edge of their seats until the very end. <br><br>Are you ready to embrace your destiny and confront the shadows that lurk within?</p>",
-      "type": "simple",
-      "unit": "1 Item",
-      "weight": 120,
-      "quantity": 80,
-      "price": 5.5,
-      "sale_price": 5.5,
-      "discount": null,
-      "is_featured": 0,
-      "shipping_days": null,
-      "is_cod": 0,
-      "is_free_shipping": 0,
-      "is_sale_enable": 0,
-      "is_return": 0,
-      "is_trending": 0,
-      "is_approved": 1,
-      "is_external": 0,
-      "external_url": null,
-      "external_button_text": null,
-      "sale_starts_at": null,
-      "sale_expired_at": null,
-      "sku": "BO16",
-      "is_random_related_products": 0,
-      "stock_status": "in_stock",
-      "meta_title": "Shadows of Destiny",
-      "meta_description": "\"Shadows of Destiny\" immerses players in a gripping narrative where choices shape fate. Navigate a world veiled in mystery and intrigue, where every decision carries weight. Unravel the secrets of a forgotten past and determine the course of your journey. Embark on an unforgettable adventure where the shadows of destiny loom large.",
-      "product_thumbnail_id": 1791,
-      "product_meta_image_id": "1791",
-      "size_chart_image_id": null,
-      "estimated_delivery_text": "Your order is likely to reach you within 5 days.",
-      "return_policy_text": null,
-      "safe_checkout": 1,
-      "secure_checkout": 1,
-      "social_share": 1,
-      "encourage_order": 1,
-      "encourage_view": 1,
-      "slug": "shadows-of-destiny",
-      "status": 1,
-      "store_id": 21,
-      "created_by_id": "1",
-      "tax_id": 1,
-      "preview_type": "url",
-      "product_type": "physical",
-      "separator": null,
-      "is_licensable": 0,
-      "license_type": null,
-      "preview_url": null,
-      "watermark": 0,
-      "watermark_position": "center",
-      "brand_id": 61,
-      "watermark_image_id": null,
-      "wholesale_price_type": null,
-      "is_licensekey_auto": 0,
-      "preview_audio_file_id": null,
-      "preview_video_file_id": null,
-      "deleted_at": null,
-      "created_at": "2024-05-23T08:27:48.000000Z",
-      "updated_at": "2024-05-23T08:27:48.000000Z",
-      "orders_count": 0,
-      "reviews_count": 0,
-      "can_review": false,
-      "order_amount": 0,
-      "is_wishlist": false,
-      "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
-      "related_products": [],
-      "cross_sell_products": [],
-      "wholesales": [],
-      "variations": [],
-      "product_thumbnail": {
-        "id": 1791,
-        "name": "book_33",
-        "disk": "public",
-        "file_name": "book_33.png",
-        "mime_type": "image/png",
-        "asset_url": "/storage/1791/book_33.png",
-        "original_url": "/assets/images/placeholder/product.png"
-      },
-      "product_galleries": [
-        {
-          "id": 1793,
-          "name": "book_32",
-          "disk": "public",
-          "file_name": "book_32.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1793/book_32.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1792,
-          "name": "book_31",
-          "disk": "public",
-          "file_name": "book_31.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1792/book_31.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        },
-        {
-          "id": 1791,
-          "name": "book_33",
-          "disk": "public",
-          "file_name": "book_33.png",
-          "mime_type": "image/png",
-          "asset_url": "/storage/1791/book_33.png",
-          "original_url": "/assets/images/placeholder/product.png"
-        }
-      ],
-      "attributes": [],
-      "categories": [
-        {
-          "id": 98,
-          "name": "Books",
-          "slug": "books",
-          "description": "Portals to infinite worlds, offering escape, knowledge, and empathy. Each page whispers secrets, sparks the imagination, and kindles curiosity.",
-          "category_image_id": null,
-          "category_icon_id": 3792,
-          "status": 1,
-          "meta_title": "Books",
-          "meta_description": "Portals to infinite worlds, offering escape, knowledge, and empathy. Each page whispers secrets, sparks the imagination, and kindles curiosity.",
-          "category_meta_image_id": null,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": null,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:10:09.000000Z",
-          "updated_at": "2024-06-21T06:36:17.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 3,
-          "pivot": {
-            "product_id": "309",
-            "category_id": "98"
-          },
-          "category_image": null,
-          "category_meta_image": null,
-          "category_icon": {
-            "id": 3792,
-            "name": "book",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "book.png",
-            "asset_url": "/storage/3792/book.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        },
-        {
-          "id": 99,
-          "name": "Fantasy",
-          "slug": "fantasy",
-          "description": "Immerse yourself in a realm of magic and adventure with \"Fantasy,\" a captivating board game where players embark on epic quests, battle mythical creatures, and strategize to conquer kingdoms. With stunning artwork and immersive gameplay, \"Fantasy\" transports you to a world of wonder and excitement. Experience the thrill of heroic quests in this fantasy adventure!",
-          "category_image_id": null,
-          "category_icon_id": 3271,
-          "status": 1,
-          "meta_title": "Fantasy",
-          "meta_description": "Immerse yourself in a realm of magic and adventure with \"Fantasy,\" a captivating board game where players embark on epic quests, battle mythical creatures, and strategize to conquer kingdoms. With stunning artwork and immersive gameplay, \"Fantasy\" transports you to a world of wonder and excitement. Experience the thrill of heroic quests in this fantasy adventure!",
-          "category_meta_image_id": 3271,
-          "type": "product",
-          "commission_rate": null,
-          "parent_id": 98,
-          "created_by_id": "1",
-          "created_at": "2024-05-23T08:11:36.000000Z",
-          "updated_at": "2024-06-13T10:39:44.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 6,
-          "pivot": {
-            "product_id": "309",
-            "category_id": "99"
-          },
-          "category_image": null,
-          "category_meta_image": {
-            "id": 3271,
-            "name": "fantasy",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "fantasy.png",
-            "asset_url": "/storage/3271/fantasy.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          },
-          "category_icon": {
-            "id": 3271,
-            "name": "fantasy",
-            "disk": "public",
-            "mime_type": "image/png",
-            "file_name": "fantasy.png",
-            "asset_url": "/storage/3271/fantasy.png",
-            "original_url": "/assets/images/placeholder/product.png"
-          }
-        }
-      ],
-      "tags": [
-        {
-          "id": 62,
-          "name": "Non-fiction",
-          "slug": "non-fiction",
-          "type": "product",
-          "description": "Explore the fascinating world of non-fiction with our curated collection. From riveting biographies to insightful historical accounts, delve into real-life stories that inspire, educate, and entertain. Discover new perspectives, gain knowledge, and embark on intellectual journeys that will broaden your understanding of the world around you.",
-          "created_by_id": "1",
-          "status": 1,
-          "created_at": "2024-05-23T08:15:18.000000Z",
-          "updated_at": "2024-05-23T08:15:18.000000Z",
-          "deleted_at": null,
-          "blogs_count": 0,
-          "products_count": 2,
-          "pivot": {
-            "product_id": "309",
-            "tag_id": "62"
-          }
-        }
-      ],
-      "brand": {
-        "id": 61,
-        "name": "Page Paradise",
-        "slug": "page-paradise",
-        "status": 1,
-        "brand_image": null,
-        "brand_meta_image": null,
-        "brand_banner": null
-      },
-      "store": {
-        "id": 21,
-        "store_name": "Bonanza Books",
-        "slug": "bonanza-books",
-        "product_images": [
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png",
-          "/assets/images/placeholder/product.png"
-        ],
-        "order_amount": 0,
-        "rating_count": 0,
-        "store_logo": null,
-        "store_cover": null,
-        "vendor": null,
-        "country": null,
-        "state": null,
-        "reviews": []
-      },
-      "reviews": [],
-      "similar_products": [],
-      "cross_products": []
-    },
-
-
     {
       "id": 201,
       "name": "IPhone 17 Pro Max",
@@ -2057,7 +765,13 @@
       "order_amount": 0,
       "is_wishlist": false,
       "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
+      "review_ratings": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "related_products": [],
       "cross_sell_products": [],
       "wholesales": [],
@@ -2104,7 +818,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg"
             },
             {
               "id": 1317,
@@ -2115,7 +829,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg"
             },
             {
               "id": 1316,
@@ -2126,7 +840,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
             }
           ],
           "attribute_values": [
@@ -2204,7 +918,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg"
             },
             {
               "id": 1317,
@@ -2215,7 +929,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg"
             },
             {
               "id": 1316,
@@ -2226,7 +940,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
             }
           ],
           "attribute_values": [
@@ -2274,33 +988,32 @@
       },
       "product_galleries": [
         {
-           "id": 1323,
-              "name": "iphone-14-pro-max-black",
-              "file_name": "iphone-14-pro-max-black.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
-            
+          "id": 1323,
+          "name": "iphone-14-pro-max-black",
+          "file_name": "iphone-14-pro-max-black.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
         },
         {
           "id": 1324,
-              "name": "iphone-14-pro-max-black-2",
-              "file_name": "iphone-14-pro-max-black-2.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
-            },
+          "name": "iphone-14-pro-max-black-2",
+          "file_name": "iphone-14-pro-max-black-2.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+        },
         {
-             "id": 1325,
-        "name": "iphone-17-pro-max-orange-1",
-        "disk": "public",
-        "file_name": "iphone-17-pro-max-orange-1.jpg",
-        "mime_type": "image/jpg",
-        "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
-        "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
-       }
+          "id": 1325,
+          "name": "iphone-17-pro-max-orange-1",
+          "disk": "public",
+          "file_name": "iphone-17-pro-max-orange-1.jpg",
+          "mime_type": "image/jpg",
+          "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+          "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+        }
       ],
       "attributes": [
         {
@@ -2329,7 +1042,6 @@
               "updated_at": "2024-05-04T05:45:06.000000Z",
               "deleted_at": null
             },
-
             {
               "id": 71,
               "value": "Blue",
@@ -2374,32 +1086,76 @@
       ],
       "categories": [
         {
-          "id": 51,
-          "name": "IPhone",
-          "slug": "iphone",
+          "id": 1,
+          "name": "Smartphones",
+          "slug": "smartphones",
           "description": null,
           "category_image_id": null,
-          "category_icon_id": null,
+          "category_icon_id": 1,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 3,
-          "parent_id": 25,
+          "commission_rate": null,
+          "parent_id": null,
           "created_by_id": "1",
-          "created_at": "2024-05-10T06:30:35.000000Z",
-          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 6,
+          "products_count": 0,
           "pivot": {
-            "product_id": "207",
-            "category_id": "51"
+            "product_id": "201",
+            "category_id": "1"
           },
           "category_image": null,
           "category_meta_image": null,
-          "category_icon": null
+          "category_icon": {
+            "id": 1,
+            "name": "smartphones",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "smartphones.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
+        },
+        {
+          "id": 11,
+          "name": "iPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": 11,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": null,
+          "parent_id": 1,
+          "created_by_id": "1",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 0,
+          "pivot": {
+            "product_id": "201",
+            "category_id": "11"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": {
+            "id": 11,
+            "name": "iphone",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "iphone.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
         }
       ],
       "tags": [],
@@ -2415,7 +1171,8 @@
       "store": {},
       "reviews": [],
       "similar_products": [],
-      "cross_products": []
+      "cross_products": [],
+      "category_id": 1
     },
     {
       "id": 203,
@@ -2485,7 +1242,13 @@
       "order_amount": 0,
       "is_wishlist": false,
       "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
+      "review_ratings": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "related_products": [],
       "cross_sell_products": [],
       "wholesales": [],
@@ -2532,7 +1295,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-3.jpg"
             },
             {
               "id": 1317,
@@ -2543,7 +1306,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-2.jpg"
             },
             {
               "id": 1316,
@@ -2554,7 +1317,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
             }
           ],
           "attribute_values": [
@@ -2632,7 +1395,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-3.jpg"
             },
             {
               "id": 1317,
@@ -2643,7 +1406,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-2.jpg"
             },
             {
               "id": 1316,
@@ -2654,7 +1417,7 @@
               "created_by_id": "1",
               "created_at": "2024-05-16T04:02:20.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg",
-            "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
+              "original_url": "/assets/images/product/iphone/iphone-17-pro-max-blue-1.jpg"
             }
           ],
           "attribute_values": [
@@ -2702,33 +1465,32 @@
       },
       "product_galleries": [
         {
-           "id": 1323,
-              "name": "iphone-14-pro-max-black",
-              "file_name": "iphone-14-pro-max-black.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
-            
+          "id": 1323,
+          "name": "iphone-14-pro-max-black",
+          "file_name": "iphone-14-pro-max-black.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
         },
         {
           "id": 1324,
-              "name": "iphone-14-pro-max-black-2",
-              "file_name": "iphone-14-pro-max-black-2.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
-            },
+          "name": "iphone-14-pro-max-black-2",
+          "file_name": "iphone-14-pro-max-black-2.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+        },
         {
-             "id": 1325,
-        "name": "iphone-17-pro-max-orange-1",
-        "disk": "public",
-        "file_name": "iphone-17-pro-max-orange-1.jpg",
-        "mime_type": "image/jpg",
-        "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
-        "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
-       }
+          "id": 1325,
+          "name": "iphone-17-pro-max-orange-1",
+          "disk": "public",
+          "file_name": "iphone-17-pro-max-orange-1.jpg",
+          "mime_type": "image/jpg",
+          "asset_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg",
+          "original_url": "/assets/images/product/iphone/iphone-17-pro-max-orange-1.jpg"
+        }
       ],
       "attributes": [
         {
@@ -2790,32 +1552,76 @@
       ],
       "categories": [
         {
-          "id": 51,
-          "name": "IPhone",
-          "slug": "iphone",
+          "id": 1,
+          "name": "Smartphones",
+          "slug": "smartphones",
           "description": null,
           "category_image_id": null,
-          "category_icon_id": null,
+          "category_icon_id": 1,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 3,
-          "parent_id": 25,
+          "commission_rate": null,
+          "parent_id": null,
           "created_by_id": "1",
-          "created_at": "2024-05-10T06:30:35.000000Z",
-          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 6,
+          "products_count": 0,
           "pivot": {
             "product_id": "203",
-            "category_id": "51"
+            "category_id": "1"
           },
           "category_image": null,
           "category_meta_image": null,
-          "category_icon": null
+          "category_icon": {
+            "id": 1,
+            "name": "smartphones",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "smartphones.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
+        },
+        {
+          "id": 11,
+          "name": "iPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": 11,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": null,
+          "parent_id": 1,
+          "created_by_id": "1",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 0,
+          "pivot": {
+            "product_id": "203",
+            "category_id": "11"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": {
+            "id": 11,
+            "name": "iphone",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "iphone.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
         }
       ],
       "tags": [],
@@ -2831,7 +1637,8 @@
       "store": {},
       "reviews": [],
       "similar_products": [],
-      "cross_products": []
+      "cross_products": [],
+      "category_id": 1
     },
     {
       "id": 207,
@@ -2901,7 +1708,13 @@
       "order_amount": 0,
       "is_wishlist": false,
       "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
+      "review_ratings": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "related_products": [],
       "cross_sell_products": [],
       "wholesales": [],
@@ -2939,7 +1752,6 @@
             "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
           },
           "variation_galleries": [
-            
             {
               "id": 1323,
               "name": "iphone-14-pro-max-black",
@@ -2961,7 +1773,8 @@
               "created_at": "2024-05-16T04:02:42.000000Z",
               "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
               "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
-            },{
+            },
+            {
               "id": 1325,
               "name": "iphone-14-pro-max-black-1",
               "file_name": "iphone-14-pro-max-black-1.png",
@@ -3706,7 +2519,6 @@
             }
           ]
         },
-
         {
           "id": 85,
           "name": "Apple iPhone 14 Pro Max (512 GB / Natural)",
@@ -3819,33 +2631,32 @@
       },
       "product_galleries": [
         {
-           "id": 1323,
-              "name": "iphone-14-pro-max-black",
-              "file_name": "iphone-14-pro-max-black.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
-            
+          "id": 1323,
+          "name": "iphone-14-pro-max-black",
+          "file_name": "iphone-14-pro-max-black.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
         },
         {
           "id": 1324,
-              "name": "iphone-14-pro-max-black-2",
-              "file_name": "iphone-14-pro-max-black-2.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
-            },
+          "name": "iphone-14-pro-max-black-2",
+          "file_name": "iphone-14-pro-max-black-2.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+        },
         {
           "id": 1325,
-              "name": "iphone-14-pro-max-black-1",
-              "file_name": "iphone-14-pro-max-black-1.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
-            }
+          "name": "iphone-14-pro-max-black-1",
+          "file_name": "iphone-14-pro-max-black-1.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.png"
+        }
       ],
       "attributes": [
         {
@@ -4039,32 +2850,76 @@
       ],
       "categories": [
         {
-          "id": 51,
-          "name": "IPhone",
-          "slug": "iphone",
+          "id": 1,
+          "name": "Smartphones",
+          "slug": "smartphones",
           "description": null,
           "category_image_id": null,
-          "category_icon_id": null,
+          "category_icon_id": 1,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 3,
-          "parent_id": 25,
+          "commission_rate": null,
+          "parent_id": null,
           "created_by_id": "1",
-          "created_at": "2024-05-10T06:30:35.000000Z",
-          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 6,
+          "products_count": 0,
           "pivot": {
             "product_id": "207",
-            "category_id": "51"
+            "category_id": "1"
           },
           "category_image": null,
           "category_meta_image": null,
-          "category_icon": null
+          "category_icon": {
+            "id": 1,
+            "name": "smartphones",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "smartphones.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
+        },
+        {
+          "id": 11,
+          "name": "iPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": 11,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": null,
+          "parent_id": 1,
+          "created_by_id": "1",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 0,
+          "pivot": {
+            "product_id": "207",
+            "category_id": "11"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": {
+            "id": 11,
+            "name": "iphone",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "iphone.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
         }
       ],
       "tags": [],
@@ -4097,9 +2952,9 @@
       },
       "reviews": [],
       "similar_products": [],
-      "cross_products": []
+      "cross_products": [],
+      "category_id": 1
     },
-
     {
       "id": 208,
       "name": "IPhone 14",
@@ -4168,7 +3023,13 @@
       "order_amount": 0,
       "is_wishlist": false,
       "rating_count": null,
-      "review_ratings": [0, 0, 0, 0, 0],
+      "review_ratings": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "related_products": [],
       "cross_sell_products": [],
       "wholesales": [],
@@ -4285,33 +3146,32 @@
       },
       "product_galleries": [
         {
-           "id": 1323,
-              "name": "iphone-14-pro-max-black",
-              "file_name": "iphone-14-pro-max-black.png",
-              "mime_type": "image/jpg",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
-            
+          "id": 1323,
+          "name": "iphone-14-pro-max-black",
+          "file_name": "iphone-14-pro-max-black.png",
+          "mime_type": "image/jpg",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black.png"
         },
         {
           "id": 1324,
-              "name": "iphone-14-pro-max-black-2",
-              "file_name": "iphone-14-pro-max-black-2.png",
-              "mime_type": "image/png",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
-              "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
-            },
+          "name": "iphone-14-pro-max-black-2",
+          "file_name": "iphone-14-pro-max-black-2.png",
+          "mime_type": "image/png",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png",
+          "original_url": "/assets/images/product/iphone/iphone-14-pro-max-black-2.png"
+        },
         {
           "id": 1325,
-              "name": "iphone-14-black-1",
-              "file_name": "iphone-14-black-1.jpg",
-              "mime_type": "image/jpg",
-              "disk": "public",
-              "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.jpg",
-              "original_url": "/assets/images/product/iphone/iphone-14-black-1.jpg"
-            }
+          "name": "iphone-14-black-1",
+          "file_name": "iphone-14-black-1.jpg",
+          "mime_type": "image/jpg",
+          "disk": "public",
+          "asset_url": "/assets/images/product/iphone/iphone-14-pro-max-black-1.jpg",
+          "original_url": "/assets/images/product/iphone/iphone-14-black-1.jpg"
+        }
       ],
       "attributes": [
         {
@@ -4340,7 +3200,6 @@
               "updated_at": "2024-05-04T05:45:06.000000Z",
               "deleted_at": null
             },
-
             {
               "id": 71,
               "value": "Midnight",
@@ -4385,32 +3244,76 @@
       ],
       "categories": [
         {
-          "id": 51,
-          "name": "IPhone",
-          "slug": "iphone",
+          "id": 1,
+          "name": "Smartphones",
+          "slug": "smartphones",
           "description": null,
           "category_image_id": null,
-          "category_icon_id": null,
+          "category_icon_id": 1,
           "status": 1,
           "meta_title": null,
           "meta_description": null,
           "category_meta_image_id": null,
           "type": "product",
-          "commission_rate": 3,
-          "parent_id": 25,
+          "commission_rate": null,
+          "parent_id": null,
           "created_by_id": "1",
-          "created_at": "2024-05-10T06:30:35.000000Z",
-          "updated_at": "2024-05-10T06:30:35.000000Z",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
           "deleted_at": null,
           "blogs_count": 0,
-          "products_count": 6,
+          "products_count": 0,
           "pivot": {
-            "product_id": "207",
-            "category_id": "51"
+            "product_id": "208",
+            "category_id": "1"
           },
           "category_image": null,
           "category_meta_image": null,
-          "category_icon": null
+          "category_icon": {
+            "id": 1,
+            "name": "smartphones",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "smartphones.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
+        },
+        {
+          "id": 11,
+          "name": "iPhone",
+          "slug": "iphone",
+          "description": null,
+          "category_image_id": null,
+          "category_icon_id": 11,
+          "status": 1,
+          "meta_title": null,
+          "meta_description": null,
+          "category_meta_image_id": null,
+          "type": "product",
+          "commission_rate": null,
+          "parent_id": 1,
+          "created_by_id": "1",
+          "created_at": "2024-06-19T13:36:23.000000Z",
+          "updated_at": "2024-06-19T13:36:23.000000Z",
+          "deleted_at": null,
+          "blogs_count": 0,
+          "products_count": 0,
+          "pivot": {
+            "product_id": "208",
+            "category_id": "11"
+          },
+          "category_image": null,
+          "category_meta_image": null,
+          "category_icon": {
+            "id": 11,
+            "name": "iphone",
+            "disk": "public",
+            "mime_type": "image/png",
+            "file_name": "iphone.png",
+            "asset_url": "/assets/images/placeholder/collection_category.png",
+            "original_url": "/assets/images/placeholder/collection_category.png"
+          }
         }
       ],
       "tags": [],
@@ -4443,9 +3346,9 @@
       },
       "reviews": [],
       "similar_products": [],
-      "cross_products": []
+      "cross_products": [],
+      "category_id": 1
     }
-    
   ],
   "first_page_url": "",
   "from": 1,
@@ -4473,5 +3376,5 @@
   "per_page": 489,
   "prev_page_url": null,
   "to": 489,
-  "total": 489
+  "total": 6
 }
