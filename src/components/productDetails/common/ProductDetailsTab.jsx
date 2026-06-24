@@ -3,7 +3,6 @@ import NoDataFound from "@/components/widgets/NoDataFound";
 import TextLimit from "@/utils/customFunctions/TextLimit";
 import { useState } from "react";
 import { Col, Row, TabContent, TabPane } from "reactstrap";
-import CustomerReview from "./CustomerReview";
 import { RiArrowDownSLine } from "react-icons/ri";
 import Btn from "@/elements/buttons/Btn";
 
@@ -12,7 +11,6 @@ const ProductDetailsTab = ({ productState }) => {
   const [activeTab, setActiveTab] = useState(1);
   const ProductDetailsTabTitle = [
     { id: 1, name: "Description" },
-    { id: 2, name: "Review" },
   ];
 
   const seeMore = () => {
@@ -32,19 +30,7 @@ const ProductDetailsTab = ({ productState }) => {
           </div>
         </TabPane>
 
-        <TabPane className={activeTab == 2 ? "show active" : ""}>
-          <div className="single-product-tables ">
-            <Row>
-              {productState?.product?.can_review || productState?.product?.reviews_count ? (
-                <CustomerReview productState={productState} />
-              ) : (
-                <Col xl={12}>
-                  <NoDataFound customClass="no-data-added" title="NoReviewYet" description="NoReviewYetDescription" />
-                </Col>
-              )}
-            </Row>
-          </div>
-        </TabPane>
+
       </TabContent>
     </Col>
   );
