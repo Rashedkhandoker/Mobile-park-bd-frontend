@@ -28,11 +28,11 @@ const sortProducts = (products, sortBy) => {
 const filterProducts = (all, params = {}) => {
   let list = [...all];
 
-  if (params.category) {
+  if (params.category && !Array.isArray(params.category) && params.category !== "") {
     const cats = params.category.split(",");
     list = list.filter((p) => p.categories?.some((c) => cats.includes(c.slug)));
   }
-  if (params.brand) {
+  if (params.brand && !Array.isArray(params.brand) && params.brand !== "") {
     const brands = params.brand.split(",");
     list = list.filter((p) => p.brand?.slug && brands.includes(p.brand.slug));
   }
@@ -44,13 +44,13 @@ const filterProducts = (all, params = {}) => {
     const ids = String(params.ids).split(",");
     list = list.filter((p) => ids.includes(String(p.id)));
   }
-  if (params.store_slug) {
+  if (params.store_slug && !Array.isArray(params.store_slug) && params.store_slug !== "") {
     const slugs = params.store_slug.split(",");
     list = list.filter((p) => p.store?.slug && slugs.includes(p.store.slug));
   }
   if (params.search) {
     const q = params.search.toLowerCase();
-    list = list.filter((p) => p.name.toLowerCase().includes(q));
+    list = list.filter((p) => p.name.toLowerCase().includes(q) || p.brand?.name?.toLowerCase().includes(q));
   }
   if (params.trending) {
     list = list.filter((p) => p.is_trending == 1 || p.is_trending === true);
