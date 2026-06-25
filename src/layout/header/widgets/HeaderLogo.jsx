@@ -110,7 +110,7 @@ const HeaderLogo = ({ extraClass }) => {
   return (
     <>
       <Link href="/" className={`${extraClass ? extraClass : ""}`}>
-        {logo?.original_url ? <Image className="img-fluid" src={Logo} height={34} width={173} alt={settingData?.general?.site_name ? settingData?.general?.site_name : "mobile-park-bd-logo"} /> : settingData?.general?.site_name && <h2 className="f-w-600 m-0">{settingData?.general?.site_name ? settingData?.general?.site_name.split(" ")[0] : "Logo Here"}</h2>}
+        {logo?.original_url ? <Image className="img-fluid" src={Logo} height={46} width={234} alt={settingData?.general?.site_name ? settingData?.general?.site_name : "mobile-park-bd-logo"} /> : settingData?.general?.site_name && <h2 className="f-w-600 m-0">{settingData?.general?.site_name ? settingData?.general?.site_name.split(" ")[0] : "Logo Here"}</h2>}
       </Link>
     </>
   );

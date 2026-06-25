@@ -4116,3 +4116,12 @@ body {
     line-height: 1.3;
   }
 }
+
+/* Logo size override */
+.header-style-5 {
+  .brand-logo {
+    img {
+      width: calc(160px + (260 - 160) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+}
