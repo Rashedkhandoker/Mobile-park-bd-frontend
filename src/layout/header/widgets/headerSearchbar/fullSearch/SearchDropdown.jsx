@@ -21,7 +21,7 @@ const RecursiveCategory = ({ categories }) => (
 );
 
 const SearchDropDown = React.forwardRef((props, ref) => {
-  const { searchValue, categoryLoading, categoryData, searchArr, selectedItemIndex } = props;
+  const { searchValue, categoryLoading, categoryData, searchArr, brandArr, selectedItemIndex } = props;
   const { t } = useTranslation("common");
   const skeleton = Array.from({ length: 3 }, (_, index) => index);
   const queryParams = searchValue ? { search: searchValue } : null;
@@ -47,6 +47,18 @@ const SearchDropDown = React.forwardRef((props, ref) => {
           </>
         )}
       </div>
+      {brandArr?.length > 0 && (
+        <div className="recent-search-section mb-4">
+          <h4 className="page-title">Related Brands</h4>
+          <div className="filter-row">
+            {brandArr.map((brand) => (
+              <Fragment key={brand.id}>
+                <Link href={`/brand/${brand.slug}`}>{brand.name}</Link>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="recent-search-section">
         <h4 className="page-title">
           {t("related_product")}

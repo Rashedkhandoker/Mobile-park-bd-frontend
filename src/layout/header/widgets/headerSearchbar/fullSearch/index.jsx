@@ -1,3 +1,4 @@
+import BrandContext from "@/context/brandContext";
 import ProductContext from "@/context/productContext";
 import Btn from "@/elements/buttons/Btn";
 import request from "@/utils/axiosUtils";
@@ -16,6 +17,8 @@ const FullSearch = () => {
   const { t } = useTranslation("common");
   const [searchValue, setSearchValue] = useState("");
   const { searchList } = useContext(ProductContext);
+  const { brandState, refetch: refetchBrands } = useContext(BrandContext);
+  const [brandArr, setBrandArr] = useState([]);
   const [searchArr, setSearchArray] = useState([]);
   const [paginate, setPaginate] = useState(4);
   const pathName = usePathname();
@@ -62,9 +65,16 @@ const FullSearch = () => {
   };
 
   useEffect(() => {
-    const search = searchList?.filter((item) => item.name?.toLowerCase().includes(searchValue.toLowerCase()));
+    const q = searchValue.toLowerCase();
+    const search = searchList?.filter((item) => item.name?.toLowerCase().includes(q) || item.brand?.name?.toLowerCase().includes(q));
     setSearchArray(search);
-  }, [searchValue]);
+    const brands = brandState?.filter((b) => b.name?.toLowerCase().includes(searchValue.toLowerCase()));
+    setBrandArr(searchValue ? brands : []);
+  }, [searchValue, brandState]);
+
+  useEffect(() => {
+    refetchBrands();
+  }, []);
   
   const handleEnterKey = () => {
     if (selectedItemIndex !== null) {
@@ -130,7 +140,7 @@ const FullSearch = () => {
       <Btn color="transparent" type="button" onClick={onHandleSearch} name="nav-submit-button" className="btn-search">
         <RiSearchLine />
       </Btn>
-      {isComponentVisible && <SearchDropDown selectedItemIndex={selectedItemIndex} searchArr={searchArr} categoryLoading={categoryIsLoading} ref={ref} categoryData={categoryData} searchValue={searchValue} />}
+      {isComponentVisible && <SearchDropDown selectedItemIndex={selectedItemIndex} searchArr={searchArr} brandArr={brandArr} categoryLoading={categoryIsLoading} ref={ref} categoryData={categoryData} searchValue={searchValue} />}
     </form>
   );
 };
