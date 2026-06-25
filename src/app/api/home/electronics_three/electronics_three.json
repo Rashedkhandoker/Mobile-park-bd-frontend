@@ -1,220 +1,228 @@
 {
-  "id": 13,
-  "content": {
-    "brand": {
-      "title": "Top Brands",
-      "status": true,
-      "brand_ids": [
-        29,
-        28,
-        27,
-        26,
-        25,
-        20,
-        18
-      ]
-    },
-    "banner": {
-      "main_banner": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
-        "redirect_link": {
-          "link": 391,
-          "link_type": "product",
-          "product_ids": 391
-        }
-      },
-      "grid_banner_1": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
-        "redirect_link": {
-          "link": 88,
-          "link_type": "product",
-          "product_ids": 88
-        }
-      },
-      "grid_banner_2": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
-        "redirect_link": {
-          "link": 88,
-          "link_type": "product",
-          "product_ids": 88
-        }
-      },
-      "grid_banner_3": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/electronic_three_5.png",
-        "redirect_link": {
-          "link": 92,
-          "link_type": "product",
-          "product_ids": 92
-        }
-      }
-    },
-    "services": {
-      "banners": [
-        {
-          "title": "Free Shipping",
-          "status": true,
-          "image_url": "/assets/images/theme/electronic_three/service.png",
-          "description": "Free Shipping World Wide"
+    "id": 13,
+    "content": {
+        "brand": {
+            "title": "Top Brands",
+            "status": true,
+            "brand_ids": [
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99
+            ]
         },
-        {
-          "title": "24 X 7 Service",
-          "status": true,
-          "image_url": "/assets/images/theme/electronic_three/service.png",
-          "description": "Online Service For 24 X 7"
+        "banner": {
+            "main_banner": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
+                "redirect_link": {
+                    "link": 391,
+                    "link_type": "product",
+                    "product_ids": 391
+                }
+            },
+            "grid_banner_1": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
+                "redirect_link": {
+                    "link": 88,
+                    "link_type": "product",
+                    "product_ids": 88
+                }
+            },
+            "grid_banner_2": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
+                "redirect_link": {
+                    "link": 88,
+                    "link_type": "product",
+                    "product_ids": 88
+                }
+            },
+            "grid_banner_3": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/electronic_three_5.png",
+                "redirect_link": {
+                    "link": 92,
+                    "link_type": "product",
+                    "product_ids": 92
+                }
+            }
         },
-        {
-          "title": "Festival Offer",
-          "status": true,
-          "image_url": "/assets/images/theme/electronic_three/service.png",
-          "description": "New Online Special Festival Offer"
+        "services": {
+            "banners": [
+                {
+                    "title": "Free Shipping",
+                    "status": true,
+                    "image_url": "/assets/images/theme/electronic_three/service.png",
+                    "description": "Free Shipping World Wide"
+                },
+                {
+                    "title": "24 X 7 Service",
+                    "status": true,
+                    "image_url": "/assets/images/theme/electronic_three/service.png",
+                    "description": "Online Service For 24 X 7"
+                },
+                {
+                    "title": "Festival Offer",
+                    "status": true,
+                    "image_url": "/assets/images/theme/electronic_three/service.png",
+                    "description": "New Online Special Festival Offer"
+                },
+                {
+                    "title": "Online Payment",
+                    "status": true,
+                    "image_url": "/assets/images/theme/electronic_three/service.png",
+                    "description": "New Online Special Festival Offer"
+                }
+            ]
         },
-        {
-          "title": "Online Payment",
-          "status": true,
-          "image_url": "/assets/images/theme/electronic_three/service.png",
-          "description": "New Online Special Festival Offer"
+        "categories_1": {
+            "status": true,
+            "category_ids": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "home_banner": {
+            "banner_1": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/main-banner.png",
+                "redirect_link": {
+                    "link": 88,
+                    "link_type": "product",
+                    "product_ids": 88
+                }
+            },
+            "banner_2": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
+                "redirect_link": {
+                    "link": 83,
+                    "link_type": "product",
+                    "product_ids": 83
+                }
+            },
+            "banner_3": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/macbook1.png",
+                "redirect_link": {
+                    "link": 90,
+                    "link_type": "product",
+                    "product_ids": 90
+                }
+            }
+        },
+        "products_ids": [
+            201,
+            203,
+            207,
+            208,
+            16,
+            17
+        ],
+        "offer_banner_1": {
+            "status": true,
+            "image_url": "/assets/images/theme/electronic_three/electronic_three_6.png",
+            "redirect_link": {
+                "link": "powerhouse-electronics",
+                "link_type": "collection"
+            }
+        },
+        "offer_banner_2": {
+            "banner_1": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/electronic_three_8.png",
+                "redirect_link": {
+                    "link": "powerhouse-electronics",
+                    "link_type": "collection"
+                }
+            },
+            "banner_2": {
+                "status": true,
+                "image_url": "/assets/images/theme/electronic_three/electronic_three_7.png",
+                "redirect_link": {
+                    "link_type": "collection"
+                }
+            }
+        },
+        "products_list_1": {
+            "title": "New Trends",
+            "status": true,
+            "product_ids": [
+                201,
+                203,
+                207,
+                208
+            ]
+        },
+        "products_list_2": {
+            "title": "Best Selling",
+            "status": true,
+            "product_ids": [
+                201,
+                203,
+                16,
+                17,
+                207
+            ]
+        },
+        "products_list_3": {
+            "title": "New Arrival",
+            "status": true,
+            "product_ids": [
+                16,
+                17,
+                201,
+                203,
+                207
+            ]
+        },
+        "category_product_1": {
+            "status": true,
+            "products": {
+                "status": true,
+                "product_ids": [
+                    88,
+                    86,
+                    85,
+                    83
+                ]
+            },
+            "categories": {
+                "status": true,
+                "category_ids": [
+                    26,
+                    27,
+                    51,
+                    52
+                ]
+            }
+        },
+        "category_product_2": {
+            "title": "Featured Products",
+            "status": true,
+            "category_ids": [
+                1,
+                4
+            ]
         }
-      ]
     },
-    "categories_1": {
-      "status": true,
-      "category_ids": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
-    },
-    "home_banner": {
-      "banner_1": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/main-banner.png",
-        "redirect_link": {
-          "link": 88,
-          "link_type": "product",
-          "product_ids": 88
-        }
-      },
-      "banner_2": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
-        "redirect_link": {
-          "link": 83,
-          "link_type": "product",
-          "product_ids": 83
-        }
-      },
-      "banner_3": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/macbook1.png",
-        "redirect_link": {
-          "link": 90,
-          "link_type": "product",
-          "product_ids": 90
-        }
-      }
-    },
-    "products_ids": [
-      201,
-      203,
-      207,
-      208,
-      16,
-      17
-    ],
-    "offer_banner_1": {
-      "status": true,
-      "image_url": "/assets/images/theme/electronic_three/electronic_three_6.png",
-      "redirect_link": {
-        "link": "powerhouse-electronics",
-        "link_type": "collection"
-      }
-    },
-    "offer_banner_2": {
-      "banner_1": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/electronic_three_8.png",
-        "redirect_link": {
-          "link": "powerhouse-electronics",
-          "link_type": "collection"
-        }
-      },
-      "banner_2": {
-        "status": true,
-        "image_url": "/assets/images/theme/electronic_three/electronic_three_7.png",
-        "redirect_link": {
-          "link_type": "collection"
-        }
-      }
-    },
-    "products_list_1": {
-      "title": "New Trends",
-      "status": true,
-      "product_ids": [
-        201,
-        203,
-        207,
-        208
-      ]
-    },
-    "products_list_2": {
-      "title": "Best Selling",
-      "status": true,
-      "product_ids": [
-        201,
-        203,
-        16,
-        17,
-        207
-      ]
-    },
-    "products_list_3": {
-      "title": "New Arrival",
-      "status": true,
-      "product_ids": [
-        16,
-        17,
-        201,
-        203,
-        207
-      ]
-    },
-    "category_product_1": {
-      "status": true,
-      "products": {
-        "status": true,
-        "product_ids": [
-          88,
-          86,
-          85,
-          83
-        ]
-      },
-      "categories": {
-        "status": true,
-        "category_ids": [
-          26,
-          27,
-          51,
-          52
-        ]
-      }
-    },
-    "category_product_2": {
-      "title": "Featured Products",
-      "status": true,
-      "category_ids": [
-        1,
-        4
-      ]
-    }
-  },
-  "slug": "electronics_three"
+    "slug": "electronics_three"
 }
