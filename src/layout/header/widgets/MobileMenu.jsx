@@ -29,11 +29,11 @@ const MobileMenu = () => {
             <span>{t("Home")}</span>
           </Link>
         </li>
-        <li className={active == "3" ? "active" : ""}>
-          <a href={Href} onClick={() => setCartCanvas(true)}>
+        <li className={active == "3" ? "active" : ""} onClick={() => handleActive(3)}>
+          <Link href="/cart">
             <RiShoppingBagLine />
             <span>{t("Cart")}</span>
-          </a>
+          </Link>
         </li>
         <li className={active == "5" ? "active" : ""} onClick={() => handleProfileClick()}>
           <a href={Href}>
