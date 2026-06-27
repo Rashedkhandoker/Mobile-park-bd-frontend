@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Col, Row, Table } from "reactstrap";
 import NoDataFound from "../widgets/NoDataFound";
 import CartData from "./CartData";
+import MobileCartCard from "./MobileCartCard";
 
 const ShowCartData = () => {
   const { getTotal, cartProducts } = useContext(CartContext);
@@ -14,7 +15,8 @@ const ShowCartData = () => {
     <Row>
       {cartProducts?.length > 0 ? (
         <>
-          <Col xs={12}>
+          {/* Desktop table */}
+          <Col xs={12} className="d-none d-md-block">
             <div className="table-responsive">
               <Table className="cart-table">
                 <thead>
@@ -34,16 +36,25 @@ const ShowCartData = () => {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td colSpan="4" className="d-md-table-cell d-none">
-                      {t("TotalPrice")} :
-                    </td>
-                    <td className="d-md-none">{t("TotalPrice")} :</td>
+                    <td colSpan="4">{t("TotalPrice")} :</td>
                     <td>
                       <h2>{convertCurrency(getTotal(cartProducts)?.toFixed(2))}</h2>
                     </td>
+                    <td></td>
                   </tr>
                 </tfoot>
               </Table>
+            </div>
+          </Col>
+
+          {/* Mobile cards */}
+          <Col xs={12} className="d-block d-md-none">
+            {cartProducts.map((elem, i) => (
+              <MobileCartCard elem={elem} key={i} />
+            ))}
+            <div className="mobile-cart-total">
+              <span>{t("TotalPrice")} :</span>
+              <h2>{convertCurrency(getTotal(cartProducts)?.toFixed(2))}</h2>
             </div>
           </Col>
         </>
