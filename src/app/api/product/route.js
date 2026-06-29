@@ -1,7 +1,19 @@
 import { NextResponse } from "next/server";
-import product from "./product.json";
+import { readFileSync, writeFileSync } from "fs";
+import { join } from "path";
+
+const filePath = join(process.cwd(), "src/app/api/product/product.json");
+
+function readStore() {
+  return JSON.parse(readFileSync(filePath, "utf-8"));
+}
+
+function writeStore(data) {
+  writeFileSync(filePath, JSON.stringify(data, null, 4));
+}
 
 export async function GET(request) {
+  const product = readStore();
   const searchParams = request?.nextUrl?.searchParams;
   const queryCategory = searchParams.get("category");
   const querySortBy = searchParams.get("sortBy");
@@ -84,4 +96,52 @@ export async function GET(request) {
   };
 
   return NextResponse.json(response);
+}
+
+export async function POST(request) {
+  const body = await request.json();
+  const store = readStore();
+  const newItem = {
+    ...body,
+    id: Math.max(0, ...store.data.map(p => p.id)) + 1,
+    slug: body.name?.toLowerCase().replace(/\s+/g, "-"),
+    status: Number(body.status ?? 1),
+    sale_price: Number(body.sale_price || 0),
+    price: Number(body.price || 0),
+    discount: body.price && body.sale_price ? Math.round((1 - body.sale_price / body.price) * 100) : 0,
+    categories: [],
+    brand: null,
+    product_thumbnail: null,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+    deleted_at: null,
+  };
+  store.data.push(newItem);
+  writeStore(store);
+  return NextResponse.json({ data: newItem }, { status: 201 });
+}
+
+export async function PUT(request) {
+  const body = await request.json();
+  const store = readStore();
+  const idx = store.data.findIndex(p => p.id === body.id);
+  if (idx === -1) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  store.data[idx] = {
+    ...store.data[idx],
+    ...body,
+    status: Number(body.status),
+    sale_price: Number(body.sale_price || 0),
+    price: Number(body.price || 0),
+    updated_at: new Date().toISOString(),
+  };
+  writeStore(store);
+  return NextResponse.json({ data: store.data[idx] });
+}
+
+export async function DELETE(request) {
+  const { id } = await request.json();
+  const store = readStore();
+  store.data = store.data.filter(p => p.id !== id);
+  writeStore(store);
+  return NextResponse.json({ success: true });
 }

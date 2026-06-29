@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { RiSearchLine } from 'react-icons/ri';
+import { RiSearchLine, RiAddLine, RiEditLine, RiDeleteBin6Line } from 'react-icons/ri';
 
-export default function DataTable({ columns, data, searchKey }) {
+export default function DataTable({ columns, data, searchKey, onAdd, onEdit, onDelete, addLabel = 'Add New' }) {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const perPage = 10;
@@ -14,11 +14,13 @@ export default function DataTable({ columns, data, searchKey }) {
   const totalPages = Math.ceil(filtered.length / perPage);
   const paginated = filtered.slice((page - 1) * perPage, page * perPage);
 
+  const hasActions = onEdit || onDelete;
+
   return (
     <div style={{ background: '#fff', borderRadius: 12, border: '1px solid #e2e8f0', overflow: 'hidden' }}>
-      {searchKey && (
-        <div style={{ padding: '16px 20px', borderBottom: '1px solid #e2e8f0', display: 'flex', gap: 12 }}>
-          <div style={{ position: 'relative', flex: 1, maxWidth: 320 }}>
+      <div style={{ padding: '16px 20px', borderBottom: '1px solid #e2e8f0', display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
+        {searchKey && (
+          <div style={{ position: 'relative', flex: 1, minWidth: 200, maxWidth: 320 }}>
             <RiSearchLine style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: '#a0aec0' }} />
             <input
               value={search}
@@ -31,11 +33,24 @@ export default function DataTable({ columns, data, searchKey }) {
               }}
             />
           </div>
-          <span style={{ fontSize: '0.8rem', color: '#718096', alignSelf: 'center' }}>
-            {filtered.length} records
-          </span>
-        </div>
-      )}
+        )}
+        <span style={{ fontSize: '0.8rem', color: '#718096', flex: 1 }}>
+          {filtered.length} records
+        </span>
+        {onAdd && (
+          <button
+            onClick={onAdd}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 6,
+              padding: '8px 16px', background: '#6366f1', color: '#fff',
+              border: 'none', borderRadius: 8, cursor: 'pointer',
+              fontSize: '0.875rem', fontWeight: 600,
+            }}
+          >
+            <RiAddLine size={16} /> {addLabel}
+          </button>
+        )}
+      </div>
       <div style={{ overflowX: 'auto' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
           <thead>
@@ -45,11 +60,16 @@ export default function DataTable({ columns, data, searchKey }) {
                   {col.label}
                 </th>
               ))}
+              {hasActions && (
+                <th style={{ padding: '12px 16px', textAlign: 'right', fontWeight: 600, color: '#4a5568', whiteSpace: 'nowrap' }}>
+                  Actions
+                </th>
+              )}
             </tr>
           </thead>
           <tbody>
             {paginated.length === 0 ? (
-              <tr><td colSpan={columns.length} style={{ padding: 32, textAlign: 'center', color: '#a0aec0' }}>No data found</td></tr>
+              <tr><td colSpan={columns.length + (hasActions ? 1 : 0)} style={{ padding: 32, textAlign: 'center', color: '#a0aec0' }}>No data found</td></tr>
             ) : paginated.map((row, i) => (
               <tr key={i} style={{ borderBottom: '1px solid #f0f0f0' }}>
                 {columns.map(col => (
@@ -57,6 +77,36 @@ export default function DataTable({ columns, data, searchKey }) {
                     {col.render ? col.render(row[col.key], row) : row[col.key]}
                   </td>
                 ))}
+                {hasActions && (
+                  <td style={{ padding: '12px 16px', textAlign: 'right', whiteSpace: 'nowrap' }}>
+                    {onEdit && (
+                      <button
+                        onClick={() => onEdit(row)}
+                        style={{
+                          background: '#eef2ff', color: '#6366f1', border: 'none',
+                          borderRadius: 6, padding: '6px 10px', cursor: 'pointer',
+                          marginRight: 6, fontSize: '0.8rem',
+                        }}
+                        title="Edit"
+                      >
+                        <RiEditLine size={14} />
+                      </button>
+                    )}
+                    {onDelete && (
+                      <button
+                        onClick={() => onDelete(row)}
+                        style={{
+                          background: '#fff5f5', color: '#e53e3e', border: 'none',
+                          borderRadius: 6, padding: '6px 10px', cursor: 'pointer',
+                          fontSize: '0.8rem',
+                        }}
+                        title="Delete"
+                      >
+                        <RiDeleteBin6Line size={14} />
+                      </button>
+                    )}
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

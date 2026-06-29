@@ -12,8 +12,8 @@
     "created_at": "2024-05-02T08:34:46.000000Z",
     "orders_count": 16,
     "role": {
-        "id": 2,
-        "name": "consumer",
+        "id": 1,
+        "name": "admin",
         "guard_name": "web",
         "system_reserve": "1"
     },

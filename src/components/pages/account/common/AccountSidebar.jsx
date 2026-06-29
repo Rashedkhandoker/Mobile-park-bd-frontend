@@ -6,18 +6,24 @@ import Btn from "@/elements/buttons/Btn";
 import Loader from "@/layout/loader";
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { RiCloseLine } from "react-icons/ri";
+import { RiCloseLine, RiDashboardLine } from "react-icons/ri";
 import { Col } from "reactstrap";
 import SidebarProfile from ".";
 
 const AccountSidebar = ({ tabActive }) => {
   const [activeTab, setActiveTab] = useState({ id: tabActive });
-  const { mobileSideBar, setMobileSideBar } = useContext(AccountContext);
+  const { mobileSideBar, setMobileSideBar, accountData } = useContext(AccountContext);
   const handelCallback = () => {
     setMobileSideBar(!mobileSideBar);
   };
   const { t } = useTranslation("common");
   const { isLoading } = useContext(ThemeOptionContext);
+
+  const isAdmin = accountData?.role?.name && accountData.role.name !== "consumer";
+
+  const menuList = isAdmin
+    ? [...sidebarMenu, { title: "Admin Panel", icon: <RiDashboardLine className="me-2" />, id: "admin", path: "/admin" }]
+    : sidebarMenu;
 
   if (isLoading) return <Loader />;
   return (
@@ -29,7 +35,7 @@ const AccountSidebar = ({ tabActive }) => {
         </Btn>
         <SidebarProfile />
         <div className="faq-tab">
-          <NavTabTitles classes={{ navClass: "nav nav-tabs" }} setActiveTab={setActiveTab} activeTab={activeTab} titleList={sidebarMenu} isLogout callBackFun={handelCallback} />
+          <NavTabTitles classes={{ navClass: "nav nav-tabs" }} setActiveTab={setActiveTab} activeTab={activeTab} titleList={menuList} isLogout callBackFun={handelCallback} />
         </div>
       </div>
     </Col>
