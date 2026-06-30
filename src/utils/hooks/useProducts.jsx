@@ -1,7 +1,7 @@
 'use client';
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { getProducts, getProductBySlug, getProductsByIds, getProductsByCategory, getProductsByBrand } from "@/utils/services/productService";
-import { getBestSellingProducts, getNewTrendsProducts, getNewArrivalProducts, getFeaturedProducts } from "@/utils/backendApi/productApi";
+import { getAllProducts, getBestSellingProducts, getNewTrendsProducts, getNewArrivalProducts, getFeaturedProducts } from "@/utils/backendApi/productApi";
 import useFetchQuery from "./useFetchQuery";
 
 /**
@@ -89,6 +89,14 @@ export const useInfiniteProducts = (getParams = () => ({}), options = {}) => {
     refetchOnWindowFocus: false,
     ...options,
   });
+};
+
+export const useAllProducts = (params = {}, options = {}) => {
+  return useFetchQuery(
+    ["products", "all", params],
+    () => getAllProducts(params),
+    { refetchOnWindowFocus: false, ...options }
+  );
 };
 
 export const useFeaturedProducts = (params = {}, options = {}) => {

@@ -46,6 +46,25 @@ const transformResponse = (res) => ({
   per_page: res.meta?.limit || 10,
 });
 
+export const getAllProducts = async (params = {}) => {
+  const res = await backendRequest({
+    url: "/products",
+    params: {
+      page: params.page || 1,
+      limit: params.limit || 20,
+      sortBy: params.sortBy || "createdAt",
+      sortDir: params.sortDir || "desc",
+      ...(params.name && { name: params.name }),
+      ...(params.categoryId && { categoryId: params.categoryId }),
+      ...(params.brandId && { brandId: params.brandId }),
+      ...(params.minPrice && { minPrice: params.minPrice }),
+      ...(params.maxPrice && { maxPrice: params.maxPrice }),
+      ...(params.inStock !== undefined && { inStock: params.inStock }),
+    },
+  });
+  return transformResponse(res);
+};
+
 export const getBestSellingProducts = async (params = {}) => {
   const res = await backendRequest({
     url: "/products/best-selling",
