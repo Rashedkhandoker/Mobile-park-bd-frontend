@@ -10,7 +10,7 @@ const transformProduct = (p) => {
     ? Math.round(((price - salePrice) / price) * 100)
     : 0;
 
-  const thumbnail = p.images?.[0]?.imageUrl || null;
+  const thumbnail = p.thumbnailUrl || p.images?.[0]?.imageUrl || null;
 
   return {
     id: p.id,

@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 
 export async function middleware(request) {
+  const path = request.nextUrl.pathname;
+
+  if (path.startsWith('/admin')) {
+    return NextResponse.next();
+  }
+
   const {
     nextUrl: { search },
   } = request;
@@ -13,14 +19,13 @@ export async function middleware(request) {
     method: "GET",
     headers: myHeaders,
   };
-  let settingData = await (await fetch(process.env.API_PROD_URL + "/settings", requestOptions))?.json();
-  const protectedRoutes = [`/account/dashboard`, `/account/order`, `/account/addresses`];
-
-  const path = request.nextUrl.pathname;
-
-  if (path.startsWith('/admin') && !request.cookies.has('uat')) {
-    return NextResponse.redirect(new URL('/auth/login', request.url));
+  let settingData;
+  try {
+    settingData = await (await fetch(process.env.API_PROD_URL + "/settings", requestOptions))?.json();
+  } catch {
+    settingData = null;
   }
+  const protectedRoutes = [`/account/dashboard`, `/account/order`, `/account/addresses`];
   if (request.cookies.has("maintenance") && path !== `/maintenance`) {
     let myHeaders = new Headers();
     myHeaders.append("Authorization", `Bearer ${request.cookies.get("uat")?.value}`);
