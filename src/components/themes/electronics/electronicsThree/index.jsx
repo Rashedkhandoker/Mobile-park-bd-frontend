@@ -14,9 +14,11 @@ import { Col, Container, Row } from "reactstrap";
 import HomeBrand from "../../widgets/HomeBrand";
 import HomeCategorySidebar from "../../widgets/HomeCategorySidebar";
 import HomeProduct from "../../widgets/HomeProduct";
+import HomeProductAPI from "../../widgets/HomeProductAPI";
 import HomeProductTab from "../../widgets/HomeProductTab";
 import HomeServices from "../../widgets/HomeService";
 import HomeSlider from "../../widgets/HomeSlider";
+import { useBestSellingProducts, useNewTrendsProducts, useNewArrivalProducts, useFeaturedProducts } from "@/utils/hooks/useProducts";
 
 const ElectronicsThree = () => {
   const { data, refetch, isLoading } = useCustomDataQuery({ params: "electronics_three" });
@@ -115,23 +117,16 @@ const ElectronicsThree = () => {
           <HomeCategorySidebar categoryIds={data?.categories_1?.category_ids || []} style="flat-grid" />
         </WrapperComponent>
       )}
-      {/* Product List 1 */}
-      {data?.products_list_1?.status && (
-        <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
-          <TitleBox type="basic" title={data?.products_list_1} />
-          <HomeProduct productIds={data?.products_list_1?.product_ids} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
-        </WrapperComponent> 
-      )}
-      {/* Category Products 2 - featured products*/}
-      {data?.category_product_2?.status && (
-        <WrapperComponent classes={{ sectionClass: "ratio_square bg-title wo-bg category-tab-section", fluidClass: "container" }} noRowCol={true}>
-          <Row>
-            <Col>
-              <HomeProductTab style="vertical" tabStyle="simple" title={data?.category_product_2} classes="row row-cols-xxl-5 row-cols-xl-4 row-cols-md-3 row-cols-2 g-sm-4 g-3" paginate={5} categoryIds={data?.category_product_2?.category_ids} />
-            </Col>
-          </Row>
-        </WrapperComponent>
-      )}
+      {/* New Trends */}
+      <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
+        <TitleBox type="basic" title={data?.products_list_1 || { title: "New Trends" }} />
+        <HomeProductAPI useHook={useNewTrendsProducts} hookParams={{ limit: 10 }} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
+      </WrapperComponent>
+      {/* Featured Products */}
+      <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
+        <TitleBox type="basic" title={data?.category_product_2 || { title: "Featured Products" }} />
+        <HomeProductAPI useHook={useFeaturedProducts} hookParams={{ limit: 10 }} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
+      </WrapperComponent>
       {/*Banners  */}
       <section className="banner-style-1 section-t-space">
         <div className="full-box">
@@ -181,26 +176,22 @@ const ElectronicsThree = () => {
           </Container>
         </div>
       </section>
-      {/* New Arrival- product 3 */}
-      {data?.products_list_3?.status && (
-        <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
-          <TitleBox type="basic" title={data?.products_list_3} />
-          <HomeProduct productIds={data?.products_list_3?.product_ids} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
-        </WrapperComponent> 
-      )}
+      {/* New Arrivals */}
+      <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
+        <TitleBox type="basic" title={data?.products_list_3 || { title: "New Arrivals" }} />
+        <HomeProductAPI useHook={useNewArrivalProducts} hookParams={{ limit: 10 }} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
+      </WrapperComponent>
       {/* Offer Banner 2 */}
       {data?.offer_banner_1?.status && (
         <section className="container section-t-space">
           <Image className="img-fluid" src={storageURL + data?.offer_banner_1?.image_url} height={211} width={1776} alt="offer-banner-2" />
         </section>
       )}
-      {/* Best selling- product 2 */}
-      {data?.products_list_2?.status && (
-        <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
-          <TitleBox type="basic" title={data?.products_list_2} />
-          <HomeProduct productIds={data?.products_list_2?.product_ids} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
-        </WrapperComponent> 
-      )}
+      {/* Best Selling */}
+      <WrapperComponent classes={{ sectionClass: "ratio_square no-arrow", fluidClass: "container" }} colProps={{ xs: "12" }}>
+        <TitleBox type="basic" title={data?.products_list_2 || { title: "Best Selling" }} />
+        <HomeProductAPI useHook={useBestSellingProducts} hookParams={{ limit: 10 }} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
+      </WrapperComponent>
       {/* Brands */}
       {data?.brand?.status && (
         <section className="section-b-space blog-wo-bg section-t-space">

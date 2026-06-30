@@ -1,6 +1,7 @@
 'use client';
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { getProducts, getProductBySlug, getProductsByIds, getProductsByCategory, getProductsByBrand } from "@/utils/services/productService";
+import { getBestSellingProducts, getNewTrendsProducts, getNewArrivalProducts, getFeaturedProducts } from "@/utils/backendApi/productApi";
 import useFetchQuery from "./useFetchQuery";
 
 /**
@@ -88,4 +89,36 @@ export const useInfiniteProducts = (getParams = () => ({}), options = {}) => {
     refetchOnWindowFocus: false,
     ...options,
   });
+};
+
+export const useFeaturedProducts = (params = {}, options = {}) => {
+  return useFetchQuery(
+    ["products", "featured", params],
+    () => getFeaturedProducts(params),
+    { refetchOnWindowFocus: false, select: (res) => res.data, ...options }
+  );
+};
+
+export const useBestSellingProducts = (params = {}, options = {}) => {
+  return useFetchQuery(
+    ["products", "best-selling", params],
+    () => getBestSellingProducts(params),
+    { refetchOnWindowFocus: false, select: (res) => res.data, ...options }
+  );
+};
+
+export const useNewTrendsProducts = (params = {}, options = {}) => {
+  return useFetchQuery(
+    ["products", "new-trends", params],
+    () => getNewTrendsProducts(params),
+    { refetchOnWindowFocus: false, select: (res) => res.data, ...options }
+  );
+};
+
+export const useNewArrivalProducts = (params = {}, options = {}) => {
+  return useFetchQuery(
+    ["products", "new-arrivals", params],
+    () => getNewArrivalProducts(params),
+    { refetchOnWindowFocus: false, select: (res) => res.data, ...options }
+  );
 };
