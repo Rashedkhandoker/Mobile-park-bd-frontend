@@ -4148,6 +4148,13 @@ body {
 
     > .position-relative {
       flex: 1;
+      min-height: 0;
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+      }
     }
 
     > .row {

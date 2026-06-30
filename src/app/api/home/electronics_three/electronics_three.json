@@ -103,7 +103,7 @@
         "home_banner": {
             "banner_1": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_three/main-banner.png",
+                "image_url": "/assets/images/theme/electronic_three/banner left.jpg",
                 "redirect_link": {
                     "link": 88,
                     "link_type": "product",
@@ -112,7 +112,7 @@
             },
             "banner_2": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_three/ipad.jpg",
+                "image_url": "/assets/images/theme/electronic_three/banner rigth bottom apple watch.jpg",
                 "redirect_link": {
                     "link": 83,
                     "link_type": "product",
@@ -121,7 +121,7 @@
             },
             "banner_3": {
                 "status": true,
-                "image_url": "/assets/images/theme/electronic_three/macbook1.png",
+                "image_url": "/assets/images/theme/electronic_three/banner rigth bottom macbook.jpg",
                 "redirect_link": {
                     "link": 90,
                     "link_type": "product",
