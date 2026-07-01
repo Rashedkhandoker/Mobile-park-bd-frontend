@@ -106,4 +106,25 @@ export const getBrands = async (params = {}) => {
   return res.data;
 };
 
+// Brand CRUD
+export const getBrandById = async (id) => {
+  const res = await adminClient.get(`/brands/${id}`);
+  return res.data;
+};
+
+export const createBrand = async (data) => {
+  const res = await adminClient.post("/brands", data);
+  return res.data;
+};
+
+export const updateBrand = async (id, data) => {
+  const res = await adminClient.put(`/brands/${id}`, data);
+  return res.data;
+};
+
+export const deleteBrand = async (id) => {
+  const res = await adminClient.delete(`/brands/${id}`);
+  return res.data;
+};
+
 export default adminClient;
