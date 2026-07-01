@@ -148,4 +148,25 @@ export const cancelOrder = async (id) => {
   return res.data;
 };
 
+// Menu management
+export const getMenuItems = async () => {
+  const res = await adminClient.get("/menu/items");
+  return res.data;
+};
+
+export const createMenuItem = async (data) => {
+  const res = await adminClient.post("/menu/items", data);
+  return res.data;
+};
+
+export const updateMenuItem = async (id, data) => {
+  const res = await adminClient.put(`/menu/items/${id}`, data);
+  return res.data;
+};
+
+export const deleteMenuItem = async (id) => {
+  const res = await adminClient.delete(`/menu/items/${id}`);
+  return res.data;
+};
+
 export default adminClient;

@@ -3,7 +3,7 @@ import { backendRequest } from "./index";
 /**
  * Transform backend product shape → frontend ProductBox shape.
  */
-const transformProduct = (p) => {
+export const transformProduct = (p) => {
   const price = p.price ? parseFloat(p.price) : 0;
   const salePrice = p.discountPrice ? parseFloat(p.discountPrice) : price;
   const discount = price > 0 && salePrice < price
@@ -99,6 +99,32 @@ export const getNewArrivalProducts = async (params = {}) => {
     params: { page: params.page || 1, limit: params.limit || 10 },
   });
   return transformResponse(res);
+};
+
+/**
+ * Fetch a category page's products by category slug.
+ * Uses backend GET /categories/slug/:slug which returns
+ * { data: { category, products: { items, pagination } } }.
+ */
+export const getProductsByCategorySlug = async (slug, params = {}) => {
+  const res = await backendRequest({
+    url: `/categories/slug/${slug}`,
+    params: {
+      page: params.page || 1,
+      limit: params.limit || 25,
+      sortBy: params.sortBy || "id",
+      sortDir: params.sortDir || "asc",
+    },
+  });
+  const products = res?.data?.products || { items: [], pagination: {} };
+  const { page = 1, limit = 25, total = 0 } = products.pagination || {};
+  return {
+    data: (products.items || []).map(transformProduct),
+    total,
+    current_page: page,
+    last_page: Math.ceil(total / limit) || 1,
+    per_page: limit,
+  };
 };
 
 export const getProductBySlugFromApi = async (slug) => {
