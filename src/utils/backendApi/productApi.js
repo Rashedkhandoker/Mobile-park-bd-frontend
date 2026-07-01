@@ -35,6 +35,10 @@ const transformProduct = (p) => {
       id: img.id,
       original_url: img.imageUrl,
     })),
+    product_galleries: (p.images || []).map((img) => ({
+      id: img.id,
+      original_url: img.imageUrl,
+    })),
   };
 };
 
@@ -95,4 +99,10 @@ export const getNewArrivalProducts = async (params = {}) => {
     params: { page: params.page || 1, limit: params.limit || 10 },
   });
   return transformResponse(res);
+};
+
+export const getProductBySlugFromApi = async (slug) => {
+  const res = await backendRequest({ url: `/products/slug/${slug}` });
+  if (!res?.data) return null;
+  return transformProduct(res.data);
 };

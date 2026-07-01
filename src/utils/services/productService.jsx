@@ -9,6 +9,7 @@
  */
 
 import productData from "@/app/api/product/product.json";
+import { getProductBySlugFromApi } from "@/utils/backendApi/productApi";
 
 // ─── internal helpers (mirrors route.js logic) ───────────────────────────────
 
@@ -98,6 +99,12 @@ export const getProducts = async (params = {}) => {
  * @returns {Promise<object|null>}
  */
 export const getProductBySlug = async (slug) => {
+  try {
+    const product = await getProductBySlugFromApi(slug);
+    if (product) return product;
+  } catch {
+    // fallback to static data
+  }
   const product = productData.data?.find((p) => p.slug === slug) ?? null;
   return Promise.resolve(product);
 };
