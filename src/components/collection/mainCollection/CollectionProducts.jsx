@@ -30,6 +30,7 @@ const CollectionProducts = ({ filter, grid, infiniteScroll, categorySlug }) => {
       paginate: filter?.paginate,
       category: categorySlug ? categorySlug : filter?.category.join(",") || tagParam,
       brand: filter.brand.join(","),
+      price: filter?.price?.join(","),
       sortBy: filter?.sortBy ?? "asc",
       store_slug: slug ?? null,
     });

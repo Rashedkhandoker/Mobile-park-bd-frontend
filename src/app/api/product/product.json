@@ -323,7 +323,7 @@
         },
         {
             "id": 17,
-            "name": "AirPods Pro (2nd generation) USB\u2010C",
+            "name": "AirPods Pro (2nd generation) USB‐C",
             "short_description": "Introducing the ultimate fusion of style and comfort: the Shacket Combo. This versatile garment combines the warmth of a jacket with the laid-back feel of a shirt, perfect for effortless everyday wear.",
             "description": "<p>Our exclusive Shacket Combo, the ultimate solution to your style conundrums! Combining the best of both worlds - shirts and jackets - our Shacket Combo offers unparalleled versatility and fashion-forward flair. Crafted from premium fabrics, each piece in this combo is designed to deliver supreme comfort without compromising on style.</p><p>Whether you're dressing up for a casual brunch with friends or heading to a weekend getaway, our Shacket Combo effortlessly transitions from day to night, making it a wardrobe staple for every occasion. The timeless design and impeccable tailoring ensure a flattering fit for all body types, while the subtle detailing adds a touch of sophistication to your ensemble.</p><p>Gone are the days of agonizing over what to wear! With our Shacket Combo, you can effortlessly elevate any outfit with minimal effort. Pair it with your favorite denim for a laid-back vibe or layer it over a dress for a chic, on-trend look. The possibilities are endless!</p><p>But our Shacket Combo isn't just about style - it's about practicality too. Designed to withstand the rigors of everyday wear, each piece is durable and easy to maintain, so you can enjoy your new favorite wardrobe staple for years to come.</p><p>Whether you're a fashion enthusiast looking to make a statement or someone who appreciates the simplicity of classic style, our Shacket Combo has something for everyone. It's the perfect fusion of fashion and function, allowing you to express your unique sense of style with confidence and ease.</p><p>Upgrade your wardrobe today with our Shacket Combo and experience the epitome of style and comfort. With its timeless appeal and effortless versatility, it's bound to become your go-to choice for any occasion. Don't miss out on the opportunity to elevate your look and make a lasting impression wherever you go.</p>",
             "type": "simple",
@@ -684,7 +684,7 @@
             "brand_id": null,
             "wholesale_price_type": null,
             "created_at": "2024-05-16T04:04:25.000000Z",
-            "updated_at": "2026-06-29T14:42:54.586Z",
+            "updated_at": "2026-07-01T17:26:53.877Z",
             "orders_count": 0,
             "reviews_count": 0,
             "rating_count": null,
@@ -894,8 +894,8 @@
                 }
             ],
             "product_thumbnail": {
-                "original_url": "/assets/images/products/1782744170112-kqjphcpa2hi.jpg",
-                "asset_url": "/assets/images/products/1782744170112-kqjphcpa2hi.jpg"
+                "original_url": "/assets/images/products/1782926810507-dghpy2cdtpu.jpg",
+                "asset_url": "/assets/images/products/1782926810507-dghpy2cdtpu.jpg"
             },
             "product_galleries": [
                 {
@@ -1084,7 +1084,7 @@
             "similar_products": [],
             "cross_products": [],
             "category_id": "1",
-            "thumbnail_url": "/assets/images/products/1782744170112-kqjphcpa2hi.jpg"
+            "thumbnail_url": "/assets/images/products/1782926810507-dghpy2cdtpu.jpg"
         },
         {
             "id": 203,

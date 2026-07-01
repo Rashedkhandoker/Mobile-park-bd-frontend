@@ -4,32 +4,26 @@ import { usePathname, useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { AccordionBody, AccordionHeader, AccordionItem, Input, Label } from "reactstrap";
 
-const CollectionPrice = ({ filter, setFilter, attributeAPIData, isOffCanvas }) => {
+const CollectionPrice = ({ setFilter, attributeAPIData, isOffCanvas }) => {
   const router = useRouter();
-  const [category, attribute, sortBy, field, rating, layout] = useCustomSearchParams(["category", "attribute", "sortBy", "field", "rating", "layout"]);
+  const [category, attribute, sortBy, field, rating, layout, priceParam] = useCustomSearchParams(["category", "attribute", "sortBy", "field", "rating", "layout", "price"]);
   const { t } = useTranslation("common");
   const pathname = usePathname();
-  const checkPrice = (value) => {
-    if (filter?.price?.indexOf(value) != -1) {
-      return true;
-    } else return false;
-  };
+
+  const currentPrices = priceParam?.price ? priceParam.price.split(",").filter(Boolean) : [];
+
+  const checkPrice = (value) => currentPrices.includes(value);
+
   const applyPrice = (event) => {
-    const index = filter?.price.indexOf(event?.target?.value);
-    let temp = [...filter?.price];
-    if (event.target.checked) {
-      temp.push(event?.target?.value);
-    } else {
-      temp.splice(index, 1);
-    }
-    setFilter((prev) => {
-      return {
-        ...prev,
-        price: temp,
-      };
-    });
+    const value = event.target.value;
+    let temp = event.target.checked
+      ? [...currentPrices, value]
+      : currentPrices.filter((p) => p !== value);
+
+    setFilter((prev) => ({ ...prev, price: temp }));
+
     if (temp.length > 0) {
-      const queryParams = new URLSearchParams({ ...category, ...attribute, ...sortBy, ...field, ...rating, ...layout, price: temp }).toString();
+      const queryParams = new URLSearchParams({ ...category, ...attribute, ...sortBy, ...field, ...rating, ...layout, price: temp.join(",") }).toString();
       router.push(`${pathname}?${queryParams}`);
     } else {
       const queryParams = new URLSearchParams({ ...category, ...attribute, ...sortBy, ...field, ...rating, ...layout }).toString();
@@ -50,13 +44,9 @@ const CollectionPrice = ({ filter, setFilter, attributeAPIData, isOffCanvas }) =
                 <Input className="checkbox_animated" type="checkbox" id={`price-${price.id}`} value={price?.value} checked={checkPrice(price?.value)} onChange={applyPrice} />
                 <Label className="form-check-label" htmlFor={`price-${price.id}`}>
                   {price?.price ? (
-                    <span className="name">
-                      {price.text} ${price.price}
-                    </span>
+                    <span className="name">{price.text} ${price.price}</span>
                   ) : (
-                    <span className="name">
-                      ${price.minPrice} - ${price.maxPrice}
-                    </span>
+                    <span className="name">${price.minPrice} - ${price.maxPrice}</span>
                   )}
                 </Label>
               </div>

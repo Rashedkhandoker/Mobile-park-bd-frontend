@@ -3,7 +3,8 @@ import ThemeOptionContext from "@/context/themeOptionsContext";
 import request from "@/utils/axiosUtils";
 import { AttributesAPI } from "@/utils/axiosUtils/API";
 import useFetchQuery from "@/utils/hooks/useFetchQuery";;
-import { useContext, useState } from "react";
+import { getProducts } from "@/utils/services/productService";
+import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { Accordion, AccordionHeader, AccordionItem } from "reactstrap";
@@ -18,6 +19,15 @@ const CollectionSidebar = ({ filter, setFilter, isOffcanvas, basicStoreCard, rig
   const { collectionMobile, setCollectionMobile, openOffCanvas, setOpenOffCanvas } = useContext(ThemeOptionContext);
   const { t } = useTranslation("common");
   const [open, setOpen] = useState(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]);
+  const [hideBrand, setHideBrand] = useState(false);
+
+  useEffect(() => {
+    if (!categorySlug) { setHideBrand(false); return; }
+    getProducts({ category: categorySlug, paginate: 500, status: 1 }).then(res => {
+      const brands = new Set((res?.data ?? []).map(p => p.brand?.slug).filter(Boolean));
+      setHideBrand(brands.size <= 1);
+    });
+  }, [categorySlug]);
   const toggle = (id) => {
     if (open.includes(id)) {
       setOpen(open.filter(item => item !== id)); // Close section
@@ -79,12 +89,14 @@ const CollectionSidebar = ({ filter, setFilter, isOffcanvas, basicStoreCard, rig
                       <CollectionCategory filter={filter} setFilter={setFilter} />
                     </AccordionItem>
                   )}
-                  <AccordionItem className={`collection-collapse-block open ${isOffcanvas ? "col-lg-3" : ""}`}>
-                    <AccordionHeader targetId="2" className="collapse-block-title">
-                      <span>{t("Brand")}</span>
-                    </AccordionHeader>
-                    <CollectionBrand filter={filter} setFilter={setFilter} />
-                  </AccordionItem>
+                  {!hideBrand && (
+                    <AccordionItem className={`collection-collapse-block open ${isOffcanvas ? "col-lg-3" : ""}`}>
+                      <AccordionHeader targetId="2" className="collapse-block-title">
+                        <span>{t("Brand")}</span>
+                      </AccordionHeader>
+                      <CollectionBrand filter={filter} setFilter={setFilter} categorySlug={categorySlug} />
+                    </AccordionItem>
+                  )}
                   {isAttributes ? <CollectionAttributes isOffCanvas={isOffcanvas} attributeAPIData={attributeAPIData} filter={filter} setFilter={setFilter} /> : null}
                   <CollectionPrice isOffCanvas={isOffcanvas} filter={filter} setFilter={setFilter} attributeAPIData={attributeAPIData} />
                   <CollectionRating isOffCanvas={isOffcanvas} filter={filter} setFilter={setFilter} attributeAPIData={attributeAPIData} />

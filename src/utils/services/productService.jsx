@@ -52,6 +52,23 @@ const filterProducts = (all, params = {}) => {
     const q = params.search.toLowerCase();
     list = list.filter((p) => p.name.toLowerCase().includes(q) || p.brand?.name?.toLowerCase().includes(q));
   }
+  if (params.price && params.price !== "" && !(Array.isArray(params.price) && params.price.length === 0)) {
+    const raw = Array.isArray(params.price) ? params.price.join(",") : params.price;
+    const ranges = raw.split(",").filter(Boolean);
+    list = list.filter((p) => {
+      const productPrice = p.sale_price ?? p.price ?? 0;
+      return ranges.some((range) => {
+        if (range.includes("-")) {
+          const [min, max] = range.split("-").map(Number);
+          return productPrice >= min && productPrice <= max;
+        }
+        const val = Number(range);
+        if (val === 100) return productPrice < 100;
+        if (val === 1000) return productPrice > 1000;
+        return false;
+      });
+    });
+  }
   if (params.trending) {
     list = list.filter((p) => p.is_trending == 1 || p.is_trending === true);
   }

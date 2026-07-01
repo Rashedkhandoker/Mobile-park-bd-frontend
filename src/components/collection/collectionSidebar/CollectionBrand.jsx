@@ -11,7 +11,7 @@ const CollectionBrand = ({ filter, setFilter }) => {
   const { brandState,isLoading,refetch } = useContext(BrandContext);
   const [showList, setShowList] = useState();
   const { t } = useTranslation("common");
-  
+
   useEffect(() => {
     refetch();
   }, []);
