@@ -127,4 +127,25 @@ export const deleteBrand = async (id) => {
   return res.data;
 };
 
+// Order management
+export const getOrders = async (params = {}) => {
+  const res = await adminClient.get("/orders", { params });
+  return res.data;
+};
+
+export const getOrderById = async (id) => {
+  const res = await adminClient.get(`/orders/${id}`);
+  return res.data;
+};
+
+export const updateOrderStatus = async (id, status) => {
+  const res = await adminClient.put(`/orders/${id}/status`, { status });
+  return res.data;
+};
+
+export const cancelOrder = async (id) => {
+  const res = await adminClient.post(`/orders/${id}/cancel`);
+  return res.data;
+};
+
 export default adminClient;
