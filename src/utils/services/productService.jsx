@@ -9,7 +9,25 @@
  */
 
 import productData from "@/app/api/product/product.json";
-import { getProductBySlugFromApi } from "@/utils/backendApi/productApi";
+import {
+  getAllProducts as getAllProductsFromApi,
+  getProductBySlugFromApi,
+  getProductsByCategorySlug,
+} from "@/utils/backendApi/productApi";
+import { getBrandBySlug } from "@/utils/backendApi/brandApi";
+
+/** Map frontend sort keys → backend sortBy/sortDir. */
+const mapSort = (sortBy) => {
+  switch (sortBy) {
+    case "desc":      return { sortBy: "id", sortDir: "desc" };
+    case "a-z":       return { sortBy: "name", sortDir: "asc" };
+    case "z-a":       return { sortBy: "name", sortDir: "desc" };
+    case "low-high":  return { sortBy: "price", sortDir: "asc" };
+    case "high-low":  return { sortBy: "price", sortDir: "desc" };
+    case "asc":
+    default:          return { sortBy: "id", sortDir: "asc" };
+  }
+};
 
 // ─── internal helpers (mirrors route.js logic) ───────────────────────────────
 
@@ -86,10 +104,47 @@ const paginate = (list, page = 1, perPage = 25) => {
  * @returns {Promise<{data: object[], total: number, current_page: number, last_page: number, per_page: number}>}
  */
 export const getProducts = async (params = {}) => {
-  const all = productData.data ?? [];
-  const filtered = filterProducts(all, params);
   const page = parseInt(params.page) || 1;
   const perPage = parseInt(params.paginate) || 25;
+
+  // id-based lookups still come from static data (backend has no ids filter)
+  const backendCapable = !params.ids && !params.category_ids && !params.store_slug;
+
+  if (backendCapable) {
+    try {
+      const sort = mapSort(params.sortBy);
+
+      // Category slug → dedicated backend endpoint (returns category products)
+      if (params.category) {
+        const slug = String(params.category).split(",")[0];
+        return await getProductsByCategorySlug(slug, {
+          page,
+          limit: perPage,
+          ...sort,
+        });
+      }
+
+      // Brand slug → resolve to id, then filter products
+      let brandId;
+      if (params.brand) {
+        const brand = await getBrandBySlug(String(params.brand).split(",")[0]);
+        brandId = brand?.id;
+      }
+
+      return await getAllProductsFromApi({
+        page,
+        limit: perPage,
+        ...sort,
+        ...(params.search && { name: params.search }),
+        ...(brandId && { brandId }),
+      });
+    } catch {
+      // fall through to static data
+    }
+  }
+
+  const all = productData.data ?? [];
+  const filtered = filterProducts(all, params);
   return Promise.resolve(paginate(filtered, page, perPage));
 };
 
