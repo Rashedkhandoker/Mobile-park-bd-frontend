@@ -1,5 +1,20 @@
 import { backendRequest } from "./index";
 
+// Hosts next/image is configured for (next.config.mjs remotePatterns).
+// Seed data contains placeholder example.com URLs — anything else would
+// crash <Image>, so unknown hosts are dropped in favor of the placeholder.
+const ALLOWED_IMAGE_HOSTS = ["localhost", "127.0.0.1", "pub-e951b8ba07534d61bdf09de5daccd23d.r2.dev"];
+
+const safeImageUrl = (url) => {
+  if (!url) return null;
+  if (url.startsWith("/")) return url;
+  try {
+    return ALLOWED_IMAGE_HOSTS.includes(new URL(url).hostname) ? url : null;
+  } catch {
+    return null;
+  }
+};
+
 /**
  * Transform backend product shape → frontend ProductBox shape.
  */
@@ -10,7 +25,7 @@ const transformProduct = (p) => {
     ? Math.round(((price - salePrice) / price) * 100)
     : 0;
 
-  const thumbnail = p.thumbnailUrl || p.images?.[0]?.imageUrl || null;
+  const thumbnail = safeImageUrl(p.thumbnailUrl) || safeImageUrl(p.images?.[0]?.imageUrl) || null;
 
   return {
     id: p.id,
@@ -33,11 +48,11 @@ const transformProduct = (p) => {
     short_description: p.description?.substring(0, 200) || "",
     images: (p.images || []).map((img) => ({
       id: img.id,
-      original_url: img.imageUrl,
+      original_url: safeImageUrl(img.imageUrl),
     })),
     product_galleries: (p.images || []).map((img) => ({
       id: img.id,
-      original_url: img.imageUrl,
+      original_url: safeImageUrl(img.imageUrl),
     })),
   };
 };

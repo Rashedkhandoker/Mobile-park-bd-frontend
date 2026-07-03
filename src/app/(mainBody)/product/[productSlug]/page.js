@@ -1,21 +1,19 @@
 import axios from "axios";
-import https from "https";
 
 import ProductDetailContent from "@/components/productDetails";
+
+const BACKEND_API = process.env.BACKEND_API_URL || process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export async function generateMetadata({ params }) {
-  const productData = await axios
-    .get(`${process.env.API_PROD_URL}/product/slug/${params?.productSlug}`, {
-      httpsAgent: new https.Agent({ rejectUnauthorized: false }),
-    })
-    .then((res) => res?.data)
-    .catch((err) => {
-      return err;
-    });
+  const product = await axios
+    .get(`${BACKEND_API}/products/slug/${params?.productSlug}`)
+    .then((res) => res?.data?.data)
+    .catch(() => null);
 
   return {
-    title: productData?.meta_title,
-    description: productData?.meta_description,
-    images: [productData?.product_meta_image?.original_url, []],
+    title: product?.name,
+    description: product?.description?.substring(0, 160),
+    images: [product?.thumbnailUrl || product?.images?.[0]?.imageUrl, []],
     openGraph: {},
   };
 }
