@@ -11,3 +11,26 @@
 @import "remixicon/fonts/remixicon.css";
 
 @import "./style.scss"; 
+/* Enlarged header/footer logo — flex container otherwise caps the img width */
+header .brand-logo {
+  flex-shrink: 0;
+
+  img.img-fluid {
+    width: 235px;
+    max-width: none;
+    height: auto;
+  }
+}
+
+/* Must out-rank .footer-theme .footer-logo img from _footer.scss */
+.footer-theme .footer-logo img,
+.footer-logo img {
+  width: calc(190px + (245 - 190) * ((100vw - 320px) / (1920 - 320)));
+  height: auto;
+}
+
+@media (max-width: 575px) {
+  header .brand-logo img.img-fluid {
+    width: 160px;
+  }
+}

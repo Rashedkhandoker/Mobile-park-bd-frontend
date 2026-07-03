@@ -381,28 +381,34 @@ export const nftProductSlider3 = (length) => {
 /* horizontalProductSlider */
 export const horizontalProductSlider5 = (length) => {
   return {
-    loop: true,
+    // Fixed slidesToShow keeps every product box the same width no matter how
+    // many products exist; infinite only when there are enough slides to loop,
+    // otherwise slick clones slides and the same product renders repeatedly.
+    infinite: length > 5,
     swipeToSlide: true,
-    slidesToShow: length > 5 ? 5 : length,
+    slidesToShow: 5,
     arrows: false,
     responsive: [
       {
         breakpoint: 1400,
         settings: {
           slidesToShow: 4,
+          infinite: length > 4,
         },
       },
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
+          infinite: length > 3,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          autoplay: true,
+          infinite: length > 2,
+          autoplay: length > 2,
           autoplaySpeed: 2500,
         },
       },

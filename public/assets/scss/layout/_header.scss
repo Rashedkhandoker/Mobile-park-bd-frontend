@@ -3926,7 +3926,7 @@ body {
     }
 
     .search-suggestion-box {
-      top: 48px;
+      top: calc(100% + 4px);
     }
   }
 }
@@ -3987,11 +3987,11 @@ body {
   }
 
   .mobile-search-bar .search-suggestion-box {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     width: 100%;
-    top: auto;
+    top: calc(100% + 4px);
     max-height: 60vh;
     overflow-y: auto;
     border-radius: 0 0 4px 4px;
