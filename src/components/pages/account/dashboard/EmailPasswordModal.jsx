@@ -1,8 +1,7 @@
 import CustomModal from "@/components/widgets/CustomModal";
 import AccountContext from "@/context/accountContext";
-import { UpdateProfileAPI, UpdateProfilePasswordAPI } from "@/utils/axiosUtils/API";
+import { changeCustomerPassword, updateCustomerProfile } from "@/utils/backendApi/customerAuthApi";
 import { ToastNotification } from "@/utils/customFunctions/ToastNotification";
-import useCreate from "@/utils/hooks/useCreate";
 import { YupObject, nameSchema, passwordConfirmationSchema, passwordSchema } from "@/utils/validation/ValidationSchema";
 import { Form, Formik } from "formik";
 import { useContext } from "react";
@@ -10,30 +9,13 @@ import EmailPasswordForm from "./EmailPasswordForm";
 import UpdatePasswordForm from "./UpdatePasswordForm";
 
 const EmailPasswordModal = ({ modal, setModal }) => {
-  const { accountData, setAccountData } = useContext(AccountContext);
-  const { data, mutate, isLoading, error } = useCreate(modal == "email" ? UpdateProfileAPI : UpdateProfilePasswordAPI, false, false, "Yes", (resDta) => {
-    if (resDta.status == 200 || resDta.status == 201) {
-      setModal("");
-      {
-        modal == "email" &&
-          setAccountData((prev) => {
-            return {
-              ...prev,
-              name: resDta?.data?.name,
-              country_code: resDta?.data?.country_code,
-              phone: resDta?.data?.phone,
-            };
-          });
-      }
-    } else {
-      ToastNotification("error", error);
-    }
-  });
+  const { accountData, setAccountData, refetch } = useContext(AccountContext);
 
   return (
     <>
       <CustomModal modal={modal == "email" || modal == "password" ? true : false} setModal={setModal} classes={{ modalClass: "theme-modal-2", modalBodyClass: "address-form", title: `${modal == "email" ? "Edit Profile" : "ChangePassword"}` }}>
         <Formik
+          enableReinitialize
           initialValues={{
             name: accountData?.name || "",
             email: accountData?.email,
@@ -45,23 +27,27 @@ const EmailPasswordModal = ({ modal, setModal }) => {
           }}
           validationSchema={YupObject({
             name: nameSchema,
-            country_code: nameSchema,
-            phone: nameSchema,
             current_password: modal == "password" && nameSchema,
             password: modal == "password" && passwordSchema,
             password_confirmation: modal == "password" && passwordConfirmationSchema,
           })}
-          onSubmit={(values,{resetForm}) => {
-            let passwordObj = { current_password: values["current_password"], password: values["password"], password_confirmation: values["password_confirmation"], _method: "PUT" };
-            let emailObj = { name: values["name"], email: values["email"], country_code: values["country_code"], phone: values["phone"], _method: "PUT" };
-            if (modal == "password") {
-              // Put your logic here
-              setModal(false);
-              resetForm()
-            } else {
-              // Put your logic here
-              setModal(false);
-              resetForm()
+          onSubmit={async (values, { resetForm, setSubmitting }) => {
+            try {
+              if (modal == "password") {
+                await changeCustomerPassword(values.current_password, values.password, values.password_confirmation);
+                ToastNotification("success", "Password changed successfully");
+              } else {
+                await updateCustomerProfile({ name: values.name, phone: values.phone });
+                setAccountData((prev) => ({ ...prev, name: values.name, phone: values.phone }));
+                refetch?.();
+                ToastNotification("success", "Profile updated successfully");
+              }
+              setModal("");
+              resetForm();
+            } catch (err) {
+              ToastNotification("error", err?.response?.data?.message || "Update failed");
+            } finally {
+              setSubmitting(false);
             }
           }}
         >

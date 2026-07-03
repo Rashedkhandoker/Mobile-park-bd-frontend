@@ -19,8 +19,8 @@ const LoginForm = ({ setState }) => {
   return (
     <Formik
       initialValues={{
-        email: "john.customer@example.com",
-        password: "123456789",
+        email: "",
+        password: "",
         recaptcha: "",
       }}
       validationSchema={YupObject({

@@ -19,8 +19,8 @@ const HeaderSix = () => {
   const { themeOption, setOpenAuthModal, mobileSideBar, setMobileSideBar } = useContext(ThemeOptionContext);
   const router = useRouter();
   const isAuthenticated = Cookies.get("uat");
-  const handleProfileClick = (path) => {
-    isAuthenticated ? router.push(path) : setOpenAuthModal(true);
+  const handleProfileClick = () => {
+    isAuthenticated ? router.push("/account/dashboard") : setOpenAuthModal(true);
   };
   const { t } = useTranslation("common");
   const [activeCategory, setActiveCategory] = useState("Beauty");
