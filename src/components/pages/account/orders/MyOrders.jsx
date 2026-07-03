@@ -1,45 +1,66 @@
 import NoDataFound from "@/components/widgets/NoDataFound";
 import Pagination from "@/components/widgets/Pagination";
+import AccountContext from "@/context/accountContext";
 import SettingContext from "@/context/settingContext";
+import { getCustomerOrders } from "@/utils/backendApi/orderApi";
+import { showMonthWiseDateAndTime } from "@/utils/customFunctions/DateFormat";
+import { useQuery } from "@tanstack/react-query";
+import Cookies from "js-cookie";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { RiEyeLine } from "react-icons/ri";
 import { Card, CardBody, Table } from "reactstrap";
-import request from "@/utils/axiosUtils";
-import { OrderAPI } from "@/utils/axiosUtils/API";
-import { showMonthWiseDateAndTime } from "@/utils/customFunctions/DateFormat";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
-import { useTranslation } from "react-i18next";
 import AccountHeading from "../common/AccountHeading";
 import Loader from "@/layout/loader";
-import Capitalize from "@/utils/customFunctions/Capitalize";
+
+const STATUS_BADGE = {
+  PENDING: "bg-pending",
+  CONFIRMED: "bg-pending",
+  SHIPPED: "bg-pending",
+  DELIVERED: "bg-completed",
+  CANCELLED: "bg-cancelled",
+};
 
 const MyOrders = () => {
   const [page, setPage] = useState(1);
   const { t } = useTranslation("common");
   const { convertCurrency } = useContext(SettingContext);
-  const { data, isLoading, refetch } = useFetchQuery([page], () => request({ url: OrderAPI, params: { page: page, paginate: 10 } }), {
-    enabled: true,
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
-    select: (res) => res?.data,
+  const { accountData } = useContext(AccountContext);
+  // Cookie is client-only — gate on mount so SSR and hydration render match.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  let customerId = accountData?.id;
+  if (!customerId && mounted) {
+    try {
+      customerId = JSON.parse(Cookies.get("account") || "{}")?.id;
+    } catch {
+      customerId = undefined;
+    }
+  }
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["customer-orders", customerId, page],
+    queryFn: () => getCustomerOrders(customerId, { page, limit: 10 }),
+    enabled: !!customerId,
   });
 
-  useEffect(() => {
-    isLoading && refetch();
-  }, [isLoading]);
+  const orders = data?.data || [];
+  const meta = data?.meta || { page: 1, limit: 10, total: 0 };
 
-  if (isLoading)
+  if (!mounted || isLoading)
     return (
       <div className="box-loader">
         <Loader classes={"blur-bg"} />
       </div>
     );
+
   return (
     <Card className="dashboard-table mt-0">
       <CardBody className="p-0">
         <AccountHeading title="MyOrders" classes={"top-sec"} />
-        {data?.data?.length > 0 ? (
+        {orders.length > 0 ? (
           <>
             <div className="total-box mt-0">
               <div className="wallet-table mt-0">
@@ -50,28 +71,27 @@ const MyOrders = () => {
                         <th>{t("OrderNumber")}</th>
                         <th>{t("Date")}</th>
                         <th>{t("Amount")}</th>
-                        <th>{t("PaymentStatus")}</th>
-                        <th>{t("PaymentMethod")}</th>
+                        <th>{t("Status")}</th>
+                        <th>Items</th>
                         <th>{t("Option")}</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {data?.data?.map((order, i) => (
-                        <tr key={i}>
+                      {orders.map((order) => (
+                        <tr key={order.id}>
                           <td>
-                            <span className="fw-bolder">#{order.order_number}</span>
+                            <span className="fw-bolder">#{order.id}</span>
                           </td>
-                          <td>{showMonthWiseDateAndTime(order?.created_at)}</td>
-                          <td>{convertCurrency(order?.total)} </td>
+                          <td>{showMonthWiseDateAndTime(order?.orderDate || order?.createdAt)}</td>
+                          <td>{convertCurrency ? convertCurrency(parseFloat(order?.totalAmount || 0)) : `৳${parseFloat(order?.totalAmount || 0).toFixed(2)}`}</td>
                           <td>
-                            <div className={`${order.payment_status.toLowerCase() === "pending" ? "badge bg-pending" : order.payment_status.toLowerCase() === "completed" ? "badge bg-completed" : "badge bg-cancelled custom-badge rounded-0"} custom-badge rounded-0`}>
-                              <span>{Capitalize(order?.payment_status)}</span>
+                            <div className={`badge ${STATUS_BADGE[order.status] || "bg-pending"} custom-badge rounded-0`}>
+                              <span>{order.status}</span>
                             </div>
                           </td>
-
-                          <td>{order.payment_method.toUpperCase()}</td>
+                          <td>{order.items?.length ?? "—"}</td>
                           <td>
-                            <Link href={`/account/order/details/${order.order_number}`}>
+                            <Link href={`/account/order/details/${order.id}`}>
                               <RiEyeLine />
                             </Link>
                           </td>
@@ -82,13 +102,15 @@ const MyOrders = () => {
                 </div>
               </div>
             </div>
-            <div className="product-pagination">
-              <div className="theme-pagination-block">
-                <nav>
-                  <Pagination current_page={data?.current_page} total={data?.total} per_page={data?.per_page} setPage={setPage} />
-                </nav>
+            {meta.total > meta.limit && (
+              <div className="product-pagination">
+                <div className="theme-pagination-block">
+                  <nav>
+                    <Pagination current_page={meta.page} total={meta.total} per_page={meta.limit} setPage={setPage} />
+                  </nav>
+                </div>
               </div>
-            </div>
+            )}
           </>
         ) : (
           <NoDataFound customClass="no-data-added" imageUrl={`/assets/svg/empty-items.svg`} title="NoOrdersFound" description="NoOrdersHaveBeenMadeYet" height="300" width="300" />

@@ -1,16 +1,12 @@
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import Btn from "@/elements/buttons/Btn";
 import { Href } from "@/utils/constants";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { RiSmartphoneLine } from "react-icons/ri";
 import { Modal, ModalBody } from "reactstrap";
 import ForgotPasswordForm from "./ForgotPasswordForm";
 import LoginForm from "./LoginForm";
-import OTPVerificationForm from "./OTPVerificationForm";
-import NumberLoginForm from "./phnLogin/LoginForm";
 import RegisterForm from "./RegisterForm";
 
 const AuthModal = () => {
@@ -31,12 +27,8 @@ const AuthModal = () => {
   useEffect(() => {
     if (state == "forgot") {
       setTitle("ForgotPassword");
-    } else if (state == "otp") {
-      setTitle("Otp");
     } else if (state == "register") {
       setTitle("CreateAccount");
-    } else if (state == "number") {
-      setTitle("LoginWithNumber");
     } else {
       setTitle("SignIn");
     }
@@ -53,14 +45,12 @@ const AuthModal = () => {
                   <div>
                     <div className="auth-title">
                       <h3>{t(title)}</h3>
-                      <p>{state == "otp" ? t("OtpDescription") : state == "number" ? t("NumberLoginDescription") : t("AuthModalDescription")}</p>
+                      <p>{t("AuthModalDescription")}</p>
                     </div>
                     {state == "register" && <RegisterForm />}
                     {state == "login" && <LoginForm setState={setState} />}
                     {state == "forgot" && <ForgotPasswordForm setState={setState} />}
-                    {state == "otp" && <OTPVerificationForm setState={setState} />}
-                    {state == "number" && <NumberLoginForm setState={setState} />}
-                    {state !== "forgot" && state !== "otp" && (
+                    {state !== "forgot" && (
                       <>
                         <div className="divider">
                           <span>{t("OR")}</span>
@@ -71,12 +61,6 @@ const AuthModal = () => {
                             {logOrNew ? t("Login") : t("Register")} {t("Here")}
                           </a>
                         </p>
-                        {state == "login" && (
-                          <Btn color="transparent" className="number-btn" onClick={() => setState("number")}>
-                            <RiSmartphoneLine />
-                            {t("LoginWithNumber")}
-                          </Btn>
-                        )}
                       </>
                     )}
                   </div>

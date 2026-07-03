@@ -1,6 +1,5 @@
-import request from "@/utils/axiosUtils";
-import { SelfAPI } from "@/utils/axiosUtils/API";
-import useFetchQuery from "@/utils/hooks/useFetchQuery";;
+import { getCustomerProfile } from "@/utils/backendApi/customerAuthApi";
+import useFetchQuery from "@/utils/hooks/useFetchQuery";
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import AccountContext from ".";
@@ -9,15 +8,13 @@ const AccountProvider = (props) => {
   const cookies = Cookies.get("uat");
   const [mobileSideBar, setMobileSideBar] = useState(false);
   const [accountData, setAccountData] = useState();
-  const { data, refetch, fetchStatus } = useFetchQuery([SelfAPI], () => request({ url: SelfAPI }), {
+  const { data, refetch, fetchStatus } = useFetchQuery(["customer-profile"], getCustomerProfile, {
     enabled: false,
-    select: (res) => {
-      return res?.data;
-    },
+    select: (res) => res?.data,
   });
 
   useEffect(() => {
-    cookies && refetch() ;
+    cookies && refetch();
   }, [cookies]);
 
   useEffect(() => {
