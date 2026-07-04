@@ -2,12 +2,17 @@
  * Product Service — single swap point for all product data fetching.
  *
  * All data comes from the backend API (see @/utils/backendApi/productApi).
- * The backend supports server-side paging/sorting and name search; filters
- * the API doesn't understand yet (ids, category/brand slugs, trending) are
- * applied client-side on the transformed product list.
+ * Category and brand slugs use dedicated backend endpoints; filters the API
+ * doesn't understand yet (ids, category_ids, store_slug) are applied
+ * client-side on the fetched product list.
  */
 
-import { getAllProducts, getProductBySlugFromApi } from "@/utils/backendApi/productApi";
+import {
+  getAllProducts,
+  getProductBySlugFromApi,
+  getProductsByCategorySlug,
+} from "@/utils/backendApi/productApi";
+import { getBrandBySlug } from "@/utils/backendApi/brandApi";
 
 // ─── legacy → backend sort mapping ───────────────────────────────────────────
 
@@ -20,20 +25,13 @@ const SORT_MAP = {
   "high-low": { sortBy: "price", sortDir: "desc" },
 };
 
-// Filters the backend can't do yet — presence forces client-side filtering.
-const CLIENT_FILTER_KEYS = ["ids", "category", "category_ids", "brand", "trending", "store_slug"];
+// Filters the backend can't do server-side yet — presence forces a fetch of
+// the full list followed by client-side filtering + paging.
+const CLIENT_FILTER_KEYS = ["ids", "category_ids", "trending", "store_slug"];
 
 const filterProducts = (all, params = {}) => {
   let list = [...all];
 
-  if (params.category) {
-    const cats = String(params.category).split(",");
-    list = list.filter((p) => p.categories?.some((c) => cats.includes(c.slug)));
-  }
-  if (params.brand) {
-    const brands = String(params.brand).split(",");
-    list = list.filter((p) => p.brand?.slug && brands.includes(p.brand.slug));
-  }
   if (params.category_ids) {
     const ids = String(params.category_ids).split(",");
     list = list.filter((p) => p.categories?.some((c) => ids.includes(String(c.id))));
@@ -76,14 +74,31 @@ export const getProducts = async (params = {}) => {
   const page = parseInt(params.page) || 1;
   const perPage = parseInt(params.paginate) || 25;
   const sort = SORT_MAP[params.sortBy] || {};
-  const needsClientFilter = CLIENT_FILTER_KEYS.some((k) => params[k] != null && params[k] !== "");
+
+  const needsClientFilter = CLIENT_FILTER_KEYS.some(
+    (k) => params[k] != null && params[k] !== ""
+  );
 
   if (!needsClientFilter) {
+    // Category slug → dedicated backend endpoint.
+    if (params.category) {
+      const slug = String(params.category).split(",")[0];
+      return getProductsByCategorySlug(slug, { page, limit: perPage, ...sort });
+    }
+
+    // Brand slug → resolve to id, then filter server-side.
+    let brandId;
+    if (params.brand) {
+      const brand = await getBrandBySlug(String(params.brand).split(",")[0]);
+      brandId = brand?.id;
+    }
+
     return getAllProducts({
       page,
       limit: perPage,
       ...sort,
       ...(params.search && { name: params.search }),
+      ...(brandId && { brandId }),
     });
   }
 

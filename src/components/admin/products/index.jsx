@@ -49,8 +49,29 @@ function ProductFormModal({ open, product, onClose, onSaved }) {
   });
   const [thumbnailFile, setThumbnailFile] = useState(null);
   const [imageFiles, setImageFiles] = useState([]);
+  const [existingImages, setExistingImages] = useState([]);
+  const [deletingImageId, setDeletingImageId] = useState(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+
+  const thumbnailPreview = thumbnailFile ? URL.createObjectURL(thumbnailFile) : null;
+  useEffect(() => {
+    return () => { if (thumbnailPreview) URL.revokeObjectURL(thumbnailPreview); };
+  }, [thumbnailPreview]);
+
+  const handleDeleteExistingImage = async (imageId) => {
+    if (!product?.id) return;
+    setDeletingImageId(imageId);
+    try {
+      await deleteProductImage(product.id, imageId);
+      setExistingImages(imgs => imgs.filter(img => img.id !== imageId));
+      queryClient.invalidateQueries({ queryKey: ['admin-products'] });
+    } catch (err) {
+      setError(err?.response?.data?.message || 'Failed to delete image');
+    } finally {
+      setDeletingImageId(null);
+    }
+  };
 
   const { data: catData } = useQuery({ queryKey: ['admin-categories'], queryFn: () => getCategories({ limit: 200 }), staleTime: 60000 });
   const { data: brandData } = useQuery({ queryKey: ['admin-brands'], queryFn: () => getBrands({ limit: 200 }), staleTime: 60000 });
@@ -86,6 +107,7 @@ function ProductFormModal({ open, product, onClose, onSaved }) {
     }
     setThumbnailFile(null);
     setImageFiles([]);
+    setExistingImages(product?.images || []);
     setError('');
   }, [product, open]);
 
@@ -214,10 +236,79 @@ function ProductFormModal({ open, product, onClose, onSaved }) {
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 20 }}>
             <FormField label="Thumbnail">
+              {(thumbnailPreview || product?.thumbnailUrl) && (
+                <div style={{ marginBottom: 8, position: 'relative', display: 'inline-block' }}>
+                  <img
+                    src={thumbnailPreview || product.thumbnailUrl}
+                    alt="thumbnail"
+                    style={{ width: 90, height: 90, objectFit: 'cover', borderRadius: 8, border: '1px solid #e2e8f0' }}
+                    onError={e => e.target.style.display = 'none'}
+                  />
+                  {thumbnailPreview && (
+                    <span style={{ position: 'absolute', top: 4, left: 4, background: ACCENT, color: '#fff', fontSize: '0.6rem', fontWeight: 600, padding: '1px 6px', borderRadius: 8 }}>
+                      New
+                    </span>
+                  )}
+                </div>
+              )}
               <input type="file" accept="image/*" onChange={e => setThumbnailFile(e.target.files?.[0] || null)} style={{ fontSize: '0.85rem' }} />
+              {product?.thumbnailUrl && !thumbnailFile && (
+                <div style={{ fontSize: '0.72rem', color: '#a0aec0', marginTop: 4 }}>Selecting a new file replaces the current thumbnail</div>
+              )}
             </FormField>
             <FormField label="Product Images">
-              <input type="file" accept="image/*" multiple onChange={e => setImageFiles([...e.target.files])} style={{ fontSize: '0.85rem' }} />
+              {(existingImages.length > 0 || imageFiles.length > 0) && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
+                  {existingImages.map(img => (
+                    <div key={img.id} style={{ position: 'relative' }}>
+                      <img
+                        src={img.imageUrl}
+                        alt=""
+                        style={{ width: 64, height: 64, objectFit: 'cover', borderRadius: 8, border: '1px solid #e2e8f0', opacity: deletingImageId === img.id ? 0.4 : 1 }}
+                        onError={e => e.target.style.display = 'none'}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => handleDeleteExistingImage(img.id)}
+                        disabled={deletingImageId === img.id}
+                        title="Delete image"
+                        style={{
+                          position: 'absolute', top: -6, right: -6, width: 18, height: 18,
+                          borderRadius: '50%', border: 'none', background: '#e53e3e', color: '#fff',
+                          fontSize: 11, lineHeight: '18px', padding: 0, cursor: 'pointer',
+                        }}
+                      >
+                        ×
+                      </button>
+                    </div>
+                  ))}
+                  {imageFiles.map((file, i) => (
+                    <div key={i} style={{ position: 'relative' }}>
+                      <img
+                        src={URL.createObjectURL(file)}
+                        alt=""
+                        style={{ width: 64, height: 64, objectFit: 'cover', borderRadius: 8, border: `2px solid ${ACCENT}` }}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setImageFiles(files => files.filter((_, idx) => idx !== i))}
+                        title="Remove from upload"
+                        style={{
+                          position: 'absolute', top: -6, right: -6, width: 18, height: 18,
+                          borderRadius: '50%', border: 'none', background: '#718096', color: '#fff',
+                          fontSize: 11, lineHeight: '18px', padding: 0, cursor: 'pointer',
+                        }}
+                      >
+                        ×
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <input type="file" accept="image/*" multiple onChange={e => setImageFiles(prev => [...prev, ...e.target.files])} style={{ fontSize: '0.85rem' }} />
+              {imageFiles.length > 0 && (
+                <div style={{ fontSize: '0.72rem', color: ACCENT, marginTop: 4 }}>{imageFiles.length} new image{imageFiles.length !== 1 ? 's' : ''} will be uploaded on save</div>
+              )}
             </FormField>
           </div>
 

@@ -193,12 +193,10 @@ const ElectronicsThree = () => {
         <HomeProductAPI useHook={useBestSellingProducts} hookParams={{ limit: 10 }} slider={true} sliderOptions={horizontalProductSlider5} style="vertical" />
       </WrapperComponent>
       {/* Brands */}
-      {data?.brand?.status && (
-        <section className="section-b-space blog-wo-bg section-t-space">
-          <TitleBox type="basic" title={data?.brand} />
-          <HomeBrand brandIds={data?.brand?.brand_ids} />
-        </section>
-      )}
+      <section className="section-b-space blog-wo-bg section-t-space">
+        <TitleBox type="basic" title={data?.brand || { title: "Top Brands" }} />
+        <HomeBrand />
+      </section>
     </>
   );
 };

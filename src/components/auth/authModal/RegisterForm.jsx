@@ -1,19 +1,73 @@
 import SearchableSelectInput from "@/components/widgets/inputFields/SearchableSelectInput";
 import { AllCountryCode } from "@/data/CountryCode";
 import Btn from "@/elements/buttons/Btn";
-import { RegisterAPI } from "@/utils/axiosUtils/API";
-import useCreate from "@/utils/hooks/useCreate";
+import AccountContext from "@/context/accountContext";
+import CartContext from "@/context/cartContext";
+import ThemeOptionContext from "@/context/themeOptionsContext";
+import { loginCustomer, registerCustomer } from "@/utils/backendApi/customerAuthApi";
+import { ToastNotification } from "@/utils/customFunctions/ToastNotification";
 import { YupObject, emailSchema, nameSchema, passwordConfirmationSchema, passwordSchema, phoneSchema } from "@/utils/validation/ValidationSchema";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import React, { useState } from "react";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
+import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Input } from "reactstrap";
 
 const RegisterForm = () => {
   const [showBoxMessage, setShowBoxMessage] = useState();
-  const { mutate, isLoading } = useCreate(RegisterAPI, false, false, "Register Successfully", false, false, false, false, setShowBoxMessage);
+  const [isLoading, setIsLoading] = useState(false);
+  const { setOpenAuthModal } = useContext(ThemeOptionContext);
+  const { refetch } = useContext(AccountContext);
+  const { refetch: cartRefetch } = useContext(CartContext);
+  const router = useRouter();
   const { t } = useTranslation("common");
   const [checkboxChecked, setCheckboxChecked] = useState(false);
+
+  const handleRegister = async (values) => {
+    setIsLoading(true);
+    setShowBoxMessage("");
+    try {
+      await registerCustomer({
+        name: values.name,
+        email: values.email,
+        password: values.password,
+        confirmPassword: values.password_confirmation,
+        phone: values.phone ? `+${values.country_code}${values.phone}` : undefined,
+      });
+      // Try auto-login; backend may require email verification first.
+      try {
+        const body = await loginCustomer(values.email, values.password);
+        const token = body?.data?.token;
+        if (token) {
+          Cookies.set("uat", token, { path: "/", expires: 1 });
+          if (body.data.customer) {
+            Cookies.set("account", JSON.stringify(body.data.customer), { path: "/" });
+            localStorage.setItem("account", JSON.stringify(body.data.customer));
+          }
+          refetch?.();
+          cartRefetch?.();
+          setOpenAuthModal?.(false);
+          ToastNotification("success", "Account created successfully");
+          router.push("/account/dashboard");
+          return;
+        }
+      } catch (loginErr) {
+        if (loginErr?.response?.status === 403) {
+          ToastNotification("success", "Account created! Check your email to verify your account, then sign in.");
+          setOpenAuthModal?.(false);
+          return;
+        }
+        throw loginErr;
+      }
+      ToastNotification("success", "Account created — please sign in");
+      setOpenAuthModal?.(false);
+    } catch (err) {
+      setShowBoxMessage(err?.response?.data?.message || "Registration failed");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <Formik
@@ -32,7 +86,7 @@ const RegisterForm = () => {
         password_confirmation: passwordConfirmationSchema,
         phone: phoneSchema,
       })}
-      onSubmit={mutate}
+      onSubmit={handleRegister}
     >
       {({ errors, touched, setFieldValue }) => (
         <Form className="auth-form-box">

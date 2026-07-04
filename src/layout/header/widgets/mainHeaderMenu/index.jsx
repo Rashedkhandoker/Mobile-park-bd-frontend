@@ -1,4 +1,4 @@
-import request from "@/utils/axiosUtils";
+import { backendRequest } from "@/utils/backendApi";
 import useFetchQuery from "@/utils/hooks/useFetchQuery";
 import { useEffect, useState } from "react";
 import MenuList from "./MenuList";
@@ -10,9 +10,9 @@ const MainHeaderMenu = () => {
     refetch,
     isLoading,
     fetchStatus,
-  } = useFetchQuery(["menu"], () => request({ url: "/menu" }), {
+  } = useFetchQuery(["menu"], () => backendRequest({ url: "/menu" }), {
     select: (res) => {
-      const originalData = res.data.data;
+      const originalData = res?.data || [];
       const modifiedData = originalData.map((item) => ({
         ...item,
         class: `${["Product", "Mega Menu"].includes(item.title) ? 1 : 0}`,

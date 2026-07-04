@@ -1,6 +1,6 @@
 import SettingContext from "@/context/settingContext";
 import ThemeOptionContext from "@/context/themeOptionsContext";
-import request from "@/utils/axiosUtils";
+import { backendRequest } from "@/utils/backendApi";
 import useFetchQuery from "@/utils/hooks/useFetchQuery";;
 import { useSearchParams } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
@@ -59,9 +59,9 @@ const Headers = () => {
     data: headerMenu,
     refetch,
     isLoading,
-  } = useFetchQuery(["menu"], () => request({ url: "/menu" }), {
+  } = useFetchQuery(["menu"], () => backendRequest({ url: "/menu" }), {
     select: (res) => {
-      const originalData = res.data.data;
+      const originalData = res?.data || [];
       const modifiedData = originalData.map((item) => ({
         ...item,
         class: `${["Product", "Mega Menu"].includes(item.title) ? 1 : 0}`,

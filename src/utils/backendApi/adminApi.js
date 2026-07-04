@@ -106,4 +106,67 @@ export const getBrands = async (params = {}) => {
   return res.data;
 };
 
+// Brand CRUD
+export const getBrandById = async (id) => {
+  const res = await adminClient.get(`/brands/${id}`);
+  return res.data;
+};
+
+export const createBrand = async (data) => {
+  const res = await adminClient.post("/brands", data);
+  return res.data;
+};
+
+export const updateBrand = async (id, data) => {
+  const res = await adminClient.put(`/brands/${id}`, data);
+  return res.data;
+};
+
+export const deleteBrand = async (id) => {
+  const res = await adminClient.delete(`/brands/${id}`);
+  return res.data;
+};
+
+// Order management
+export const getOrders = async (params = {}) => {
+  const res = await adminClient.get("/orders", { params });
+  return res.data;
+};
+
+export const getOrderById = async (id) => {
+  const res = await adminClient.get(`/orders/${id}`);
+  return res.data;
+};
+
+export const updateOrderStatus = async (id, status) => {
+  const res = await adminClient.put(`/orders/${id}/status`, { status });
+  return res.data;
+};
+
+export const cancelOrder = async (id) => {
+  const res = await adminClient.post(`/orders/${id}/cancel`);
+  return res.data;
+};
+
+// Menu management
+export const getMenuItems = async () => {
+  const res = await adminClient.get("/menu/items");
+  return res.data;
+};
+
+export const createMenuItem = async (data) => {
+  const res = await adminClient.post("/menu/items", data);
+  return res.data;
+};
+
+export const updateMenuItem = async (id, data) => {
+  const res = await adminClient.put(`/menu/items/${id}`, data);
+  return res.data;
+};
+
+export const deleteMenuItem = async (id) => {
+  const res = await adminClient.delete(`/menu/items/${id}`);
+  return res.data;
+};
+
 export default adminClient;

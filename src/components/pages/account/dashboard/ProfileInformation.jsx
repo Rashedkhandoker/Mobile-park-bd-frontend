@@ -24,14 +24,14 @@ const ProfileInformation = () => {
               </li>
               <li>
                 <h6>
-                  {t("Phone")} : +{accountData?.country_code} {accountData?.phone}
+                  {t("Phone")} : {accountData?.country_code ? `+${accountData.country_code} ` : ""}{accountData?.phone || "—"}
                 </h6>
               </li>
-              {accountData?.address[0] ? (
+              {accountData?.address?.[0] ? (
                 <li>
                   <h6>
-                    {t("Address")} : {accountData?.address[0]?.street}
-                    {accountData?.address[0]?.city}, {accountData?.address[0]?.state.name}, {accountData?.address[0]?.country.name} {accountData?.address[0]?.pincode}
+                    {t("Address")} : {accountData?.address?.[0]?.street}
+                    {accountData?.address?.[0]?.city}, {accountData?.address?.[0]?.state?.name}, {accountData?.address?.[0]?.country?.name} {accountData?.address?.[0]?.pincode}
                   </h6>
                 </li>
               ) : null}

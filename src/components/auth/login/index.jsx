@@ -4,11 +4,13 @@ import Breadcrumbs from "@/utils/commonComponents/breadcrumb";
 import useHandleLogin from "@/utils/hooks/useLogin";
 import { YupObject, emailSchema, passwordSchema } from "@/utils/validation/ValidationSchema";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Col, Container, FormGroup, Row } from "reactstrap";
 
 const LoginContainer = () => {
-  const { mutate } = useHandleLogin();
+  const [showBoxMessage, setShowBoxMessage] = useState("");
+  const { mutate } = useHandleLogin(setShowBoxMessage);
   const { t } = useTranslation("common");
   return (
     <>
@@ -19,10 +21,15 @@ const LoginContainer = () => {
             <Col lg="6">
               <h3>Login</h3>
               <div className="theme-card">
+                {showBoxMessage && (
+                  <div role="alert" className="alert alert-danger">
+                    {showBoxMessage}
+                  </div>
+                )}
                 <Formik
                   initialValues={{
-                    email: "john.customer@example.com",
-                    password: "123456789",
+                    email: "",
+                    password: "",
                   }}
                   validationSchema={YupObject({
                     email: emailSchema,
